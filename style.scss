@@ -4,13 +4,36 @@
 
 :root{ 
     --bg-color: #e6ffff;
-    --light-shadow: #fcffff;
-    --dark-shadow: #bfffff;
-    --main-color: #0fd3ff;
+    --light-color: #fcffff;
+    --dark-color: #bfffff;
+    --verydark-color: #99ffff;
+    --main-color: #00caff;
+    --main-color2: #0fd3ff;
     --text-color: #7e898c;
-    --shadow: 5px 5px 5px var(--dark-shadow),
-    -5px -5px 5px var(--light-shadow);
+    --shadow: 5px 5px 5px var(--dark-color),
+    -5px -5px 5px var(--light-color);
+    --inner-shadow: inset 5px 5px 5px var(--dark-color),
+    inset -5px -5px 5px var(--light-color);
+    --verydark-shadow: 5px 5px 5px var(--verydark-color),
+    -5px -5px 5px var(--light-color);
 }
+
+/*
+:root{ 
+    --bg-color: #f4e6ff;
+    --light-color: #fcffff;
+    --dark-color: #e3bfff;
+    --verydark-color: #623873;
+    --main-color: #623873;
+    --main-color2: #0fd3ff;
+    --text-color: #877e8c;
+    --shadow: 5px 5px 5px var(--dark-color),
+    -5px -5px 5px var(--light-color);
+    --inner-shadow: inset 5px 5px 5px var(--dark-color),
+    inset -5px -5px 5px var(--light-color);
+    --verydark-shadow: 5px 5px 5px var(--verydark-color),
+    -5px -5px 5px var(--light-color);
+}*/
 
 
 *{
@@ -24,63 +47,208 @@ body{
     font-size: 16px;
     line-height: 2em;
     color: var(--text-color);
+    background: var(--bg-color);
 }
 
 main{
-    max-width: 1140px;
-    background: var(--bg-color);
+    max-width: 1366px;
+    
     margin: 0 auto;
 }
 
 section{
     padding: 60px 10px 20px;
-    height: 500px;
+    min-height: 500px;
+}
+
+h2{
+    color: var(--main-color);
+    font-size: 2em;
+}
+
+h3{
+    font-weight: normal;
+
 }
 
 /*--- Intro ---*/
 
 .intro{
-    background: var(--bg-color);
+    margin-top: 100px;
 
-}
-
-.me{
-
-    text-align: center;
-    img{
-        border: 10px solid var(--bg-color);
-        box-shadow: var(--shadow);
- 
+    .me{
+        text-align: center;
+        h2{
+            color: var(--text-color);
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 10px solid var(--bg-color);
+            box-shadow: var(--shadow);
+        }
+        
     }
-    h2{
+
+
+    .container{
+        margin: 1em auto;
         color: var(--main-color);
-        font-size: 2em;
-        margin-top: 1em;
+        /*border: 1px solid  grey;*/
+        width: 500px;
+        height: 40px; 
+        font-size: 35px;
+        line-height: 40px;
+        overflow: hidden;
+        
+        ul{
+            list-style: none;
+            padding-left: 10px;
+            animation: change 8s infinite;
+        }
     }
 
 }
 
-.intro img{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+
+/*--- About ---*/
+
+.about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+
+    .work{
+        width: 100%;
+        img{
+            padding: 1em;
+            border-radius: 10px;
+            border: 10px solid var(--bg-color);
+            box-shadow: var(--shadow);
+
+        }
+
+    }
+
+    .info{
+        width: 100%;
+        padding: 1em;
+
+     
+
+        .p-info{
+
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            div{
+                padding: 1em 0;
+                width: 50%;
+            }
+            .cv{
+                background: var(--bg-color);
+                height: 3em;
+                border-radius: 5px;
+                box-shadow: var(--shadow);
+                text-align: center;
+                align-self: center;
+            }
+            .cv:hover{
+                box-shadow: var(--verydark-shadow);
+                
+            }
+            .cv:active{
+                box-shadow: var(--inner-shadow), var(--shadow);
+            }
+        }
+       
+    }
+ 
+
 }
 
-.container{
-    margin: 1em auto;
-    /*border: 1px solid  grey;*/
-    width: 500px;
-    height: 40px; 
-    font-size: 35px;
-    line-height: 40px;
-    overflow: hidden;
-    
-    ul{
-        list-style: none;
-        padding-left: 10px;
-        animation: change 8s infinite;
+
+/*--- Skills ---*/
+
+
+/*--- Services ---*/
+
+
+/*--- Portfolio ---*/
+
+.portfolio{
+
+    h2{
+        text-align: center;
+        margin: 3em 0 2em 0;
     }
 }
+
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+    .card{
+        width: 30%;
+        height: 300px;
+        border: 12px solid var(--bg-color);
+        box-shadow: var(--shadow);
+
+        overflow: hidden;
+
+        &:hover{
+            box-shadow: var(--verydark-shadow);
+        }
+        img{
+            width: 100%;
+     
+
+        }
+
+
+
+    }
+}
+
+.web img:hover{
+    transform: translateY(100%);
+    transition: translateY 4s;
+}
+
+.brand img:hover{
+    transform: scale(1.3);
+    transition: all 2s;
+}
+
+.graphic img:hover{
+    transform: scale(1.3);
+    transition: all 2s;
+}
+
+
+
+/*--- Contact ---*/
+
+.contact{
+    height: 300px;
+}
+
+.data{
+    width: 200px;
+    margin: 0 auto;
+    img{
+        width: 2em;
+        fill: blue;
+
+    }
+    object{
+        fill:blue;
+    }
+}
+
+
+/*--Animations --*/
 
 @keyframes change{
     0%{margin-top: 0;}
@@ -96,66 +264,3 @@ section{
 
     100%{margin-top: 0px;}
 }
-
-
-/*--- About ---*/
-
-.about{
-    display: flex;
-    justify-content: space-evenly;
-
-    div{
-        width: 45%;
-        padding: 1em;
-    }
-
-    .work{
-        border: 10px solid var(--bg-color);
-        box-shadow: var(--shadow);
-
-    }
-
-    .info{
-        display: flex;
-        flex-wrap: wrap;
-
-        h5{
-            float: left;
-        }
-        .cv{
-            background: var(--bg-color);
-            width: 200px;
-            height: 40px;
-            border: 10px solid var(--bg-color);
-            border-radius: 5px;
-            box-shadow: var(--shadow);
-        }
-    }
- 
-
-}
-
-
-/*--- Skills ---*/
-
-
-/*--- Services ---*/
-
-
-/*--- Portfolio ---*/
-
-
-.web{
-    display: flex;
-    justify-content: space-between;
-    .card{
-        width: 30%;
-        height: 200px;
-        box-shadow: var(--shadow);
-
-    }
-}
-
-
-/*--- Contact ---*/
-
