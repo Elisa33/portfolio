@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;500&display=swap');
+
+/*-- Colors --*/
+
+:root{ 
+    --bg-color: #e6ffff;
+    --light-shadow: #fcffff;
+    --dark-shadow: #bfffff;
+    --main-color: #0fd3ff;
+    --text-color: #7e898c;
+    --shadow: 5px 5px 5px var(--dark-shadow),
+    -5px -5px 5px var(--light-shadow);
+}
+
+
+*{
+
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    line-height: 2em;
+    color: var(--text-color);
+}
+
+main{
+    max-width: 1140px;
+    background: var(--bg-color);
+    margin: 0 auto;
+}
+
+section{
+    padding: 60px 10px 20px;
+    height: 500px;
+}
+
+/*--- Intro ---*/
+
+.intro{
+    background: var(--bg-color);
+
+}
+
+.me{
+
+    text-align: center;
+    img{
+        border: 10px solid var(--bg-color);
+        box-shadow: var(--shadow);
+ 
+    }
+    h2{
+        color: var(--main-color);
+        font-size: 2em;
+        margin-top: 1em;
+    }
+
+}
+
+.intro img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.container{
+    margin: 1em auto;
+    /*border: 1px solid  grey;*/
+    width: 500px;
+    height: 40px; 
+    font-size: 35px;
+    line-height: 40px;
+    overflow: hidden;
+    
+    ul{
+        list-style: none;
+        padding-left: 10px;
+        animation: change 8s infinite;
+    }
+}
+
+@keyframes change{
+    0%{margin-top: 0;}
+    20%{margin-top: 0;}
+    25%{margin-top: -40px;}
+    50%{margin-top: -40px;}
+
+    55%{margin-top: -80px;}
+    80%{margin-top: -80px;}
+
+    85%{margin-top: -40px;}
+    95%{margin-top: -40px;}
+
+    100%{margin-top: 0px;}
+}
+
+
+/*--- About ---*/
+
+.about{
+    display: flex;
+    justify-content: space-evenly;
+
+    div{
+        width: 45%;
+        padding: 1em;
+    }
+
+    .work{
+        border: 10px solid var(--bg-color);
+        box-shadow: var(--shadow);
+
+    }
+
+    .info{
+        display: flex;
+        flex-wrap: wrap;
+
+        h5{
+            float: left;
+        }
+        .cv{
+            background: var(--bg-color);
+            width: 200px;
+            height: 40px;
+            border: 10px solid var(--bg-color);
+            border-radius: 5px;
+            box-shadow: var(--shadow);
+        }
+    }
+ 
+
+}
+
+
+/*--- Skills ---*/
+
+
+/*--- Services ---*/
+
+
+/*--- Portfolio ---*/
+
+
+.web{
+    display: flex;
+    justify-content: space-between;
+    .card{
+        width: 30%;
+        height: 200px;
+        box-shadow: var(--shadow);
+
+    }
+}
+
+
+/*--- Contact ---*/
+
