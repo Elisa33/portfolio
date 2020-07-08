@@ -239,10 +239,6 @@ h3 {
   fill: blue;
 }
 
-.data object {
-  fill: blue;
-}
-
 /*--Animations --*/
 @-webkit-keyframes change {
   0% {
