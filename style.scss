@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
 
 /*-- Colors --*/
-
+/*
 :root{ 
     --bg-color: #e6ffff;
     --light-color: #fcffff;
@@ -18,25 +18,40 @@
     --verydark-shadow: 5px 5px 5px var(--verydark-color),
     -5px -5px 5px var(--light-color);
 
-    --font: 'Raleway', sans-serif;
-}
+    --font: 'Quicksand', sans-serif;
 
-/*
-:root{ 
-    --bg-color: #f4e6ff;
-    --light-color: #fcffff;
-    --dark-color: #e3bfff;
-    --verydark-color: #623873;
-    --main-color: #623873;
-    --main-color2: #0fd3ff;
-    --text-color: #877e8c;
-    --shadow: 5px 5px 5px var(--dark-color),
-    -5px -5px 5px var(--light-color);
-    --inner-shadow: inset 5px 5px 5px var(--dark-color),
-    inset -5px -5px 5px var(--light-color);
-    --verydark-shadow: 5px 5px 5px var(--verydark-color),
-    -5px -5px 5px var(--light-color);
 }*/
+
+
+:root{ 
+    /*--bg-color: #e0e5ec;*/
+    --bg-color: #D6EFF6;
+    --main-color: #00caff;
+
+    --shadow: -8px -8px 20px 0px #fff9, -6px -6px 6px 0px #fff9,
+    8px 8px 20px 0px #0001, 5px 5px 6px 0px #0001, inset 0px 0px 0px 0px #fff9,
+    inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9,
+    inset 0px 0px 0px 0px #0001;
+
+    /*--hover-shadow: -8px -8px 15px 0px #fff, -6px -6px 6px 0px #fff,
+    8px 8px 20px 0px #000, 5px 5px 6px 0px #000, inset 0px 0px 0px 0px #fff,
+    inset 0px 0px 0px 0px #000, inset 0px 0px 0px 0px #fff,
+    inset 0px 0px 0px 0px #000;*/
+
+
+    --inner-shadow: 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #fff9,
+    0px 0px 0px 0px #0001, 0px 0px 0px 0px #0001, inset -8px -8px 20px 0px #fff9,
+    inset -5px -5px 6px 0px #fff9, inset 8px 8px 20px 0px #0003,
+    inset 5px 5px 6px 0px #0001;
+
+    --font: 'Quicksand', sans-serif;
+    --text-color: #877e8c;
+    --thin: 300;
+    --semibold: 400;
+    --bold: 500;
+    
+
+}
 
 
 *{
@@ -151,8 +166,12 @@ h3{
                 width: 50%;
             }
             .cv{
+                
                 p{
+                display: grid;
+                place-items: center;
                 width: 50%;
+                font-weight: 500;
                 color: var(--main-color);
                 background: var(--bg-color);
                 height: 3em;
@@ -164,7 +183,7 @@ h3{
                 }
             }
             .cv p:hover{
-                box-shadow: var(--verydark-shadow);
+                box-shadow: var(--shadow);
                 transition: box-shadow 0.5s ease-in-out;
             }
             .cv p:active{
@@ -206,8 +225,8 @@ h3{
 
         overflow: hidden;
 
-        &:hover{
-            box-shadow: var(--verydark-shadow);
+        .cards:hover{
+            box-shadow: var(--hover-shadow);
         }
         img{
             width: 100%;
@@ -221,7 +240,7 @@ h3{
 }
 
 .web img:hover{
-    transform: translateY(-80%);
+    transform: translateY(-63%);
     transition: all 4s;
     
 }
@@ -231,6 +250,12 @@ h3{
     height: 150px;
     background:var(--main-color);
     z-index: 9;
+
+}
+
+.brand img{
+    width: 100%;
+    
 
 }
 .brand img:hover{
