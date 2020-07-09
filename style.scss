@@ -58,7 +58,7 @@ main{
 
 section{
     padding: 60px 10px 20px;
-    min-height: 500px;
+    min-height: 300px;
 }
 
 h2{
@@ -214,8 +214,8 @@ h3{
 }
 
 .web img:hover{
-    transform: translateY(100%);
-    transition: translateY 4s;
+    transform: translateY(-70%);
+    transition: all 4s;
 }
 
 .brand img:hover{
@@ -237,20 +237,12 @@ h3{
 }
 
 .data{
-    width: 200px;
+    width: 300px;
     margin: 0 auto;
-    img{
-        width: 2em;
-        fill: blue;
 
-    }
-    object{
-        width: 2em;
-        fill: rgb(34, 97, 39);
-
-    }
     svg{
-        width: 2em;
+        margin: 0.5em;
+        width: 2.5em;
         fill: var(--main-color);
 
     }
