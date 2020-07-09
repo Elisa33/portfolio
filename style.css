@@ -14,6 +14,7 @@
     inset -5px -5px 5px var(--light-color);
   --verydark-shadow: 5px 5px 5px var(--verydark-color),
     -5px -5px 5px var(--light-color);
+  --font: 'Raleway', sans-serif;
 }
 
 /*
@@ -39,7 +40,7 @@
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font);
   font-size: 16px;
   line-height: 2em;
   color: var(--text-color);
@@ -147,24 +148,27 @@ h3 {
   width: 50%;
 }
 
-.about .info .p-info .cv {
+.about .info .p-info .cv p {
+  width: 50%;
+  color: var(--main-color);
   background: var(--bg-color);
   height: 3em;
   border-radius: 5px;
-  -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow);
+  /*box-shadow: var(--shadow);*/
   text-align: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  line-height: 32px;
 }
 
-.about .info .p-info .cv:hover {
+.about .info .p-info .cv p:hover {
   -webkit-box-shadow: var(--verydark-shadow);
           box-shadow: var(--verydark-shadow);
+  -webkit-transition: -webkit-box-shadow 0.5s ease-in-out;
+  transition: -webkit-box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out, -webkit-box-shadow 0.5s ease-in-out;
 }
 
-.about .info .p-info .cv:active {
+.about .info .p-info .cv p:active {
   -webkit-box-shadow: var(--inner-shadow), var(--shadow);
           box-shadow: var(--inner-shadow), var(--shadow);
 }
@@ -205,10 +209,17 @@ h3 {
 }
 
 .web img:hover {
-  -webkit-transform: translateY(-70%);
-          transform: translateY(-70%);
+  -webkit-transform: translateY(-80%);
+          transform: translateY(-80%);
   -webkit-transition: all 4s;
   transition: all 4s;
+}
+
+.cover {
+  width: 100%;
+  height: 150px;
+  background: var(--main-color);
+  z-index: 9;
 }
 
 .brand img:hover {
