@@ -59,6 +59,7 @@ section {
 h2 {
   color: var(--main-color);
   font-size: 2em;
+  font-weight: normal;
 }
 
 h3 {
@@ -237,6 +238,16 @@ h3 {
 .data img {
   width: 2em;
   fill: blue;
+}
+
+.data object {
+  width: 2em;
+  fill: #226127;
+}
+
+.data svg {
+  width: 2em;
+  fill: var(--main-color);
 }
 
 /*--Animations --*/

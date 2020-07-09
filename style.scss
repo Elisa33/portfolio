@@ -64,6 +64,7 @@ section{
 h2{
     color: var(--main-color);
     font-size: 2em;
+    font-weight: normal;
 }
 
 h3{
@@ -243,6 +244,17 @@ h3{
         fill: blue;
 
     }
+    object{
+        width: 2em;
+        fill: rgb(34, 97, 39);
+
+    }
+    svg{
+        width: 2em;
+        fill: var(--main-color);
+
+    }
+
 
 }
 
