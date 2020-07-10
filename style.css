@@ -276,6 +276,10 @@ h3 {
   fill: var(--main-color);
 }
 
+.data a {
+  text-decoration: none;
+}
+
 /*--Animations --*/
 @-webkit-keyframes change {
   0% {
