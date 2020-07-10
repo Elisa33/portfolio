@@ -1,4 +1,10 @@
-function Banner(){
+
+function showPage(){
+    event.preventDefault()
+}
+
+
+/*function Banner(){
 	
     var keyword = "HEY";
       var canvas;
@@ -153,4 +159,4 @@ function Banner(){
   }
   
   var banner = new Banner();
-  banner.initialize("canvas");
+  banner.initialize("canvas");*/
