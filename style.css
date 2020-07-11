@@ -414,7 +414,7 @@ h3 {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 767px) and (min-width: 600px) {
   main {
     max-width: 1199px;
   }
@@ -481,14 +481,14 @@ h3 {
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 992px) and (min-width: 768px) {
   .cards .card {
     height: 500px;
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
   h2 {
     font-size: 3em;
   }
