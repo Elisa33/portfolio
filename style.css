@@ -44,7 +44,7 @@
 }
 
 * {
-  margin: 0;
+  margin: 0 auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -58,7 +58,7 @@ body {
 }
 
 main {
-  max-width: 1366px;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -268,7 +268,7 @@ h3 {
 
 /*--- Contact ---*/
 .contact {
-  height: 300px;
+  height: 200px;
 }
 
 .data {
@@ -368,6 +368,14 @@ h3 {
     margin-top: 3em;
     font-size: 20px;
     padding: 0;
+    padding-left: 1em;
+  }
+  .about .info .p-info div {
+    width: 100%;
+    font-size: 1em;
+  }
+  .about .info .p-info .cv a {
+    width: 100%;
   }
   .about .work img {
     width: 100%;
@@ -408,4 +416,9 @@ h3 {
 /* Medium devices (landscape tablets, 768px and up) */
 /* Large devices (laptops/desktops, 992px and up) */
 /* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  main {
+    max-width: 1366px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
