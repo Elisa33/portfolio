@@ -43,12 +43,6 @@
   --bold: 500;
 }
 
-* {
-  margin: 0 auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 body {
   font-family: var(--font);
   font-size: 16px;
@@ -64,6 +58,7 @@ main {
 
 section {
   padding: 60px 10px 20px;
+  margin: 0 auto;
 }
 
 h2 {
@@ -242,13 +237,14 @@ h3 {
     transition: all 1s;
     transition-delay: background 10s;
 
-}
-.web img:hover{
-    transform: translateY(-63%);
-    transition: all 4s;
-    
-    
 }*/
+.web img:hover {
+  -webkit-transform: translateY(-63%);
+          transform: translateY(-63%);
+  -webkit-transition: all 4s;
+  transition: all 4s;
+}
+
 .brand img {
   width: 100%;
 }
