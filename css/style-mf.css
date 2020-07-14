@@ -22,7 +22,7 @@
 }*/
 :root {
   /*--bg-color: #e0e5ec;*/
-  --bg-color: #D6EFF6;
+  --bg-color: aliceblue;
   --main-color: #00caff;
   --shadow: -8px -8px 20px 0px #fff9, -6px -6px 6px 0px #fff9,
     8px 8px 20px 0px #0001, 5px 5px 6px 0px #0001, inset 0px 0px 0px 0px #fff9,
@@ -52,13 +52,14 @@ body {
 }
 
 main {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 
 section {
-  padding: 60px 10px 20px;
+  width: 100%;
   margin: 0 auto;
+  margin-top: 5em;
 }
 
 h2 {
@@ -115,10 +116,14 @@ h3 {
 
 /*--- About ---*/
 .about {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 5em auto;
 }
 
 .about .work {
@@ -132,7 +137,7 @@ h3 {
 }
 
 .about .work img {
-  width: 90%;
+  width: 100%;
   padding: 1em;
   border-radius: 10px;
   -webkit-box-sizing: border-box;
@@ -143,8 +148,11 @@ h3 {
 }
 
 .about .info {
-  width: 100%;
-  padding: 1em;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 1em;
+  font-size: 1.5em;
+  line-height: 1.8em;
 }
 
 .about .info .p-info {
@@ -159,15 +167,16 @@ h3 {
 }
 
 .about .info .p-info div {
-  padding: 0.8em 0;
-  width: 50%;
+  padding: 0.5em 0;
+  width: 100%;
+  font-size: 1em;
 }
 
 .about .info .p-info .cv a {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  width: 50%;
+  width: 100%;
   font-weight: 500;
   color: var(--main-color);
   background: var(--bg-color);
@@ -202,21 +211,30 @@ h3 {
 /*--- Portfolio ---*/
 .portfolio h2 {
   text-align: center;
-  margin: 3em 0 2em 0;
+  margin: 2em 0 1em 0;
 }
 
 .cards {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 5em;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 .cards .card {
-  width: 30%;
-  height: 300px;
+  width: 90%;
+  height: 380px;
+  margin: auto;
+  margin-top: 2em;
   border: 12px solid var(--bg-color);
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
@@ -271,12 +289,13 @@ h3 {
 
 /*--- Contact ---*/
 .contact {
-  height: 200px;
+  height: 150px;
 }
 
 .data {
-  width: 300px;
+  width: 100%;
   margin: 0 auto;
+  text-align: center;
 }
 
 .data svg {
@@ -350,98 +369,14 @@ h3 {
 }
 
 /* Extra small devices (phones, 480 and down) */
-@media only screen and (max-width: 480) {
-  .mail {
-    display: none;
-  }
-  .p-info {
-    background-color: red;
-  }
-}
-
-/* Extra small devices (phones, 600 and down) */
-@media only screen and (max-width: 600px) {
-  main {
-    width: 95%;
-  }
-  section {
-    padding-top: 40px;
-  }
-  .about {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin: 0 auto;
-  }
-  .about .info {
-    margin-top: 3em;
-    font-size: 20px;
-    padding: 0;
-    padding-left: 1em;
-  }
-  .about .info .p-info div {
-    width: 100%;
-    font-size: 1em;
-  }
-  .about .info .p-info .cv a {
-    width: 100%;
-  }
-  .about .work img {
-    width: 100%;
-  }
-  .portfolio h2 {
-    margin: 2em 0 1em 0;
-  }
-  .cards {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin: 0 auto;
-    margin-bottom: 5em;
-    width: 90%;
-  }
-  .cards .card {
-    width: 90%;
-    height: 250px;
-    margin: auto;
-    margin-top: 40px;
-  }
-  .brand img {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .data {
-    text-align: center;
-  }
-  .contact {
-    height: 150px;
-  }
-}
-
+/*@media only screen and (max-width: 480px) {
+   Este es el dispositivo por defecto
+}*/
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 601px) and (max-width: 767px) {
-  main {
-    max-width: 1199px;
-  }
-  section {
-    padding-top: 40px;
-  }
+@media only screen and (min-width: 600px) {
   .intro .me img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    border: 10px solid var(--bg-color);
-    -webkit-box-shadow: var(--shadow);
-    box-shadow: var(--shadow);
+    width: 280px;
+    height: 280px;
   }
   .about {
     display: -webkit-box;
@@ -455,19 +390,15 @@ h3 {
   }
   .about .info {
     /*margin-top: 3em;*/
-    font-size: 2em;
+    font-size: 1.8em;
     line-height: 1.2em;
     padding: 0;
     padding-left: 1em;
   }
   .about .info .p-info div {
-    width: 100%;
     font-size: 1em;
   }
   .about .info .p-info .cv a {
-    width: 100%;
-  }
-  .about .work img {
     width: 100%;
   }
   .portfolio h2 {
@@ -481,39 +412,81 @@ h3 {
     margin-bottom: 5em;
   }
   .cards .card {
-    width: 100%;
     height: 380px;
     margin: auto;
-    margin-top: 40px;
-  }
-  .data {
-    text-align: center;
-  }
-  .contact {
-    height: 150px;
+    margin-top: 2em;
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (max-width: 992px) {
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 3em;
+  }
+  .intro .me img {
+    width: 320px;
+    height: 320px;
+  }
+  .about .info {
+    font-size: 1.8em;
+  }
+  .about .info .cv a {
+    font-size: 1.2em;
+  }
   .cards .card {
-    height: 500px;
+    height: 450px;
+    margin-top: 3em;
+  }
+  .cards .card {
+    height: 600px;
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 992px) {
+  .intro .me img {
+    width: 350px;
+    height: 350px;
+  }
   h2 {
     font-size: 3em;
   }
+  .about {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    margin: 5em auto;
+  }
   .about .info .p-info div {
+    width: 100%;
+    font-size: 1.2em;
+  }
+  .about .info .p-info .cv a {
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
     width: 50%;
-    font-size: 1em;
+    font-weight: 500;
+    color: var(--main-color);
+    background: var(--bg-color);
+    height: 3em;
+    border-radius: 5px;
+    /*box-shadow: var(--shadow);*/
+    text-align: center;
+    line-height: 32px;
+    text-decoration: none;
+  }
+  .cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .cards .card {
-    width: 100%;
-    height: 720px;
-    margin: auto;
+    width: 50%;
+    height: 250px;
+    margin: 1em;
     margin-top: 40px;
   }
   .data {
@@ -521,8 +494,8 @@ h3 {
     text-align: center;
   }
   .data svg {
-    margin: 1em;
-    width: 4.5em;
+    margin: 0.5em;
+    width: 4em;
   }
   .contact {
     height: 200px;
@@ -532,7 +505,43 @@ h3 {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   main {
-    max-width: 1366px;
+    width: 80%;
+  }
+  section {
+    margin-top: 5em;
+  }
+  .intro .me img {
+    width: 250px;
+    height: 250px;
+  }
+  h2 {
+    font-size: 2.5em;
+    margin-top: 0;
+  }
+  .about .work img {
+    height: 450px;
+  }
+  .about .info {
+    font-size: 1.3em;
+    line-height: 2em;
+  }
+  .about .info .p-info div {
+    width: 50%;
+    font-size: 1em;
+  }
+  .about .info .p-info .cv a {
+    width: 100%;
+    text-align: center;
+  }
+  .cards .card {
+    height: 300px;
+  }
+  .data svg {
+    margin: 0.5em;
+    width: 2.5em;
+  }
+  .contact {
+    height: 150px;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style-mf.css.map */
