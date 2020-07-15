@@ -1,217 +1,174 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
 
 /*-- Colors --*/
-/*
-:root{ 
-    --bg-color: #e6ffff;
-    --light-color: #fcffff;
-    --dark-color: #bfffff;
-    --verydark-color: #99ffff;
-    --main-color: #00caff;
-    --main-color2: #0fd3ff;
-    --text-color: #7e898c;
 
-    --shadow: 5px 5px 5px var(--dark-color),
-    -5px -5px 5px var(--light-color);
-    --inner-shadow: inset 5px 5px 5px var(--dark-color),
-    inset -5px -5px 5px var(--light-color);
-    --verydark-shadow: 5px 5px 5px var(--verydark-color),
-    -5px -5px 5px var(--light-color);
-
-    --font: 'Quicksand', sans-serif;
-
-}*/
-
-
-:root{ 
+:root {
     /*--bg-color: #e0e5ec;*/
     --bg-color: aliceblue;
     --main-color: #00caff;
 
     --shadow: -8px -8px 20px 0px #fff9, -6px -6px 6px 0px #fff9,
-    8px 8px 20px 0px #0001, 5px 5px 6px 0px #0001, inset 0px 0px 0px 0px #fff9,
-    inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9,
-    inset 0px 0px 0px 0px #0001;
+        8px 8px 20px 0px #0001, 5px 5px 6px 0px #0001, inset 0px 0px 0px 0px #fff9,
+        inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9,
+        inset 0px 0px 0px 0px #0001;
 
     /*--hover-shadow: -8px -8px 15px 0px #fff, -6px -6px 6px 0px #fff,
     8px 8px 20px 0px #000, 5px 5px 6px 0px #000, inset 0px 0px 0px 0px #fff,
     inset 0px 0px 0px 0px #000, inset 0px 0px 0px 0px #fff,
     inset 0px 0px 0px 0px #000;*/
 
-
     --inner-shadow: 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #fff9,
-    0px 0px 0px 0px #0001, 0px 0px 0px 0px #0001, inset -8px -8px 20px 0px #fff9,
-    inset -5px -5px 6px 0px #fff9, inset 8px 8px 20px 0px #0003,
-    inset 5px 5px 6px 0px #0001;
+        0px 0px 0px 0px #0001, 0px 0px 0px 0px #0001, inset -8px -8px 20px 0px #fff9,
+        inset -5px -5px 6px 0px #fff9, inset 8px 8px 20px 0px #0003,
+        inset 5px 5px 6px 0px #0001;
 
     --font: 'Quicksand', sans-serif;
     --text-color: #877e8c;
     --thin: 300;
     --semibold: 400;
     --bold: 500;
-    
-
 }
 
 
-body{
+body {
     font-family: var(--font);
-    font-size: 16px;
-    line-height: 2em;
+    font-size: 0.8em;
+    line-height: 1.5em;
     color: var(--text-color);
     background: var(--bg-color);
 }
 
-main{
-    //width: 80%;
+main {
     width: 90%;
     margin: 0 auto;
 }
 
-section{
-    //padding: 60px 10px 20px;
+section {
     width: 100%;
     margin: 0 auto;
-    margin-top: 5em;    
+    margin-top: 5em;
 }
 
-h2{
+h2 {
     color: var(--main-color);
     font-size: 2em;
     font-weight: normal;
     margin: 1em 0 0.5em 0;
 }
 
-h3{
+h3 {
+    font-size: 1.2em;
     font-weight: normal;
     margin-bottom: 0.5em;
-
 }
 
 /*--- Intro ---*/
 
-.intro{
+.intro {
     margin-top: 100px;
 
-    .me{
+    .me {
         text-align: center;
-        h2{
+        h2 {
             color: var(--text-color);
         }
-        img{
+        img {
             width: 200px;
             height: 200px;
             border-radius: 50%;
             border: 10px solid var(--bg-color);
             box-shadow: var(--shadow);
         }
-        
     }
 
 
-    .container{
+    .container {
         margin: 1em auto;
         color: var(--main-color);
-        /*border: 1px solid  grey;*/
         width: 100%;
-        height: 40px; 
+        height: 40px;
         font-size: 35px;
         line-height: 40px;
         overflow: hidden;
-        
-        ul{
+        ul {
             list-style: none;
             padding-left: 10px;
             animation: change 8s infinite;
         }
     }
-
 }
 
 
 /*--- About ---*/
 
-.about{
-    
+.about {
     display: flex;
-        flex-direction: column;
-        margin: 5em auto;
+    flex-direction: column;
+    margin: 5em auto;
 
-    .work{
-
+    .work {
         background: var(--bg-color);
         display: flex;
         justify-content: center;
-        img{
-            //width: 90%;
+
+        img {
             width: 100%;
             padding: 1em;
             border-radius: 10px;
             box-sizing: border-box;
-            border: 10px solid var(--bg-color);
             box-shadow: var(--shadow);
-
         }
-
     }
 
-    .info{
-        //width: 100%;
-        //padding: 1em;
-        width: 90%;
+    .info {
+        //width: 90%;
         margin: 0 auto;
         margin-top: 1em;
         font-size: 1.5em;
         line-height: 1.8em;
-        //padding-left: 1em;
 
-
-        .p-info{
-            
+        .p-info {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
 
-            div{
+            div {
                 padding: 0.5em 0;
                 width: 100%;
                 font-size: 1em;
             }
-            .cv{
-                
-                a{
-                display: grid;
-                place-items: center;
-                width: 100%;
-                font-weight: 500;
-                color: var(--main-color);
-                background: var(--bg-color);
-                height: 3em;
-                border-radius: 5px;
-                /*box-shadow: var(--shadow);*/
-                text-align: center;
-                line-height: 32px;
-                text-decoration: none;
 
+            .cv {
+                a {
+                    display: grid;
+                    place-items: center;
+                    width: 100%;
+                    font-weight: 500;
+                    color: var(--main-color);
+                    background: var(--bg-color);
+                    height: 3em;
+                    border-radius: 5px;
+                    text-align: center;
+                    line-height: 32px;
+                    text-decoration: none;
                 }
             }
-             a:hover{
+
+            a:hover {
                 box-shadow: var(--shadow);
                 transition: box-shadow 0.5s ease-in-out;
             }
-             a:active{
+
+            a:active {
                 box-shadow: var(--inner-shadow), var(--shadow);
             }
-            h4,p{
+
+            h4,
+            p {
                 margin: 0;
             }
-           
-
         }
-       
     }
- 
-
 }
 
 
@@ -223,83 +180,59 @@ h3{
 
 /*--- Portfolio ---*/
 
-.portfolio{
-
-    h2{
+.portfolio {
+    h2 {
         text-align: center;
-        //margin: 3em 0 2em 0;
         margin: 2em 0 1em 0;
     }
 }
 
 
-.cards{
+.cards {
     width: 100%;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     margin-bottom: 5em;
     justify-content: space-between;
-    
-    .card{
+
+    .card {
+        display: flex;
+        align-items: flex-start;
         width: 90%;
-        height: 380px;
         margin: auto;
         margin-top: 2em;
         border: 12px solid var(--bg-color);
         box-shadow: var(--shadow);
         position: relative;
-
         overflow: hidden;
 
-
-        img{
+        img {
             width: 100%;
-     
-
         }
-
-
-
     }
 }
 
 
-/*
-.cover{
-    width: 100%;
-    height: 100%;
-    
-    position: absolute;
-    top: 0;
-    left: 0;
+.web {
+    height: 400px;
 }
 
-.cover:hover{
-    background:var(--main-color);
-    transition: all 1s;
-    transition-delay: background 10s;
-
-}*/
-
-.web img:hover{
+.web img:hover {
     transform: translateY(-63%);
     transition: all 4s;
-    
-    
 }
 
-.brand img{
+.brand img {
     width: 100%;
-   
-
 }
-.brand img:hover{
+
+.brand img:hover {
     transform: scale(1.3);
     transition: all 2s;
 }
 
-.graphic img:hover{
+.graphic img:hover {
     transform: scale(1.3);
     transition: all 2s;
 }
@@ -307,235 +240,214 @@ h3{
 
 /*--- Contact ---*/
 
-.contact{
-    //height: 200px;
-    height: 150px;
+.contact {
+    height: 120px;
 }
 
-.data{
+.data {
     width: 100%;
     margin: 0 auto;
     text-align: center;
 
-
-
-    svg{
+    svg {
         margin: 0.5em;
         width: 2.5em;
         fill: var(--main-color);
-
     }
-    a{
+
+    a {
         text-decoration: none;
     }
-
-
 }
 
 
 /*--Animations --*/
 
-@keyframes change{
-    0%{margin-top: 0;}
-    20%{margin-top: 0;}
-    25%{margin-top: -40px;}
-    50%{margin-top: -40px;}
-
-    55%{margin-top: -80px;}
-    80%{margin-top: -80px;}
-
-    85%{margin-top: -40px;}
-    95%{margin-top: -40px;}
-
-    100%{margin-top: 0px;}
+@keyframes change {
+    0% { margin-top: 0;}
+    20% {margin-top: 0;}
+    25% {margin-top: -40px;}
+    50% {margin-top: -40px;}
+    55% {margin-top: -80px;}
+    80% {margin-top: -80px;}
+    85% {margin-top: -40px;}
+    95% {margin-top: -40px;}
+    100% {margin-top: 0px;}
 }
 
 
-/* Extra small devices (phones, 480 and down) */
+/* Current device (phones, 480 and down) */
 /*@media only screen and (max-width: 480px) {
-   Este es el dispositivo por defecto
 }*/
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 600px) {
 
     .intro .me img {
         width: 280px;
         height: 280px;
     }
 
-    .about{
+    .about {
         display: flex;
         flex-direction: column;
         margin: 0 auto;
-   
-        .info{
-            /*margin-top: 3em;*/
-            font-size: 1.8em;
-            line-height: 1.2em;
+
+        .info {
+
+            line-height: 1.5em;
             padding: 0;
             padding-left: 1em;
-            .p-info{
-                
-                div{
+
+            .p-info {
+
+                div {
                     //width: 90%;
                     font-size: 1em;
-                  
-                }
-                .cv a{
-                    width: 100%;
                 }
 
-            } 
+                .cv a {
+                    width: 100%;
+                }
+            }
         }
-        
     }
-    .portfolio{
-        h2{
+
+    .portfolio {
+        h2 {
             margin: 2em 0 1em 0;
         }
     }
-   
 
-    .cards{
+
+    .cards {
         flex-direction: column;
         margin-bottom: 5em;
 
-        .card{
+        .card {
 
-            height: 380px;
+            //height: 380px;
             margin: auto;
             margin-top: 2em;
         }
     }
-
 }
 
-    
+
 
 
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) {
 
-    h2{
+    h2 {
         font-size: 3em;
     }
+
     .intro .me img {
         width: 320px;
         height: 320px;
     }
 
-    .about{
-        .info{
-       
-            font-size: 1.8em;
-         
-                .cv a{
-                    font-size: 1.2em;
-                }
+    .about {
+        .work {
+            width: 100%;
+        }
 
-            } 
-        
-    }
-
-    .cards{
-
-
-        .card{
-
-            height: 450px;
- 
-            margin-top: 3em;
+        .info {
+            padding-left: 2em;
+            font-size: 1.5em;
+            h2 {
+                font-size: 2em;
+            }
+            .cv a {
+                font-size: 1.2em;
+            }
         }
     }
 
-
-    .cards .card{
-
+    .web {
         height: 600px;
+    }
 
+    .cards {
+        .card {
+            margin-top: 3em;
+        }
     }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 
-@media only screen and (min-width: 992px){
+@media only screen and (min-width: 992px) {
 
     .intro .me img {
         width: 350px;
         height: 350px;
     }
 
-    h2{
+    h2 {
         font-size: 3em;
     }
 
 
-    .about{
+    .about {
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin: 5em auto;
 
-
-        .info{
- 
-           
-            .p-info{
-                
-                div{
+        .info {
+            .p-info {
+                div {
                     width: 100%;
-                    font-size: 1.2em;
-                  
+                    font-size: 1em;
+                    line-height: 1.5em;
                 }
 
-                .cv{
-                
-                    a{
-                    display: grid;
-                    place-items: center;
-                    width: 50%;
-                    font-weight: 500;
-                    color: var(--main-color);
-                    background: var(--bg-color);
-                    height: 3em;
-                    border-radius: 5px;
-                    /*box-shadow: var(--shadow);*/
-                    text-align: center;
-                    line-height: 32px;
-                    text-decoration: none;
-    
+                .cv {
+                    a {
+                        display: grid;
+                        place-items: center;
+                        width: 50%;
+                        font-weight: 500;
+                        color: var(--main-color);
+                        background: var(--bg-color);
+                        height: 3em;
+                        border-radius: 5px;
+                        /*box-shadow: var(--shadow);*/
+                        text-align: center;
+                        line-height: 32px;
+                        text-decoration: none;
                     }
                 }
-  
-
-            } 
+            }
         }
-
     }
 
-   
+    .web {
+        height: 300px;
+    }
 
-    .cards{
+    .cards {
         flex-direction: row;
+        .card {
 
-        .card{
             width: 50%;
-            height: 250px;
             margin: 1em;
             margin-top: 40px;
         }
     }
 
-    .data{
+    .data {
         width: 400px;
         text-align: center;
-        svg{
+        svg {
             margin: 0.5em;
             width: 4em;
         }
     }
-    .contact{
+
+    .contact {
         height: 200px;
     }
 }
@@ -543,74 +455,67 @@ h3{
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    main{
+    main {
         width: 80%;
-        
     }
 
-    section{
-        margin-top: 5em;    
+    section {
+        margin-top: 5em;
     }
+
     .intro .me img {
         width: 250px;
         height: 250px;
     }
 
-    h2{
+    h2 {
         font-size: 2.5em;
         margin-top: 0;
     }
 
-    .about{
-        .work img{
-            height: 450px;
+    .about {
+        .work {
+            picture,
+            img {
+                height: 450px;
+            }
         }
-        .info{
+
+        .info {
             font-size: 1.3em;
             line-height: 2em;
-            .p-info{
-                
-                div{
+            .p-info {
+                div {
                     width: 50%;
                     font-size: 1em;
-                  
                 }
-               
-                .cv a{
+                .cv a {
                     width: 100%;
                     text-align: center;
                 }
             }
-
-        }
-       
-    }
-
-    .cards{
-
-
-        .card{
-
-            height: 300px;
-
         }
     }
-    .data{
 
+    .web {
+        height: 350px;
+    }
 
-        svg{
+    .data {
+        svg {
             margin: 0.5em;
             width: 2.5em;
         }
     }
-    .contact{
+
+    .contact {
         height: 150px;
     }
 
 
-   
 
-   
+
+
 
 
 
