@@ -103,7 +103,7 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 5em auto;
+  margin: 8em auto;
 }
 
 .about .work {
@@ -127,6 +127,7 @@ h3 {
 }
 
 .about .info {
+  width: 90%;
   margin: 0 auto;
   margin-top: 1em;
   font-size: 1.5em;
@@ -202,7 +203,7 @@ h3 {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 auto;
-  margin-bottom: 5em;
+  margin-bottom: 8em;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -356,7 +357,6 @@ h3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 0 auto;
   }
   .about .info {
     line-height: 1.5em;
@@ -377,7 +377,6 @@ h3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-bottom: 5em;
   }
   .cards .card {
     margin: auto;
@@ -415,8 +414,8 @@ h3 {
   }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+/* Large devices (laptops/desktops, 993px and up) */
+@media only screen and (min-width: 993px) {
   .intro .me img {
     width: 350px;
     height: 350px;
@@ -429,7 +428,6 @@ h3 {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    margin: 5em auto;
   }
   .about .info .p-info div {
     width: 100%;
@@ -493,10 +491,6 @@ h3 {
   h2 {
     font-size: 2.5em;
     margin-top: 0;
-  }
-  .about .work picture,
-  .about .work img {
-    height: 450px;
   }
   .about .info {
     font-size: 1.3em;
