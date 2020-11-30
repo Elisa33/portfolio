@@ -196,7 +196,7 @@ h3 {
 }
 
 /*--- Skills ---*/
-ul {
+.skills ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
