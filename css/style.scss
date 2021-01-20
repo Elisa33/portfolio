@@ -19,20 +19,8 @@ html {
 	--bg-color: aliceblue;
 	--main-color: #00caff;
 
-	--shadow: -8px -8px 20px 0px #fff9, -6px -6px 6px 0px #fff9,
-		8px 8px 20px 0px #0001, 5px 5px 6px 0px #0001, inset 0px 0px 0px 0px #fff9,
-		inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9,
-		inset 0px 0px 0px 0px #0001;
-
-	/*--hover-shadow: -8px -8px 15px 0px #fff, -6px -6px 6px 0px #fff,
-    8px 8px 20px 0px #000, 5px 5px 6px 0px #000, inset 0px 0px 0px 0px #fff,
-    inset 0px 0px 0px 0px #000, inset 0px 0px 0px 0px #fff,
-    inset 0px 0px 0px 0px #000;*/
-
-	--inner-shadow: 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #fff9,
-		0px 0px 0px 0px #0001, 0px 0px 0px 0px #0001, inset -8px -8px 20px 0px #fff9,
-		inset -5px -5px 6px 0px #fff9, inset 8px 8px 20px 0px #0003,
-		inset 5px 5px 6px 0px #0001;
+	--shadow: 6px 6px 6px #c5cbd1, -6px -6px 6px #ffffff;
+	--down-shadow: inset 6px 6px 6px #c5cbd1, inset -6px -6px 6px #ffffff;
 
 	--font: 'Quicksand', sans-serif;
 	--text-color: #877e8c;
@@ -182,7 +170,7 @@ h3 {
 			}
 
 			a:active {
-				box-shadow: var(--inner-shadow), var(--shadow);
+				box-shadow: var(--down-shadow), var(--shadow);
 			}
 
 			h4,
@@ -210,12 +198,7 @@ h3 {
 			margin-left: 1rem;
 		}
 		border-radius: 5px;
-		background: var(--bg-color);
-		box-shadow: inset 11px 11px 13px #c7ced4, inset -11px -11px 13px #ffffff;
-
-		/* border: 10px solid var(--bg-color);
-		border-radius: 5px;
-		box-shadow: var(--shadow); */
+		box-shadow: var(--down-shadow);
 	}
 }
 
