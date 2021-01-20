@@ -1,33 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap");
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 /*-- Colors --*/
+/*
+:root{ 
+    --bg-color: #e6ffff;
+    --light-color: #fcffff;
+    --dark-color: #bfffff;
+    --verydark-color: #99ffff;
+    --main-color: #00caff;
+    --main-color2: #0fd3ff;
+    --text-color: #7e898c;
+
+    --shadow: 5px 5px 5px var(--dark-color),
+    -5px -5px 5px var(--light-color);
+    --inner-shadow: inset 5px 5px 5px var(--dark-color),
+    inset -5px -5px 5px var(--light-color);
+    --verydark-shadow: 5px 5px 5px var(--verydark-color),
+    -5px -5px 5px var(--light-color);
+
+    --font: 'Quicksand', sans-serif;
+
+}*/
 :root {
   /*--bg-color: #e0e5ec;*/
-  --bg-color: aliceblue;
+  --bg-color: #D6EFF6;
   --main-color: #00caff;
   --shadow: -8px -8px 20px 0px #fff9, -6px -6px 6px 0px #fff9,
-		8px 8px 20px 0px #0001, 5px 5px 6px 0px #0001, inset 0px 0px 0px 0px #fff9,
-		inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9,
-		inset 0px 0px 0px 0px #0001;
+    8px 8px 20px 0px #0001, 5px 5px 6px 0px #0001, inset 0px 0px 0px 0px #fff9,
+    inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9,
+    inset 0px 0px 0px 0px #0001;
   /*--hover-shadow: -8px -8px 15px 0px #fff, -6px -6px 6px 0px #fff,
     8px 8px 20px 0px #000, 5px 5px 6px 0px #000, inset 0px 0px 0px 0px #fff,
     inset 0px 0px 0px 0px #000, inset 0px 0px 0px 0px #fff,
     inset 0px 0px 0px 0px #000;*/
   --inner-shadow: 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #fff9,
-		0px 0px 0px 0px #0001, 0px 0px 0px 0px #0001, inset -8px -8px 20px 0px #fff9,
-		inset -5px -5px 6px 0px #fff9, inset 8px 8px 20px 0px #0003,
-		inset 5px 5px 6px 0px #0001;
+    0px 0px 0px 0px #0001, 0px 0px 0px 0px #0001, inset -8px -8px 20px 0px #fff9,
+    inset -5px -5px 6px 0px #fff9, inset 8px 8px 20px 0px #0003,
+    inset 5px 5px 6px 0px #0001;
   --font: 'Quicksand', sans-serif;
   --text-color: #877e8c;
   --thin: 300;
@@ -37,26 +45,23 @@ html {
 
 body {
   font-family: var(--font);
-  font-size: 0.8em;
-  line-height: 1.5em;
+  font-size: 16px;
+  line-height: 2em;
   color: var(--text-color);
   background: var(--bg-color);
 }
 
 main {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 
 section {
-  width: 100%;
+  padding: 60px 10px 20px;
   margin: 0 auto;
-  margin-top: 5em;
 }
 
 h2 {
-  width: auto;
-  text-align: center;
   color: var(--main-color);
   font-size: 2em;
   font-weight: normal;
@@ -64,14 +69,8 @@ h2 {
 }
 
 h3 {
-  font-size: 1.2em;
   font-weight: normal;
   margin-bottom: 0.5em;
-  text-align: center;
-}
-
-.contain {
-  overflow: hidden;
 }
 
 /*--- Intro ---*/
@@ -99,6 +98,7 @@ h3 {
 .intro .container {
   margin: 1em auto;
   color: var(--main-color);
+  /*border: 1px solid  grey;*/
   width: 100%;
   height: 40px;
   font-size: 35px;
@@ -115,14 +115,10 @@ h3 {
 
 /*--- About ---*/
 .about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 8em auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
 }
 
 .about .work {
@@ -136,29 +132,19 @@ h3 {
 }
 
 .about .work img {
-  width: 100%;
+  width: 90%;
   padding: 1em;
   border-radius: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border: 10px solid var(--bg-color);
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
 }
 
 .about .info {
-  width: 90%;
-  margin: 0 auto;
-  margin-top: 1em;
-  font-size: 1.5em;
-  line-height: 1.8em;
-}
-
-.about .info h2 {
-  text-align: start;
-}
-
-.about .info h3 {
-  text-align: start;
+  width: 100%;
+  padding: 1em;
 }
 
 .about .info .p-info {
@@ -173,21 +159,21 @@ h3 {
 }
 
 .about .info .p-info div {
-  padding: 0.5em 0;
-  width: 100%;
-  font-size: 1em;
+  padding: 0.8em 0;
+  width: 50%;
 }
 
 .about .info .p-info .cv a {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  width: 100%;
+  width: 50%;
   font-weight: 500;
   color: var(--main-color);
   background: var(--bg-color);
   height: 3em;
   border-radius: 5px;
+  /*box-shadow: var(--shadow);*/
   text-align: center;
   line-height: 32px;
   text-decoration: none;
@@ -207,75 +193,30 @@ h3 {
           box-shadow: var(--inner-shadow), var(--shadow);
 }
 
-.about .info .p-info h4,
-.about .info .p-info p {
+.about .info .p-info h4, .about .info .p-info p {
   margin: 0;
 }
 
 /*--- Skills ---*/
-.category {
-  margin-top: 4em;
-}
-
-.category .levels {
-  padding: 0;
-  margin-top: 2em;
-}
-
-.category .levels li {
-  display: block;
-  text-decoration: none;
-  list-style-type: none;
-  text-align: center;
-}
-
-.category .levels h5 {
-  color: var(--main-color);
-  font-size: 1.1em;
-  font-weight: 500;
-  text-transform: uppercase;
-  margin: 1em auto 0.5em;
-}
-
-.category .levels .plus {
-  text-align: center;
-}
-
 /*--- Services ---*/
 /*--- Portfolio ---*/
 .portfolio h2 {
   text-align: center;
-  margin: 2em 0 1em 0;
+  margin: 3em 0 2em 0;
 }
 
 .cards {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 0 auto;
-  margin-bottom: 8em;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 .cards .card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 90%;
-  margin: auto;
-  margin-top: 2em;
-  border-radius: 5px;
+  width: 30%;
+  height: 300px;
   border: 12px solid var(--bg-color);
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
@@ -287,20 +228,23 @@ h3 {
   width: 100%;
 }
 
-.cards .card a {
-  text-decoration: none;
-  margin: 1em auto;
-  color: var(--main-color);
-  font-size: 1.2em;
-  font-weight: 500;
-  text-transform: uppercase;
+/*
+.cover{
+    width: 100%;
+    height: 100%;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.web .contain {
-  height: 400px;
-}
+.cover:hover{
+    background:var(--main-color);
+    transition: all 1s;
+    transition-delay: background 10s;
 
-.web .contain img:hover {
+}*/
+.web img:hover {
   -webkit-transform: translateY(-63%);
           transform: translateY(-63%);
   -webkit-transition: all 4s;
@@ -327,13 +271,12 @@ h3 {
 
 /*--- Contact ---*/
 .contact {
-  height: 120px;
+  height: 200px;
 }
 
 .data {
-  width: 100%;
+  width: 300px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .data svg {
@@ -425,11 +368,6 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  visibility: hidden;
-}
-
-.active {
-  visibility: visible;
 }
 
 .modal {
@@ -452,22 +390,31 @@ h3 {
   display: block;
   text-align: right;
   color: #bbb;
-  -webkit-transition: 0.3s ease all;
-  transition: 0.3s ease all;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
 }
 
 .btn-close {
   color: #000;
 }
 
-/* Current device (phones, 480 and down) */
-/*@media only screen and (max-width: 480px) {
-}*/
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .intro .me img {
-    width: 280px;
-    height: 280px;
+/* Extra small devices (phones, 480 and down) */
+@media only screen and (max-width: 480) {
+  .mail {
+    display: none;
+  }
+  .p-info {
+    background-color: red;
+  }
+}
+
+/* Extra small devices (phones, 600 and down) */
+@media only screen and (max-width: 600px) {
+  main {
+    width: 95%;
+  }
+  section {
+    padding-top: 40px;
   }
   .about {
     display: -webkit-box;
@@ -477,16 +424,22 @@ h3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin: 0 auto;
   }
   .about .info {
-    line-height: 1.5em;
+    margin-top: 3em;
+    font-size: 20px;
     padding: 0;
     padding-left: 1em;
   }
   .about .info .p-info div {
+    width: 100%;
     font-size: 1em;
   }
   .about .info .p-info .cv a {
+    width: 100%;
+  }
+  .about .work img {
     width: 100%;
   }
   .portfolio h2 {
@@ -497,106 +450,119 @@ h3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 5em;
+    width: 90%;
   }
   .cards .card {
+    width: 90%;
+    height: 250px;
     margin: auto;
-    margin-top: 2em;
+    margin-top: 40px;
   }
-  .levels {
-    width: 100%;
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  h2 {
-    font-size: 3em;
-  }
-  .intro .me img {
-    width: 320px;
-    height: 320px;
-  }
-  .about .work {
-    width: 100%;
-  }
-  .about .info {
-    padding-left: 2em;
-    font-size: 1.5em;
-  }
-  .about .info h2 {
-    font-size: 2em;
-  }
-  .about .info .cv a {
-    font-size: 1.2em;
-  }
-  .web .contain {
-    height: 600px;
-  }
-  .cards .card {
-    margin-top: 3em;
-  }
-  .skills {
-    padding: 0 2em;
-  }
-  .skills .category .levels {
+  .brand img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
+  .data {
+    text-align: center;
+  }
+  .contact {
+    height: 150px;
+  }
 }
 
-/* Large devices (laptops/desktops, 993px and up) */
-@media only screen and (min-width: 993px) {
-  .intro .me img {
-    width: 350px;
-    height: 350px;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+  main {
+    max-width: 1199px;
   }
-  h2 {
-    font-size: 3em;
+  section {
+    padding-top: 40px;
+  }
+  .intro .me img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 10px solid var(--bg-color);
+    -webkit-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
   }
   .about {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 auto;
+  }
+  .about .info {
+    /*margin-top: 3em;*/
+    font-size: 2em;
+    line-height: 1.2em;
+    padding: 0;
+    padding-left: 1em;
   }
   .about .info .p-info div {
     width: 100%;
     font-size: 1em;
-    line-height: 1.5em;
   }
   .about .info .p-info .cv a {
-    display: -ms-grid;
-    display: grid;
-    place-items: center;
-    width: 50%;
-    font-weight: 500;
-    color: var(--main-color);
-    background: var(--bg-color);
-    height: 3em;
-    border-radius: 5px;
-    text-align: center;
-    line-height: 32px;
-    text-decoration: none;
+    width: 100%;
   }
-  .web .contain {
-    height: 300px;
+  .about .work img {
+    width: 100%;
+  }
+  .portfolio h2 {
+    margin: 2em 0 1em 0;
   }
   .cards {
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 5em;
   }
   .cards .card {
+    width: 100%;
+    height: 380px;
+    margin: auto;
+    margin-top: 40px;
+  }
+  .data {
+    text-align: center;
+  }
+  .contact {
+    height: 150px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .cards .card {
+    height: 500px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  h2 {
+    font-size: 3em;
+  }
+  .about .info .p-info div {
     width: 50%;
-    margin: 1em;
+    font-size: 1em;
+  }
+  .cards .card {
+    width: 100%;
+    height: 720px;
+    margin: auto;
     margin-top: 40px;
   }
   .data {
@@ -604,8 +570,8 @@ h3 {
     text-align: center;
   }
   .data svg {
-    margin: 0.5em;
-    width: 4em;
+    margin: 1em;
+    width: 4.5em;
   }
   .contact {
     height: 200px;
@@ -615,40 +581,7 @@ h3 {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   main {
-    width: 80%;
-  }
-  section {
-    margin-top: 5em;
-  }
-  .intro .me img {
-    width: 250px;
-    height: 250px;
-  }
-  h2 {
-    font-size: 2.5em;
-    margin-top: 0;
-  }
-  .about .info {
-    font-size: 1.3em;
-    line-height: 2em;
-  }
-  .about .info .p-info div {
-    width: 50%;
-    font-size: 1em;
-  }
-  .about .info .p-info .cv a {
-    width: 100%;
-    text-align: center;
-  }
-  .web .contain {
-    height: 350px;
-  }
-  .data svg {
-    margin: 0.5em;
-    width: 2.5em;
-  }
-  .contact {
-    height: 150px;
+    max-width: 1366px;
   }
 }
-/*# sourceMappingURL=style-mf.css.map */
+/*# sourceMappingURL=style.css.map */
