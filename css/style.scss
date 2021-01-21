@@ -226,6 +226,19 @@ h3 {
 	}
 }
 
+.now {
+	text-align: center;
+	padding: 1rem 1rem;
+	color: var(--main-color);
+	background: aliceblue;
+	margin: 0 auto;
+	margin-top: 2rem;
+	border-radius: 2rem;
+	font-size: 1.5rem;
+	font-weight: normal;
+	box-shadow: var(--shadow);
+}
+
 /*--- Services ---*/
 
 /*--- Portfolio ---*/
