@@ -263,6 +263,7 @@ h3 {
   font-weight: normal;
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
+  line-height: 2rem;
 }
 
 /*--- Services ---*/
