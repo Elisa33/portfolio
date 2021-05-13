@@ -3,6 +3,17 @@ function showPage(){
     event.preventDefault()
 }
 
+const btnSwitch = document.getElementById('switch');
+
+btnSwitch.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    btnSwitch.classList.toggle('active');
+});
+
+/* function clase(){
+    btnSwitch.classList.toggle('active');
+} */
+
 
 /*function Banner(){
 	

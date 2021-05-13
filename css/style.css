@@ -1,4 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap");
+/*  Colors */
+:root {
+  --bg-color: aliceblue;
+  --main-color: #00caff;
+  --bg-medium: #005971;
+  /* $bg-dark: #031827; */
+  --shadow: 4px 4px 4px #AFC9D0, -4px -4px 4px #FCFFFF;
+  --down-shadow: inset 4px 4px 4px #AFC9D0, inset -6px -6px 6px #FAFDFF;
+  --little-shadow: inset 3px 3px 3px #AFC9D0, inset -3px -3px 3px #FAFDFF;
+  --text-color: #877e8c;
+  --font: 'Quicksand', sans-serif;
+  --thin: 300;
+  --semibold: 400;
+  --bold: 500;
+}
+
+.dark-mode {
+  --text-color: rgb(173, 209, 240);
+  /* --bg-color: #001b26; */
+  /* --bg-color: #013340; */
+  --bg-color: #005971;
+  /* --down-shadow: inset 6px 6px 6px #1e9cce, inset -6px -6px 6px #d34c16;
+	--little-shadow: inset 3px 3px 3px #b82556, -3px -3px 3px #52a52c; */
+  --shadow: 5px 5px 5px #012220, -5px -5px 5px #14687F;
+  --down-shadow: inset 3px 3px 3px #012220, inset -6px -6px 6px #14687F;
+  --little-shadow: inset 2px 2px 3px #012220, inset -3px -3px 3px #14687F;
+}
+
+/* $bg-dark: #031827; */
+/* $bg-dark: #034252; */
 *,
 *:before,
 *:after {
@@ -11,26 +41,18 @@ html {
           box-sizing: border-box;
 }
 
-/*-- Colors --*/
-:root {
-  /*--bg-color: #e0e5ec;*/
-  --bg-color: aliceblue;
-  --main-color: #00caff;
-  --shadow: 6px 6px 6px #c5cbd1, -6px -6px 6px #ffffff;
-  --down-shadow: inset 6px 6px 6px #c5cbd1, inset -6px -6px 6px #ffffff;
-  --font: 'Quicksand', sans-serif;
-  --text-color: #877e8c;
-  --thin: 300;
-  --semibold: 400;
-  --bold: 500;
-}
-
 body {
   font-family: var(--font);
   font-size: 0.8em;
   line-height: 1.5em;
   color: var(--text-color);
   background: var(--bg-color);
+  -webkit-transition: .05 ease all;
+  transition: .05 ease all;
+  /* &.dark-mode{
+		color: var(--text-dark);
+		background: var(--bg-dark);
+	} */
 }
 
 main {
@@ -64,6 +86,81 @@ h3 {
   overflow: hidden;
 }
 
+/*-- Header --*/
+nav {
+  height: 5rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.switch {
+  width: 3.3rem;
+  height: 1.5rem;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: none;
+  background-color: var(--bg-color);
+  -webkit-box-shadow: var(--little-shadow);
+          box-shadow: var(--little-shadow);
+}
+
+.switch span {
+  width: 1rem;
+  height: 1rem;
+}
+
+.switch span svg {
+  /* fill: var(--main-color); */
+  stroke: var(--main-color);
+}
+
+body.dark-mode .switch span svg {
+  stroke: var(--main-color);
+}
+
+.switch:after {
+  content: '';
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  position: absolute;
+  background: var(--main-color);
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 25px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  /* box-shadow: $down-shadow; */
+  /* box-shadow: var(--shadow); */
+}
+
+.switch.active {
+  background: var(--bg-medium);
+  color: var(--main-color);
+}
+
+.switch.active:after {
+  right: 0;
+  left: unset;
+}
+
 /*--- Intro ---*/
 .intro {
   margin-top: 100px;
@@ -74,7 +171,7 @@ h3 {
 }
 
 .intro .me h2 {
-  color: var(--text-color);
+  color: var(--main-color);
 }
 
 .intro .me img {
@@ -84,9 +181,10 @@ h3 {
   border: 10px solid var(--bg-color);
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
+  margin-bottom: 1rem;
 }
 
-.intro .container {
+.intro .window {
   margin: 1em auto;
   color: var(--main-color);
   width: 100%;
@@ -96,7 +194,7 @@ h3 {
   overflow: hidden;
 }
 
-.intro .container ul {
+.intro .window ul {
   list-style: none;
   padding-left: 10px;
   -webkit-animation: change 8s infinite;
@@ -115,24 +213,14 @@ h3 {
   margin: 8em auto;
 }
 
-.about .work {
-  background: var(--bg-color);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.about .work img {
+.about img {
   width: 100%;
-  padding: 1em;
   border-radius: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
+  border: 12px solid var(--bg-color);
 }
 
 .about .info {
@@ -255,11 +343,11 @@ h3 {
   text-align: center;
   padding: 1rem 1rem;
   color: var(--main-color);
-  background: aliceblue;
+  background: var(--bg-color);
   margin: 0 auto;
   margin-top: 2rem;
   border-radius: 2rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: normal;
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
@@ -301,7 +389,8 @@ h3 {
   margin: auto;
   margin-top: 2em;
   border-radius: 5px;
-  border: 12px solid var(--bg-color);
+  background: var(--bg-color);
+  padding: 12px;
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
   position: relative;
@@ -359,12 +448,28 @@ h3 {
   width: 100%;
   margin: 0 auto;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .data svg {
   margin: 0.5em;
   width: 2.5em;
   fill: var(--main-color);
+}
+
+.data svg:hover {
+  -webkit-filter: drop-shadow(1px 1px 1px #AFC9D0);
+          filter: drop-shadow(1px 1px 1px #AFC9D0);
+}
+
+body.dark-mode .data svg:hover {
+  -webkit-filter: drop-shadow(3px 3px 3px #353b3d);
+          filter: drop-shadow(3px 3px 3px #353b3d);
 }
 
 .data a {
@@ -433,7 +538,7 @@ h3 {
 
 /* Modales*/
 .overlay {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(1, 34, 32, 0.8);
   position: fixed;
   top: 0;
   bottom: 0;
@@ -458,13 +563,19 @@ h3 {
 }
 
 .modal {
-  background: #fff;
+  background: aliceblue;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   padding: 20px;
-  text-align: center;
-  width: 600px;
+  text-align: left;
+  width: 90%;
+  max-width: 600px;
+}
+
+.modal h3 {
+  text-align: left;
+  color: var(--main-color);
 }
 
 .modal img {
@@ -477,12 +588,14 @@ h3 {
   display: block;
   text-align: right;
   color: #bbb;
+  font-weight: var(--semibold);
   -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;
+  text-decoration: none;
 }
 
 .btn-close {
-  color: #000;
+  color: var(--main-color);
 }
 
 /* Current device (phones, 480 and down) */

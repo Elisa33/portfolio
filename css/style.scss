@@ -2,6 +2,52 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
 
+
+
+/*  Colors */
+
+:root {
+  	--bg-color: aliceblue;
+	--main-color: #00caff;
+	--bg-medium: #005971;
+
+	/* $bg-dark: #031827; */
+	--shadow: 4px 4px 4px #AFC9D0, -4px -4px 4px #FCFFFF;
+	--down-shadow: inset 4px 4px 4px #AFC9D0, inset -6px -6px 6px #FAFDFF;
+	--little-shadow: inset 3px 3px 3px #AFC9D0, inset -3px -3px 3px #FAFDFF;
+	--text-color: #877e8c;
+
+	--font: 'Quicksand', sans-serif;
+	--thin: 300;
+	--semibold: 400;
+	--bold: 500;
+
+
+}
+
+.dark-mode {
+	--text-color: rgb(173, 209, 240);
+	/* --bg-color: #001b26; */
+	/* --bg-color: #013340; */
+	--bg-color: #005971;
+
+	
+	/* --down-shadow: inset 6px 6px 6px #1e9cce, inset -6px -6px 6px #d34c16;
+	--little-shadow: inset 3px 3px 3px #b82556, -3px -3px 3px #52a52c; */
+
+	 --shadow: 5px 5px 5px #012220, -5px -5px 5px #14687F; 
+	--down-shadow: inset 3px 3px 3px #012220, inset -6px -6px 6px #14687F;
+	--little-shadow: inset 2px 2px 3px #012220, inset -3px -3px 3px #14687F;
+
+}
+
+
+/* $bg-dark: #031827; */
+
+/* $bg-dark: #034252; */
+
+
+
 *,
 *:before,
 *:after {
@@ -12,22 +58,6 @@ html {
 	box-sizing: border-box;
 }
 
-/*-- Colors --*/
-
-:root {
-	/*--bg-color: #e0e5ec;*/
-	--bg-color: aliceblue;
-	--main-color: #00caff;
-
-	--shadow: 6px 6px 6px #c5cbd1, -6px -6px 6px #ffffff;
-	--down-shadow: inset 6px 6px 6px #c5cbd1, inset -6px -6px 6px #ffffff;
-
-	--font: 'Quicksand', sans-serif;
-	--text-color: #877e8c;
-	--thin: 300;
-	--semibold: 400;
-	--bold: 500;
-}
 
 body {
 	font-family: var(--font);
@@ -35,7 +65,13 @@ body {
 	line-height: 1.5em;
 	color: var(--text-color);
 	background: var(--bg-color);
+	transition: .05 ease all;
+	/* &.dark-mode{
+		color: var(--text-dark);
+		background: var(--bg-dark);
+	} */
 }
+
 
 main {
 	width: 90%;
@@ -68,6 +104,68 @@ h3 {
 	overflow: hidden;
 }
 
+/*-- Header --*/
+
+nav{
+	height: 5rem;
+	padding: 1rem;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.switch{
+	width: 3.3rem;
+	height: 1.5rem;
+	border-radius: 25px;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	outline: none;
+	background-color: var(--bg-color);
+	box-shadow: var(--little-shadow);
+	span{
+		width: 1rem;
+		height: 1rem;
+		
+		svg {
+			/* fill: var(--main-color); */
+			stroke: var(--main-color);
+			body.dark-mode &{
+				stroke: var(--main-color);
+			}
+		}
+	}
+	
+	&:after{
+		content: '';
+		display: block;
+		width: 1.6rem;
+		height: 1.6rem;
+		position: absolute;
+		background: var(--main-color);
+		top:0;
+		left:0;
+		right: unset;
+		border-radius:25px;
+		transition:.3s ease all;
+		/* box-shadow: $down-shadow; */
+		/* box-shadow: var(--shadow); */
+	}
+	
+	&.active{
+		background: var(--bg-medium);
+		color: var(--main-color);
+		&:after{
+			right:0;
+			left: unset;
+		}
+		}
+	}
+	
+
 /*--- Intro ---*/
 
 .intro {
@@ -76,7 +174,7 @@ h3 {
 	.me {
 		text-align: center;
 		h2 {
-			color: var(--text-color);
+			color: var(--main-color);
 		}
 		img {
 			width: 200px;
@@ -84,10 +182,12 @@ h3 {
 			border-radius: 50%;
 			border: 10px solid var(--bg-color);
 			box-shadow: var(--shadow);
+			margin-bottom: 1rem;
 		}
+		
 	}
 
-	.container {
+	.window {
 		margin: 1em auto;
 		color: var(--main-color);
 		width: 100%;
@@ -109,20 +209,13 @@ h3 {
 	display: flex;
 	flex-direction: column;
 	margin: 8em auto;
-
-	.work {
-		background: var(--bg-color);
-		display: flex;
-		justify-content: center;
-
 		img {
 			width: 100%;
-			padding: 1em;
 			border-radius: 10px;
 			box-sizing: border-box;
 			box-shadow: var(--shadow);
+			border: 12px solid var(--bg-color);
 		}
-	}
 
 	.info {
 		width: 90%;
@@ -149,6 +242,7 @@ h3 {
 			}
 
 			.cv {
+				
 				a {
 					display: grid;
 					place-items: center;
@@ -162,6 +256,7 @@ h3 {
 					line-height: 32px;
 					text-decoration: none;
 				}
+				
 			}
 
 			a:hover {
@@ -187,6 +282,8 @@ h3 {
 	.category {
 		margin-top: 4em;
 		padding: 1rem;
+		border-radius: 5px;
+		box-shadow: var(--down-shadow);
 		svg {
 			width: 1rem;
 			fill: var(--bg-color);
@@ -196,10 +293,9 @@ h3 {
 		h3 {
 			display: inline;
 			margin-left: 1rem;
-		}
-		border-radius: 5px;
-		box-shadow: var(--down-shadow);
+		}		
 	}
+	
 }
 
 .list {
@@ -230,14 +326,15 @@ h3 {
 	text-align: center;
 	padding: 1rem 1rem;
 	color: var(--main-color);
-	background: aliceblue;
+	background: var(--bg-color);
 	margin: 0 auto;
 	margin-top: 2rem;
 	border-radius: 2rem;
-	font-size: 1.5rem;
+	font-size: 1rem;
 	font-weight: normal;
 	box-shadow: var(--shadow);
 	line-height: 2rem;
+
 }
 
 /*--- Services ---*/
@@ -266,7 +363,8 @@ h3 {
 		margin: auto;
 		margin-top: 2em;
 		border-radius: 5px;
-		border: 12px solid var(--bg-color);
+		background: var(--bg-color);
+		padding: 12px ;
 		box-shadow: var(--shadow);
 		position: relative;
 		overflow: hidden;
@@ -318,15 +416,28 @@ h3 {
 	width: 100%;
 	margin: 0 auto;
 	text-align: center;
+	display: flex;
+	justify-content: center;
 
 	svg {
 		margin: 0.5em;
 		width: 2.5em;
 		fill: var(--main-color);
+		&:hover{
+			filter:drop-shadow(1px 1px 1px #AFC9D0);
+
+		}
+		body.dark-mode &{
+			&:hover{
+				filter:drop-shadow(3px 3px 3px #353b3d);
+	
+			}
+		}
 	}
 
 	a {
 		text-decoration: none;
+		
 	}
 }
 
@@ -364,7 +475,7 @@ h3 {
 
 /* Modales*/
 .overlay {
-	background: rgba(0, 0, 0, 0.8);
+	background: rgba(1, 34, 32, 0.8);
 	position: fixed;
 	top: 0;
 	bottom: 0;
@@ -383,12 +494,18 @@ h3 {
 }
 
 .modal {
-	background: #fff;
+	background: aliceblue;
 	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
 	border-radius: 5px;
 	padding: 20px;
-	text-align: center;
-	width: 600px;
+	text-align: left;
+	width: 90%;
+	max-width: 600px;
+	h3{
+		text-align: left;
+		color: var(--main-color);
+	}
+	
 	img {
 		width: 150px;
 	}
@@ -400,11 +517,13 @@ h3 {
 	display: block;
 	text-align: right;
 	color: #bbb;
+	font-weight: var(--semibold);
 	transition: 0.3s ease all;
+	text-decoration: none;
 }
 
 .btn-close {
-	color: #000;
+	color: var(--main-color);
 }
 
 /* Current device (phones, 480 and down) */
