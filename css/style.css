@@ -1,13 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap");
 /*  Colors */
 :root {
-  --bg-color: aliceblue;
+  --bg-color: #dbefff;
+  /* aliceblue */
   --main-color: #00caff;
-  --bg-medium: #005971;
-  /* $bg-dark: #031827; */
-  --shadow: 4px 4px 4px #AFC9D0, -4px -4px 4px #FCFFFF;
-  --down-shadow: inset 4px 4px 4px #AFC9D0, inset -6px -6px 6px #FAFDFF;
-  --little-shadow: inset 3px 3px 3px #AFC9D0, inset -3px -3px 3px #FAFDFF;
+  --light-color: lighten(#00caff, 40%);
+  /* --shadow: 4px 4px 4px #AFC9D0, -4px -4px 4px #FAFDFF; */
+  --shadow: inset  5px 5px 5px rgba(0, 0, 0, 0.05),
+	inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+		   5px 5px 5px rgba(0, 0, 0, 0.05),
+		  -5px -5px 5px rgba(255, 255, 255, 0.5);
+  --little-shadow: 2px 2px 2px #AFC9D0, -3px -3px 3px #fff;
+  --down-shadow: inset 4px 4px 4px #AFC9D0, inset -4px -4px 4px #FAFDFF;
+  --little-down-shadow: inset 3px 3px 3px #AFC9D0, inset -3px -3px 3px #FAFDFF;
   --text-color: #877e8c;
   --font: 'Quicksand', sans-serif;
   --thin: 300;
@@ -17,18 +22,19 @@
 
 .dark-mode {
   --text-color: rgb(173, 209, 240);
-  /* --bg-color: #001b26; */
-  /* --bg-color: #013340; */
   --bg-color: #005971;
-  /* --down-shadow: inset 6px 6px 6px #1e9cce, inset -6px -6px 6px #d34c16;
-	--little-shadow: inset 3px 3px 3px #b82556, -3px -3px 3px #52a52c; */
   --shadow: 5px 5px 5px #012220, -5px -5px 5px #14687F;
-  --down-shadow: inset 3px 3px 3px #012220, inset -6px -6px 6px #14687F;
-  --little-shadow: inset 2px 2px 3px #012220, inset -3px -3px 3px #14687F;
+  --little-shadow: 3px 3px 3px #012220, -3px -3px 3px #14687F;
+  /* --down-shadow: inset 3px 3px 3px #012220, inset -4px -4px 4px #14687F; */
+  --little-down-shadow: inset 2px 2px 3px #012220, inset -3px -3px 3px #14687F;
+  --down-shadow:
+
+	inset  5px 5px 5px rgba(0, 0, 0, 0.2),
+          inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+                 5px 5px 15px rgba(0, 0, 0, 0.3),
+                -5px -5px 15px rgba(255, 255, 255, 0.1);
 }
 
-/* $bg-dark: #031827; */
-/* $bg-dark: #034252; */
 *,
 *:before,
 *:after {
@@ -116,8 +122,8 @@ nav {
           align-items: center;
   outline: none;
   background-color: var(--bg-color);
-  -webkit-box-shadow: var(--little-shadow);
-          box-shadow: var(--little-shadow);
+  -webkit-box-shadow: var(--little-down-shadow);
+          box-shadow: var(--little-down-shadow);
 }
 
 .switch span {
@@ -145,20 +151,8 @@ body.dark-mode .switch span svg {
   left: 0;
   right: unset;
   border-radius: 25px;
-  -webkit-transition: .3s ease all;
-  transition: .3s ease all;
-  /* box-shadow: $down-shadow; */
-  /* box-shadow: var(--shadow); */
-}
-
-.switch.active {
-  background: var(--bg-medium);
-  color: var(--main-color);
-}
-
-.switch.active:after {
-  right: 0;
-  left: unset;
+  -webkit-box-shadow: var(--little-shadow);
+          box-shadow: var(--little-shadow);
 }
 
 /*--- Intro ---*/
@@ -171,7 +165,8 @@ body.dark-mode .switch span svg {
 }
 
 .intro .me h2 {
-  color: var(--main-color);
+  /* color: var(--main-color); */
+  color: var(--light-color);
 }
 
 .intro .me img {
@@ -354,6 +349,10 @@ body.dark-mode .switch span svg {
   line-height: 2rem;
 }
 
+.now span {
+  font-weight: var(--bold);
+}
+
 /*--- Services ---*/
 /*--- Portfolio ---*/
 .portfolio h2 {
@@ -445,35 +444,46 @@ body.dark-mode .switch span svg {
 }
 
 .data {
-  width: 100%;
+  width: 40%;
   margin: 0 auto;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.data svg {
+  margin: 0.5em;
+  fill: var(--bg-color);
+}
+
+.data a {
+  text-decoration: none;
+  width: 3em;
+  height: 3em;
+  background: var(--main-color);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.data svg {
-  margin: 0.5em;
-  width: 2.5em;
-  fill: var(--main-color);
-}
-
-.data svg:hover {
-  -webkit-filter: drop-shadow(1px 1px 1px #AFC9D0);
-          filter: drop-shadow(1px 1px 1px #AFC9D0);
-}
-
-body.dark-mode .data svg:hover {
-  -webkit-filter: drop-shadow(3px 3px 3px #353b3d);
-          filter: drop-shadow(3px 3px 3px #353b3d);
-}
-
-.data a {
-  text-decoration: none;
+.data a:hover {
+  -webkit-transition: -webkit-box-shadow 0.2s ease-in-out;
+  transition: -webkit-box-shadow 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+  -webkit-box-shadow: var(--little-shadow);
+          box-shadow: var(--little-shadow);
 }
 
 /*--Animations --*/
