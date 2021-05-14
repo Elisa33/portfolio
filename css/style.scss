@@ -150,6 +150,15 @@ nav{
 		right: unset;
 		border-radius:25px;
 		box-shadow: var(--little-shadow);
+		
+	}
+	&.active{
+		background: var(--bg-medium);
+		color: var(--main-color);
+		&:after{
+			right:0;
+			left: unset;
+		}
 	}
 	}
 	

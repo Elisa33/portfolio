@@ -155,6 +155,16 @@ body.dark-mode .switch span svg {
           box-shadow: var(--little-shadow);
 }
 
+.switch.active {
+  background: var(--bg-medium);
+  color: var(--main-color);
+}
+
+.switch.active:after {
+  right: 0;
+  left: unset;
+}
+
 /*--- Intro ---*/
 .intro {
   margin-top: 100px;
