@@ -1,0 +1,16 @@
+{
+    "spanish":[
+      {"name":"Mi nombre es Elisa", 
+        "about":"Sobre mi",
+        "profile": "Desarrolladora web & Diseñadora Gráfica"
+    }
+      
+    ],
+    "english":[
+      {"name":"I'm Elisa", 
+        "about":"About me",
+        "profile": "Front-End Dev & Graphic Designer"
+    }
+      
+    ]
+}

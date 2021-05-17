@@ -104,6 +104,12 @@ nav {
           justify-content: flex-end;
 }
 
+.lang {
+  color: var(--main-color);
+  padding: 5px;
+  cursor: pointer;
+}
+
 .switch {
   width: 3.3rem;
   height: 1.5rem;
