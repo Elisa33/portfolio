@@ -638,9 +638,14 @@ body.dark-mode .switch span svg {
   width: 150px;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .btn-close {
   font-size: 1em;
   line-height: 1em;
+  color: var(--main-color);
   display: block;
   text-align: right;
   color: #bbb;
@@ -650,8 +655,12 @@ body.dark-mode .switch span svg {
   text-decoration: none;
 }
 
-.btn-close {
-  color: var(--main-color);
+.m-info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  gap: 1rem;
 }
 
 /* Current device (phones, 480 and down) */
