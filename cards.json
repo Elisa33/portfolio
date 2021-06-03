@@ -63,7 +63,7 @@
                "techs": "Html 5 - Css3",
                "icon01":"<img src='img/icons/html5.svg' alt=''>",
                "icon02":"<img src='img/icons/css3.svg' alt=''>",
-               "mode": "Freelance"
+               "mode": "Co-created with <a href='www.grudisegno.com' class='info'>Gru</a>"
                },
                {
                "id":"web3",
@@ -96,25 +96,25 @@
 
                {
                "id":"tikal",
-               "client":"tikal", 
+               "client":"Tikal", 
                "img": "img/brand/brand-tikal.png",
                "clase":"brand",
                "rol":"Brand Designer",
                "techs": "Illustrator",
                "icon01":"<img src='img/icons/ai.svg' alt=''>",
                "icon02":"",
-               "mode": "freelance"
+               "mode": "Freelance"
                },
                {
                "id":"ampersand",
-               "client":"ampersand", 
+               "client":"Ampersand", 
                "img": "img/brand/brand-ampersand.png",
                "clase":"brand",
                "rol":"Brand Designer",
                "techs": "Illustrator",
                "icon01":"<img src='img/icons/ai.svg' alt=''>",
                "icon02":"",
-               "mode": "freelance"
+               "mode": "Freelance"
                }
 
          ]
