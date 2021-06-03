@@ -663,6 +663,12 @@ body.dark-mode .switch span svg {
   gap: 1rem;
 }
 
+.m-info a {
+  text-decoration: none;
+  color: var(--main-color);
+  font-weight: bold;
+}
+
 /* Current device (phones, 480 and down) */
 /*@media only screen and (max-width: 480px) {
 }*/
