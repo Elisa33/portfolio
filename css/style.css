@@ -55,10 +55,6 @@ body {
   background: var(--bg-color);
   -webkit-transition: .05 ease all;
   transition: .05 ease all;
-  /* &.dark-mode{
-		color: var(--text-dark);
-		background: var(--bg-dark);
-	} */
 }
 
 main {
@@ -177,7 +173,7 @@ body.dark-mode .switch span svg {
 
 /*--- Intro ---*/
 .intro {
-  margin-top: 100px;
+  margin-top: 3rem;
 }
 
 .intro .me {
@@ -225,7 +221,7 @@ body.dark-mode .switch span svg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 8em auto;
+  margin: 3rem auto;
 }
 
 .about img {
@@ -271,10 +267,14 @@ body.dark-mode .switch span svg {
   font-size: 1em;
 }
 
+.about .info .p-info .cv {
+  margin-top: 1rem;
+}
+
 .about .info .p-info .cv a {
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
+  /* display: grid;
+					place-items: center; */
+  padding: 1rem 3rem;
   width: 100%;
   font-weight: 500;
   color: var(--main-color);
@@ -284,11 +284,13 @@ body.dark-mode .switch span svg {
   text-align: center;
   line-height: 32px;
   text-decoration: none;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
 }
 
 .about .info .p-info a:hover {
-  -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow);
+  -webkit-box-shadow: var(--down-shadow);
+          box-shadow: var(--down-shadow);
   -webkit-transition: -webkit-box-shadow 0.5s ease-in-out;
   transition: -webkit-box-shadow 0.5s ease-in-out;
   transition: box-shadow 0.5s ease-in-out;
@@ -373,11 +375,10 @@ body.dark-mode .switch span svg {
   font-weight: var(--bold);
 }
 
-/*--- Services ---*/
 /*--- Portfolio ---*/
 .portfolio h2 {
   text-align: center;
-  margin: 2em 0 1em 0;
+  margin: 3rem 0 1rem 0;
 }
 
 .cards {
@@ -390,7 +391,6 @@ body.dark-mode .switch span svg {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 auto;
-  margin-bottom: 8em;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -404,9 +404,9 @@ body.dark-mode .switch span svg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 90%;
-  margin: auto;
-  margin-top: 2em;
+  /* width: 90%; */
+  /* margin: auto; */
+  margin: 2em auto;
   border-radius: 5px;
   background: var(--bg-color);
   padding: 12px;
@@ -490,7 +490,7 @@ body.dark-mode .switch span svg {
 }
 
 .data {
-  width: 40%;
+  width: 60%;
   margin: 0 auto;
   text-align: center;
   display: -webkit-box;
@@ -669,11 +669,8 @@ body.dark-mode .switch span svg {
   font-weight: bold;
 }
 
-/* Current device (phones, 480 and down) */
-/*@media only screen and (max-width: 480px) {
-}*/
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+/* Small devices (portrait tablets and large phones, 640px and up) */
+@media only screen and (min-width: 640px) {
   .intro .me img {
     width: 280px;
     height: 280px;
@@ -708,11 +705,10 @@ body.dark-mode .switch span svg {
             flex-direction: column;
   }
   .cards .card {
-    margin: auto;
-    margin-top: 2em;
+    margin-top: 1.5rem auto;
   }
-  .levels {
-    width: 100%;
+  .data {
+    width: 40%;
   }
 }
 
@@ -739,10 +735,11 @@ body.dark-mode .switch span svg {
     font-size: 1.2em;
   }
   .web .contain {
-    height: 600px;
+    height: 500px;
   }
   .cards .card {
     margin-top: 3em;
+    width: 70%;
   }
   .skills {
     padding: 0 2em;
@@ -755,10 +752,16 @@ body.dark-mode .switch span svg {
     -webkit-column-gap: 2rem;
             column-gap: 2rem;
   }
+  .now {
+    font-size: 1.2rem;
+  }
+  .data {
+    width: 30%;
+  }
 }
 
-/* Large devices (laptops/desktops, 993px and up) */
-@media only screen and (min-width: 993px) {
+/* Large devices (laptops/desktops, 1024px and up) */
+@media only screen and (min-width: 1024px) {
   .intro .me img {
     width: 350px;
     height: 350px;
@@ -781,7 +784,7 @@ body.dark-mode .switch span svg {
     display: -ms-grid;
     display: grid;
     place-items: center;
-    width: 50%;
+    width: 100%;
     font-weight: 500;
     color: var(--main-color);
     background: var(--bg-color);
@@ -805,8 +808,11 @@ body.dark-mode .switch span svg {
     margin: 1em;
     margin-top: 40px;
   }
+  .now {
+    font-size: 1.5rem;
+  }
   .data {
-    width: 400px;
+    width: 200px;
     text-align: center;
   }
   .data svg {
