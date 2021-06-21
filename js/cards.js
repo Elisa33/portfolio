@@ -41,7 +41,10 @@ function loadData() {
                         clase,
                         rol,
                         techs,
-                        mode } = array[i];
+                        mode,
+                        description,
+                        site,
+                        code } = array[i];
         
         
                         const card = document.createElement('div');
@@ -83,27 +86,47 @@ function loadData() {
                                         <div class="m-info">
                                             <img src="${img}" alt="" />
                                             <div class="project">
-                                                <div class="pr-info">
-                                                    <h3>Client:</h3>
-                                                    <p>${client}</p>
+                                                <div className="project-info">
+                                                    <div class="pr-info">
+                                                        <h3>Client:</h3>
+                                                        <p>${client}</p>
+                                                    </div>
+                                                    <div class="pr-info">
+                                                        <h3>Rol:</h3>
+                                                        <p>${rol}</p>
+                                                    </div>
+                                                    <div class="pr-info">
+                                                        <h3>Techs:</h3>
+                                                        <p>${techs}</p>
+                                                    </div>
+                                                    <div class="pr-info">
+                                                        <h3>Mode:</h3>
+                                                        <p>${mode}</p>
+                                                    </div>
+                                                    <div class="pr-info">
+                                                        <h3>Description:</h3>
+                                                        <p>${description}</p>
+                                                    </div>
                                                 </div>
-                                                <div class="pr-info">
-                                                    <h3>Rol:</h3>
-                                                    <p>${rol}</p>
-                                                </div>
-                                                <div class="pr-info">
-                                                    <h3>Techs:</h3>
-                                                    <p>${techs}</p>
-                                                </div>
-                                                <div class="pr-info">
-                                                    <h3>Mode:</h3>
-                                                    <p>${mode}</p>
+                                                <div class="project-code">
+                                                    
                                                 </div>
                                             </div>
                                         </div>
                                 `
                             modal.innerHTML = modalContent;
                             overlay.appendChild(modal);
+                            const projectCode = document.querySelector(".project-code");
+
+                            const siteContent = `
+                            <a href="${site}"><img src='img/icons/eye.svg' alt=''> Site</a>
+                            `
+                            const codeContent = `
+                            <a href="${code}"><img src='img/icons/github.svg' alt=''>Code</a>
+                            `
+
+                            site ? projectCode.innerHTML += siteContent : '';
+                            code ? projectCode.innerHTML += codeContent : '';
                 
                         };
                                         

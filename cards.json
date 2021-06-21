@@ -9,11 +9,15 @@
                "client":"La mochila de paseo", 
                "img": "img/javascript/screencapt-mochila.png",
                "clase":"web",
-               "rol":"React developer",
-               "techs": "React - Styled Components",
+               "rol":"Designer & React developer",
+               "techs": "React - Styled Components - Figma",
                "icon01":"<img src='img/icons/react.svg' alt=''>",
                "icon02":"<img src='img/icons/sass.svg' alt=''>",
-               "mode": "Practice"
+               "icon03":"<img src='img/icons/figma.svg' alt=''>",
+               "mode": "Work",
+               "description": "I am building this site applying my last kwnoledge in React, I implement react-router and handle css with styled-components. As a designer I create new sections and recommend styles to the client",
+               "site": "https://mochila.vercel.app/",
+               "code": "https://github.com/Elisa33/mochila"
                },
                {
                "id":"js2",
@@ -24,7 +28,10 @@
                "techs": "Javascript - Bootstrap",
                "icon01":"<img src='img/icons/js.svg' alt=''>",
                "icon02":"<img src='img/icons/boostrap.svg' alt=''>",
-               "mode": "Practice"
+               "mode": "Practice",
+               "description": "This work was for practice CRUD with React",
+               "site": "https://appointment-vet.netlify.app/",
+               "code": "https://github.com/Elisa33/mascotas-app"
  
                },
                {
@@ -36,7 +43,10 @@
                "techs": "React - Tailwind",
                "icon01":"<img src='img/icons/js.svg' alt=''>",
                "icon02":"<img src='img/icons/tailwind.svg' alt=''>",
-               "mode": "Practice"
+               "mode": "Practice",
+               "description": "This work was for practice fetch API with React",
+               "site": "https://clever-mcnulty-bbe9bb.netlify.app/",
+               "code": "https://github.com/Elisa33/pixabay"
                }
          ]
       },
@@ -52,7 +62,9 @@
                "techs": "Html 5 - Css3",
                "icon01":"<img src='img/icons/html5.svg' alt=''>",
                "icon02":"<img src='img/icons/css3.svg' alt=''>",
-               "mode": "Freelance"
+               "mode": "Freelance",
+               "description": "Working as a Designer and custom this site with html/css",
+               "site": "https://www.onixpublicidad.com"
                },
                {
                "id":"web2",
@@ -63,7 +75,9 @@
                "techs": "Html 5 - Css3",
                "icon01":"<img src='img/icons/html5.svg' alt=''>",
                "icon02":"<img src='img/icons/css3.svg' alt=''>",
-               "mode": "Co-created with <a href='http://www.grudisegno.com/ class='info'>Gru</a>"
+               "mode": "Co-created with <a href='http://www.grudisegno.com/ class='info'>Gru</a>",
+               "description": "Working as developer customizing this site, with my colegue as a team",
+               "site": "https://www.brunaeventos.com.ar"
                },
                {
                "id":"web3",
@@ -74,8 +88,9 @@
                "techs": "Wordpress - Css3",
                "icon01":"<img src='img/icons/wp.svg' alt=''>",
                "icon02":"<img src='img/icons/css3.svg' alt=''>",
-               "mode": "Co-created with <a href='http://www.grudisegno.com/ class='info'>Gru</a>"
-
+               "mode": "Co-created with <a href='http://www.grudisegno.com/ class='info'>Gru</a>",
+               "description": "Working as developer customizing this site, with my colegue as a team",
+               "site": "https://www.flordeluna.com.ar"
                }
 
          ]
@@ -91,7 +106,8 @@
                "techs": "Illustrator",
                "icon01":"<img src='img/icons/ai.svg' alt=''>",
                "icon02":"",
-               "mode": "Freelance"
+               "mode": "Freelance",
+               "description": "Working as a Designer, develop the brand for this client who sells portones electricos"
                },
 
                {
@@ -103,7 +119,8 @@
                "techs": "Illustrator",
                "icon01":"<img src='img/icons/ai.svg' alt=''>",
                "icon02":"",
-               "mode": "Freelance"
+               "mode": "Freelance",
+               "description": "Working as a Designer, develop the brand for this client who construye buildings"
                },
                {
                "id":"ampersand",
@@ -114,7 +131,8 @@
                "techs": "Illustrator",
                "icon01":"<img src='img/icons/ai.svg' alt=''>",
                "icon02":"",
-               "mode": "Freelance"
+               "mode": "Freelance",
+               "description": "Working as a Designer, develop the brand for this client who sells publicidad"
                }
 
          ]
@@ -130,7 +148,8 @@
                "techs": "Illustrator",
                "icon01":"<img src='img/icons/ai.svg' alt=''>",
                "icon02":"",
-               "mode": "freelance"
+               "mode": "freelance",
+               "description": "Working as a Designer"
                },
                {
                   "id":"web2",
@@ -141,7 +160,8 @@
                "techs": "Illustrator",
                "icon01":"<img src='img/icons/ps.svg' alt=''>",
                "icon02":"<img src='img/icons/id.svg' alt=''>",
-               "mode": "freelance"
+               "mode": "freelance",
+               "description": "Working as a Designer"
  
                },
                {
@@ -153,7 +173,8 @@
                "techs": "Illustrator",
                "icon01":"<img src='img/icons/ai.svg' alt=''>",
                "icon02":"",
-               "mode": "Freelance"
+               "mode": "Freelance",
+               "description": "Working as a Designer"
                }
 
          ]
