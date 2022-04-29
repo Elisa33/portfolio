@@ -328,12 +328,12 @@ nav{
 }
 
 .now {
+	display: block;
 	text-align: center;
 	padding: 1rem 1rem;
 	color: var(--main-color);
 	background: var(--bg-color);
-	margin: 0 auto;
-	margin-top: 2rem;
+	margin: 1rem auto;
 	border-radius: 2rem;
 	font-size: 1rem;
 	font-weight: normal;
@@ -364,7 +364,7 @@ nav{
 	.card {
 		display: flex;
 		flex-direction: column;
-		/* width: 90%; */
+		width: 90%;
 		/* margin: auto; */
 		margin: 2em auto;
 		border-radius: 5px;
