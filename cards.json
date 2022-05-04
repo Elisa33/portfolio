@@ -6,6 +6,21 @@
          "React":[
             {
                "id":"js1",
+               "client":"Tecnobox", 
+               "img": "img/react/screencapt-tecnobox.png",
+               "clase":"web",
+               "rol":"Frontend developer",
+               "techs": "React - CSS modules",
+               "icon01":"<img src='img/icons/react.svg' alt=''>",
+               "icon02":"<img src='img/icons/js.svg' alt=''>",
+               "mode": "Freelance",
+               "description": "This work was for a products system with css modules, fetch API and authentication",
+               "site": "https://tecnobox.vercel.app/",
+               "code": "https://github.com/Elisa33/tecnobox-react"
+               
+               },
+               {
+               "id":"js2",
                "client":"La mochila de paseo", 
                "img": "img/react/screencapt-mochila.png",
                "clase":"web",
@@ -15,23 +30,10 @@
                "icon02":"<img src='img/icons/styledcomponents.svg' alt=''>",
                "icon03":"<img src='img/icons/figma.svg' alt=''>",
                "mode": "Work",
-               "description": "I am building this site applying my last kwnoledge in React, I implement react-router and handle css with styled-components. As a designer I create new sections and recommend styles to the client",
+               "description": "I am building this site in React, I implement react-router and handle css with styled-components. As a designer I create new sections and recommend styles to the client",
                "site": "https://mochila.vercel.app/",
                "code": "https://github.com/Elisa33/mochila"
-               },
-               {
-               "id":"js2",
-               "client":"Tecnobox", 
-               "img": "img/react/screencapt-tecnobox.png",
-               "clase":"web",
-               "rol":"Frontend developer",
-               "techs": "React - CSS modules",
-               "icon01":"<img src='img/icons/react.svg' alt=''>",
-               "icon02":"<img src='img/icons/js.svg' alt=''>",
-               "mode": "Freelance",
-               "description": "This work was for a client, a products system",
-               "site": "https://tecnobox.vercel.app/",
-               "code": "https://github.com/Elisa33/tecnobox-react"
+              
  
                },
                {
@@ -42,9 +44,9 @@
                "rol":"React developer",
                "techs": "React - Tailwind",
                "icon01":"<img src='img/icons/react.svg' alt=''>",
-               "icon02":"<img src='img/icons/tailwind.svg' alt=''>",
+               "icon02":"<img src='img/icons/firebase.svg' alt=''>",
                "mode": "Practice",
-               "description": "This work was for practice forms with React",
+               "description": "This work was for practice forms and storage with firebase",
                "site": "https://nutricion-seven.vercel.app/",
                "code": "https://github.com/Elisa33/nutricion"
                }
@@ -54,17 +56,18 @@
          "Javascript":[
             {
                "id":"js4",
-               "client":"CRM", 
-               "img": "img/javascript/screencapt-crm.png",
+               "client":"Images bank", 
+               "img": "img/javascript/screencapt-images.png",
                "clase":"web",
-               "rol":"Front developer",
-               "techs": "Modern JS",
+               "rol":"React developer",
+               "techs": "React - Tailwind",
                "icon01":"<img src='img/icons/js.svg' alt=''>",
-               "icon02":"<img src='img/icons/sass.svg' alt=''>",
-               "mode": "Work",
-               "description": "This work was for practice CRUD with Javascript",
-               "site": "https://crm-indexeddb.vercel.app/",
-               "code": "https://github.com/Elisa33/crm-indexeddb"
+               "icon02":"<img src='img/icons/tailwind.svg' alt=''>",
+               "mode": "Practice",
+               "description": "This work was for practice fetch API with React",
+               "site": "https://clever-mcnulty-bbe9bb.netlify.app/",
+               "code": "https://github.com/Elisa33/pixabay"
+              
                },
                {
                "id":"js5",
@@ -83,17 +86,18 @@
                },
                {
                "id":"js6",
-               "client":"Images bank", 
-               "img": "img/javascript/screencapt-images.png",
+               "client":"CRM", 
+               "img": "img/javascript/screencapt-crm.png",
                "clase":"web",
-               "rol":"React developer",
-               "techs": "React - Tailwind",
+               "rol":"Front developer",
+               "techs": "Modern JS",
                "icon01":"<img src='img/icons/js.svg' alt=''>",
-               "icon02":"<img src='img/icons/tailwind.svg' alt=''>",
-               "mode": "Practice",
-               "description": "This work was for practice fetch API with React",
-               "site": "https://clever-mcnulty-bbe9bb.netlify.app/",
-               "code": "https://github.com/Elisa33/pixabay"
+               "icon02":"<img src='img/icons/sass.svg' alt=''>",
+               "mode": "Work",
+               "description": "This work was for practice CRUD with Javascript",
+               "site": "https://crm-indexeddb.vercel.app/",
+               "code": "https://github.com/Elisa33/crm-indexeddb"
+              
                }
          ]
       },
