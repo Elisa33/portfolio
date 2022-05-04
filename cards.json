@@ -63,7 +63,7 @@
                "icon02":"<img src='img/icons/sass.svg' alt=''>",
                "mode": "Work",
                "description": "This work was for practice CRUD with Javascript",
-               "site": "https://mochila.vercel.app/",
+               "site": "https://crm-indexeddb.vercel.app/",
                "code": "https://github.com/Elisa33/crm-indexeddb"
                },
                {
