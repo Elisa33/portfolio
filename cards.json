@@ -3,11 +3,11 @@
 	"projects": [
 
       {
-         "Javascript/React":[
+         "React":[
             {
                "id":"js1",
                "client":"La mochila de paseo", 
-               "img": "img/javascript/screencapt-mochila.png",
+               "img": "img/react/screencapt-mochila.png",
                "clase":"web",
                "rol":"Designer & React developer",
                "techs": "React - Styled Components - Figma",
@@ -21,6 +21,53 @@
                },
                {
                "id":"js2",
+               "client":"Tecnobox", 
+               "img": "img/react/screencapt-tecnobox.png",
+               "clase":"web",
+               "rol":"Frontend developer",
+               "techs": "React - CSS modules",
+               "icon01":"<img src='img/icons/react.svg' alt=''>",
+               "icon02":"<img src='img/icons/js.svg' alt=''>",
+               "mode": "Freelance",
+               "description": "This work was for a client",
+               "site": "https://tecnobox.vercel.app/",
+               "code": "https://github.com/Elisa33/tecnobox-react"
+ 
+               },
+               {
+               "id":"js3",
+               "client":"Nutrición", 
+               "img": "img/react/screencapt-nutricion.png",
+               "clase":"web",
+               "rol":"React developer",
+               "techs": "React - Tailwind",
+               "icon01":"<img src='img/icons/react.svg' alt=''>",
+               "icon02":"<img src='img/icons/tailwind.svg' alt=''>",
+               "mode": "Practice",
+               "description": "This work was for practice forms with React",
+               "site": "https://nutricion-seven.vercel.app/",
+               "code": "https://github.com/Elisa33/pixabay"
+               }
+         ]
+      },
+      {
+         "Javascript":[
+            {
+               "id":"js4",
+               "client":"CRM", 
+               "img": "img/javascript/screencapt-crm.png",
+               "clase":"web",
+               "rol":"Front developer",
+               "techs": "Modern JS",
+               "icon01":"<img src='img/icons/js.svg' alt=''>",
+               "icon02":"<img src='img/icons/sass.svg' alt=''>",
+               "mode": "Work",
+               "description": "This work was for practice CRUD with Javascript",
+               "site": "https://mochila.vercel.app/",
+               "code": "https://github.com/Elisa33/crm-indexeddb"
+               },
+               {
+               "id":"js5",
                "client":"Vet", 
                "img": "img/javascript/screencapt-vet.png",
                "clase":"web",
@@ -35,7 +82,7 @@
  
                },
                {
-               "id":"js3",
+               "id":"js6",
                "client":"Images bank", 
                "img": "img/javascript/screencapt-images.png",
                "clase":"web",
@@ -52,7 +99,7 @@
       },
 
       {
-         "Front-End":[
+         "Layout":[
             {
                "id":"web1",
                "client":"Onix site", 
