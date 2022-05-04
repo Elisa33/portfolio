@@ -455,8 +455,8 @@ body.dark-mode .switch span svg {
 }
 
 .web .contain img:hover {
-  -webkit-transform: translateY(-63%);
-          transform: translateY(-63%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   -webkit-transition: all 4s;
   transition: all 4s;
 }

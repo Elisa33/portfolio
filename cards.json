@@ -12,7 +12,7 @@
                "rol":"Designer & React developer",
                "techs": "React - Styled Components - Figma",
                "icon01":"<img src='img/icons/react.svg' alt=''>",
-               "icon02":"<img src='img/icons/sass.svg' alt=''>",
+               "icon02":"<img src='img/icons/styledcomponents.svg' alt=''>",
                "icon03":"<img src='img/icons/figma.svg' alt=''>",
                "mode": "Work",
                "description": "I am building this site applying my last kwnoledge in React, I implement react-router and handle css with styled-components. As a designer I create new sections and recommend styles to the client",
@@ -29,7 +29,7 @@
                "icon01":"<img src='img/icons/react.svg' alt=''>",
                "icon02":"<img src='img/icons/js.svg' alt=''>",
                "mode": "Freelance",
-               "description": "This work was for a client",
+               "description": "This work was for a client, a products system",
                "site": "https://tecnobox.vercel.app/",
                "code": "https://github.com/Elisa33/tecnobox-react"
  
@@ -46,7 +46,7 @@
                "mode": "Practice",
                "description": "This work was for practice forms with React",
                "site": "https://nutricion-seven.vercel.app/",
-               "code": "https://github.com/Elisa33/pixabay"
+               "code": "https://github.com/Elisa33/nutricion"
                }
          ]
       },
