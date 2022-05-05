@@ -84,7 +84,7 @@ function loadData() {
                                         <div class="m-info">
                                             <div class="img-wrapper">
                                             
-                                                <img src="${img}" alt="" class="img-h"/>
+                                                <img src="${img}" alt="" />
                                             </div>
                                             <div class="project">
                                                 <div className="project-info">

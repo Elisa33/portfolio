@@ -454,12 +454,6 @@ body.dark-mode .switch span svg {
   height: 200px;
 }
 
-@media only screen and (min-width: 640px) {
-  .web .contain {
-    height: 300px;
-  }
-}
-
 .web .contain img:hover {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -747,6 +741,19 @@ body.dark-mode .modal {
   font-size: .8rem;
 }
 
+/* only mobile */
+@media only screen and (max-width: 640px) {
+  .img-wrapper {
+    width: 150px;
+    height: 400px;
+    overflow: hidden;
+    display: none;
+  }
+  .img-wrapper img {
+    width: 150px;
+  }
+}
+
 /* Small devices (portrait tablets and large phones, 640px and up) */
 @media only screen and (min-width: 640px) {
   .intro .me img {
@@ -787,6 +794,18 @@ body.dark-mode .modal {
   }
   .data {
     width: 40%;
+  }
+  .web .contain {
+    height: 300px;
+  }
+  .img-wrapper {
+    width: 150px;
+    height: 400px;
+    overflow: hidden;
+    display: block;
+  }
+  .img-wrapper img {
+    width: 150px;
   }
 }
 
