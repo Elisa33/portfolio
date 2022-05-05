@@ -82,7 +82,10 @@ function loadData() {
                             const modalContent = `
                                         <div id="btn-close" class="btn-close" onClick="close">X</div>
                                         <div class="m-info">
-                                            <img src="${img}" alt="" class="img-h"/>
+                                            <div class="img-wrapper">
+                                            
+                                                <img src="${img}" alt="" class="img-h"/>
+                                            </div>
                                             <div class="project">
                                                 <div className="project-info">
                                                     <div class="pr-info">

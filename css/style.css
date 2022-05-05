@@ -629,9 +629,14 @@ body.dark-mode .switch span svg {
   color: var(--main-color);
 }
 
-.modal img {
+.modal .img-wrapper {
   width: 150px;
   height: 400px;
+  overflow: hidden;
+}
+
+.modal .img-wrapper img {
+  width: 150px;
 }
 
 body.dark-mode .modal {

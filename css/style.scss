@@ -530,9 +530,13 @@ nav{
 		color: var(--main-color);
 	}
 	
-	img {
+	.img-wrapper {
 		width: 150px;
 		height: 400px;
+		overflow: hidden;
+		img{
+			width: 150px;
+		}
 	}
 	body.dark-mode &{
 		background: var(--bg-color);
