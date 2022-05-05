@@ -451,7 +451,13 @@ body.dark-mode .switch span svg {
 }
 
 .web .contain {
-  height: 0px;
+  height: 200px;
+}
+
+@media only screen and (min-width: 640px) {
+  .web .contain {
+    height: 300px;
+  }
 }
 
 .web .contain img:hover {

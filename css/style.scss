@@ -407,8 +407,19 @@ nav{
 
 
 
-.web .contain {
-	height: 0px;
+.web{
+	.contain {
+		height: 200px;
+	}
+} 
+
+@media only screen and (min-width: 640px) {
+	.web{
+
+		.contain {
+			height: 300px;
+		}
+	} 
 }
 
 .web .contain img:hover {
