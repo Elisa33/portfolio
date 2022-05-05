@@ -60,11 +60,11 @@
                "img": "img/javascript/screencapt-images.png",
                "clase":"web",
                "rol":"React developer",
-               "techs": "React - Tailwind",
+               "techs": "Javascript - Tailwind",
                "icon01":"<img src='img/icons/js.svg' alt=''>",
                "icon02":"<img src='img/icons/tailwind.svg' alt=''>",
                "mode": "Practice",
-               "description": "This work was for practice fetch API with React",
+               "description": "This work was for practice fetch API",
                "site": "https://clever-mcnulty-bbe9bb.netlify.app/",
                "code": "https://github.com/Elisa33/pixabay"
               
