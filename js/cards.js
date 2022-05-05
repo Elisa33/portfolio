@@ -68,13 +68,11 @@ function loadData() {
                     card.classList.add(`${clase}`);
                     card.innerHTML = contenido;
                     cards.appendChild(card);
-        
                     card.addEventListener('click', showModal);
+                    
         
                     //Modals 
-            
                     function showModal(){
-                        
                         
                         const overlay = document.querySelector('.overlay');
                         overlay.classList.add('active');
@@ -82,9 +80,9 @@ function loadData() {
                         modal.classList.add('modal')
                         
                             const modalContent = `
-                                        <a href="" id="btn-close" class="btn-close">X</a>
+                                        <div id="btn-close" class="btn-close" onClick="close">X</div>
                                         <div class="m-info">
-                                            <img src="${img}" alt="" />
+                                            <img src="${img}" alt="" class="img-h"/>
                                             <div class="project">
                                                 <div className="project-info">
                                                     <div class="pr-info">
@@ -117,29 +115,32 @@ function loadData() {
                             modal.innerHTML = modalContent;
                             overlay.appendChild(modal);
                             const projectCode = document.querySelector(".project-code");
+                            const btnClose = document.querySelector("#btn-close");
 
                             const siteContent = `
-                            <a href="${site}"><img src='img/icons/eye.svg' alt=''> Site</a>
+                            <a href="${site}" target="_blank"><img src='img/icons/eye.svg' alt=''> Site</a>
                             `
                             const codeContent = `
-                            <a href="${code}"><img src='img/icons/github.svg' alt=''>Code</a>
+                            <a href="${code}" target="_blank"><img src='img/icons/github.svg' alt=''>Code</a>
                             `
 
                             site ? projectCode.innerHTML += siteContent : '';
                             code ? projectCode.innerHTML += codeContent : '';
+
+                            btnClose.addEventListener('click', close);
                 
-                        };
-                                        
+                        };  
+                        
+                        function close(){
+                            const overlay = document.querySelector('.overlay');
+                            const modal = document.querySelector('.modal');
+                            modal.innerHTML = '';
+                            overlay.classList.remove('active');
+                            modal.classList.remove('modal');
+                            console.log('close')
+                        }
                 } 
-           
-            }
-
-
-            /* const keys = Object.keys(element);
-            console.log(keys);
-            console.log(keys[index]);
-            const array = element.keys;  */
-       
+            }       
         })
     }
 

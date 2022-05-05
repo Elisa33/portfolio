@@ -451,7 +451,7 @@ body.dark-mode .switch span svg {
 }
 
 .web .contain {
-  height: 400px;
+  height: 0px;
 }
 
 .web .contain img:hover {
@@ -631,6 +631,7 @@ body.dark-mode .switch span svg {
 
 .modal img {
   width: 150px;
+  height: 400px;
 }
 
 body.dark-mode .modal {
@@ -652,6 +653,7 @@ body.dark-mode .modal {
   -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .m-info {

@@ -408,7 +408,7 @@ nav{
 
 
 .web .contain {
-	height: 400px;
+	height: 0px;
 }
 
 .web .contain img:hover {
@@ -532,6 +532,7 @@ nav{
 	
 	img {
 		width: 150px;
+		height: 400px;
 	}
 	body.dark-mode &{
 		background: var(--bg-color);
@@ -552,6 +553,7 @@ nav{
 	font-weight: var(--semibold);
 	transition: 0.3s ease all;
 	text-decoration: none;
+	cursor: pointer;
 }
 
 

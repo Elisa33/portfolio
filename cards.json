@@ -3,18 +3,18 @@
 	"projects": [
 
       {
-         "React":[
+         "Personal Projects React":[
             {
                "id":"js1",
                "client":"Tecnobox", 
                "img": "img/react/screencapt-tecnobox.png",
                "clase":"web",
                "rol":"Frontend developer",
-               "techs": "React - CSS modules",
+               "techs": "React - CSS modules - Forms - FetchAPI",
                "icon01":"<img src='img/icons/react.svg' alt=''>",
                "icon02":"<img src='img/icons/js.svg' alt=''>",
                "mode": "Freelance",
-               "description": "This work was for a products system with css modules, fetch API and authentication",
+               "description": "This system allows you to enter as admin, upload, edit and delete products, read customer orders. As a customer, you can see the products, select them and place the order.",
                "site": "https://tecnobox.vercel.app/",
                "code": "https://github.com/Elisa33/tecnobox-react"
                
@@ -25,7 +25,7 @@
                "img": "img/react/screencapt-mochila.png",
                "clase":"web",
                "rol":"Designer & React developer",
-               "techs": "React - Styled Components - Figma",
+               "techs": "React - - ReactRouter - Styled Components - Figma",
                "icon01":"<img src='img/icons/react.svg' alt=''>",
                "icon02":"<img src='img/icons/styledcomponents.svg' alt=''>",
                "icon03":"<img src='img/icons/figma.svg' alt=''>",
@@ -42,18 +42,18 @@
                "img": "img/react/screencapt-nutricion.png",
                "clase":"web",
                "rol":"React developer",
-               "techs": "React - Tailwind",
+               "techs": "React - Tailwind -Firebase",
                "icon01":"<img src='img/icons/react.svg' alt=''>",
                "icon02":"<img src='img/icons/firebase.svg' alt=''>",
                "mode": "Practice",
-               "description": "This work was for practice forms and storage with firebase",
+               "description": "This application is for patients to complete online forms, the data is saved in firebase and then can be viewed by the doctor from the patient view",
                "site": "https://nutricion-seven.vercel.app/",
                "code": "https://github.com/Elisa33/nutricion"
                }
          ]
       },
       {
-         "Javascript":[
+         "Study Projects Javascript":[
             {
                "id":"js4",
                "client":"Images bank", 
