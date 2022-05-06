@@ -3,7 +3,7 @@
 	"projects": [
 
       {
-         "Personal Projects React":[
+         "React Projects":[
             {
                "id":"js1",
                "client":"Tecnobox", 
@@ -25,7 +25,7 @@
                "img": "img/react/screencapt-mochila.png",
                "clase":"web",
                "rol":"Designer & React developer",
-               "techs": "React - - ReactRouter - Styled Components - Figma",
+               "techs": "React - ReactRouter - Styled Components - Figma",
                "icon01":"<img src='img/icons/react.svg' alt=''>",
                "icon02":"<img src='img/icons/styledcomponents.svg' alt=''>",
                "icon03":"<img src='img/icons/figma.svg' alt=''>",
@@ -53,7 +53,7 @@
          ]
       },
       {
-         "Study Projects Javascript":[
+         "Javascript Study Projects":[
             {
                "id":"js4",
                "client":"Images bank", 
@@ -128,7 +128,7 @@
                "icon02":"<img src='img/icons/css3.svg' alt=''>",
                "mode": "Co-created with <a href='http://www.grudisegno.com/ class='info'>Gru</a>",
                "description": "Working as developer customizing this site, with my colegue as a team",
-               "site": "https://www.brunaeventos.com.ar"
+               "site": "https://www.brunaeventos.com"
                },
                {
                "id":"web3",
@@ -149,16 +149,16 @@
       {
          "Branding Creative":[
                {
-               "id":"dm",
-               "client":"DM", 
-               "img": "img/brand/brand-dm.png",
+               "id":"barquito",
+               "client":"Barquito de papel", 
+               "img": "img/brand/brand-barquito.png",
                "clase":"brand",
                "rol":"Brand Designer",
                "techs": "Illustrator",
                "icon01":"<img src='img/icons/ai.svg' alt=''>",
                "icon02":"",
                "mode": "Freelance",
-               "description": "Working as a Designer, develop the brand for this client who sells portones electricos"
+               "description": "Working as a Designer, developing the brand for a client that sells children's clothing"
                },
 
                {
@@ -171,7 +171,7 @@
                "icon01":"<img src='img/icons/ai.svg' alt=''>",
                "icon02":"",
                "mode": "Freelance",
-               "description": "Working as a Designer, develop the brand for this client who construye buildings"
+               "description": "Working as a Designer, developing the brand for a construction company"
                },
                {
                "id":"ampersand",
@@ -183,7 +183,7 @@
                "icon01":"<img src='img/icons/ai.svg' alt=''>",
                "icon02":"",
                "mode": "Freelance",
-               "description": "Working as a Designer, develop the brand for this client who sells publicidad"
+               "description": "Working as a Designer, developing the brand for an advertising agency"
                }
 
          ]
