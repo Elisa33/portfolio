@@ -416,7 +416,7 @@ nav{
 
 
 .web .contain img:hover {
-	transform: translateY(-50%);
+	transform: translateY(-66%);
 	transition: all 4s;
 }
 
@@ -582,9 +582,19 @@ nav{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	h3{
+		font-size: 1rem;
+		margin:0 0 5px 0;
+	}
+	p{
+		font-size: 0.9rem;
+		margin:0 0 12px 0;
+	}
 	.project-code{
 		display: flex;
-		justify-content: space-evenly;
+		align-items: center;
+		justify-content: flex-start;
+		gap:10px;
 		a {
 			display: flex;
 			align-items: center;
@@ -615,13 +625,15 @@ nav{
 		}
 	}
 }
-		
-		
-.pr-info{
-	p{
-		font-size: .8rem;
-	}
+.pro-info{
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	
 }
+
+		
+	
 /* only mobile */
 @media only screen and (max-width: 640px) {
 	.img-wrapper {

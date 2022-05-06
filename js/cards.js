@@ -87,27 +87,22 @@ function loadData() {
                                                 <img src="${img}" alt="" />
                                             </div>
                                             <div class="project">
-                                                <div className="project-info">
-                                                    <div class="pr-info">
-                                                        <h3>Client:</h3>
-                                                        <p>${client}</p>
-                                                    </div>
-                                                    <div class="pr-info">
-                                                        <h3>Rol:</h3>
-                                                        <p>${rol}</p>
-                                                    </div>
-                                                    <div class="pr-info">
-                                                        <h3>Techs:</h3>
-                                                        <p>${techs}</p>
-                                                    </div>
-                                                    <div class="pr-info">
-                                                        <h3>Mode:</h3>
-                                                        <p>${mode}</p>
-                                                    </div>
-                                                    <div class="pr-info">
-                                                        <h3>Description:</h3>
-                                                        <p>${description}</p>
-                                                    </div>
+                                                <div className="pro-info">
+                                                    
+                                                    <h3>Client:</h3>
+                                                    <p>${client}</p>
+                                                
+                                                    <h3>Rol:</h3>
+                                                    <p>${rol}</p>
+                                                
+                                                    <h3>Techs:</h3>
+                                                    <p>${techs}</p>
+                                                
+                                                    <h3>Mode:</h3>
+                                                    <p>${mode}</p>
+                                                
+                                                    <h3>Description:</h3>
+                                                    <p>${description}</p>
                                                 </div>
                                                 <div class="project-code">
                                                     
