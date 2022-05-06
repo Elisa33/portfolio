@@ -191,7 +191,7 @@
       {
          "Graphic Desing":[
             {
-               "id":"web1",
+               "id":"graph1",
                "client":"Ampersand", 
                "img": "img/graphic/graph-onix.png",
                "clase":"graphic",
@@ -203,7 +203,7 @@
                "description": "Working as a Designer"
                },
                {
-                  "id":"web2",
+                  "id":"graph2",
                "client":"kúspide", 
                "img": "img/graphic/graph-kuspide.png",
                "clase":"graphic",
@@ -216,16 +216,16 @@
  
                },
                {
-                  "id":"web3",
-               "client":"ampersand", 
-               "img": "img/graphic/graph-onix.png",
+                  "id":"graph3",
+               "client":"Birthday", 
+               "img": "img/graphic/graph-birthday.png",
                "clase":"graphic",
                "rol":"Graphic Designer",
                "techs": "Illustrator",
                "icon01":"<img src='img/icons/ai.svg' alt=''>",
                "icon02":"",
                "mode": "Freelance",
-               "description": "Working as a Designer"
+               "description": "Illustrations and design"
                }
 
          ]

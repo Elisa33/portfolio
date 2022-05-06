@@ -773,6 +773,9 @@ body.dark-mode .modal {
   .img-wrapper img {
     width: 150px;
   }
+  .m-info {
+    display: block;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 640px and up) */
