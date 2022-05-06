@@ -8,8 +8,8 @@
 
 :root {
   	--bg-color: #dbefff; /* aliceblue */
-	--main-color: #00caff;
-	--light-color: lighten(#00caff, 40%);
+	--main-color: #00caee;
+	--light-color: lighten(#00caee, 40%);
 
 	--shadow: inset  5px 5px 5px rgba(0, 0, 0, 0.05),
 			inset -5px -5px 5px rgba(255, 255, 255, 0.5),
@@ -388,6 +388,7 @@ nav{
 		.flex{
 			margin: 1rem 0.3rem;
 			display: flex;
+			align-items: center;
 			justify-content: space-between;
 		   }
 		   
@@ -395,7 +396,7 @@ nav{
 			display: flex;
 			justify-content: end;
 			img{
-				width: 20px;
+				width: 24px;
 			   
 			}
 			* + * { 
@@ -534,15 +535,7 @@ nav{
 		color: var(--main-color);
 	}
 	
-	.img-wrapper {
-		width: 150px;
-		height: 400px;
-		overflow: hidden;
-		img{
-			width: 150px;
-		}
-		
-	}
+	
 
 	body.dark-mode &{
 		background: var(--bg-color);
@@ -566,17 +559,6 @@ nav{
 	cursor: pointer;
 }
 
-
-.m-info{
-	display: grid;
-	grid-template-columns: 1fr 2fr;
-	gap: 1rem;
-	a{
-		text-decoration: none;
-		color:var(--main-color);
-		font-weight: bold;
-	}
-}
 
 .project{
 	display: flex;
@@ -634,8 +616,6 @@ nav{
 
 		
 	
-/* only mobile */
-@media only screen and (max-width: 640px) {
 	.img-wrapper {
 		width: 150px;
 		height: 400px;
@@ -649,9 +629,10 @@ nav{
 	.m-info{
 		display:block;
 	}
-}
+
 
 /* Small devices (portrait tablets and large phones, 640px and up) */
+
 @media only screen and (min-width: 640px) {
 	.intro .me img {
 		width: 280px;
@@ -712,6 +693,17 @@ nav{
 		}
 		
 	}
+	.m-info{
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 1rem;
+	a{
+		text-decoration: none;
+		color:var(--main-color);
+		font-weight: bold;
+	}
+}
+	
 }
 
 
@@ -845,10 +837,10 @@ nav{
 
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+/* Extra large devices (large laptops and desktops, 1536px and up) */
+@media only screen and (min-width: 1536px) {
 	main {
-		width: 80%;
+		width: 70%;
 	}
 
 	section {

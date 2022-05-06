@@ -3,8 +3,8 @@
 :root {
   --bg-color: #dbefff;
   /* aliceblue */
-  --main-color: #00caff;
-  --light-color: lighten(#00caff, 40%);
+  --main-color: #00caee;
+  --light-color: lighten(#00caee, 40%);
   --shadow: inset  5px 5px 5px rgba(0, 0, 0, 0.05),
 			inset -5px -5px 5px rgba(255, 255, 255, 0.5),
 		   5px 5px 5px rgba(0, 0, 0, 0.05),
@@ -428,6 +428,9 @@ body.dark-mode .switch span svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -443,7 +446,7 @@ body.dark-mode .switch span svg {
 }
 
 .cards .card .tech img {
-  width: 20px;
+  width: 24px;
 }
 
 .cards .card .tech * + * {
@@ -629,16 +632,6 @@ body.dark-mode .switch span svg {
   color: var(--main-color);
 }
 
-.modal .img-wrapper {
-  width: 150px;
-  height: 400px;
-  overflow: hidden;
-}
-
-.modal .img-wrapper img {
-  width: 150px;
-}
-
 body.dark-mode .modal {
   background: var(--bg-color);
 }
@@ -659,20 +652,6 @@ body.dark-mode .modal {
   transition: 0.3s ease all;
   text-decoration: none;
   cursor: pointer;
-}
-
-.m-info {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 2fr;
-      grid-template-columns: 1fr 2fr;
-  gap: 1rem;
-}
-
-.m-info a {
-  text-decoration: none;
-  color: var(--main-color);
-  font-weight: bold;
 }
 
 .project {
@@ -762,20 +741,19 @@ body.dark-mode .modal {
   gap: 4px;
 }
 
-/* only mobile */
-@media only screen and (max-width: 640px) {
-  .img-wrapper {
-    width: 150px;
-    height: 400px;
-    overflow: hidden;
-    display: none;
-  }
-  .img-wrapper img {
-    width: 150px;
-  }
-  .m-info {
-    display: block;
-  }
+.img-wrapper {
+  width: 150px;
+  height: 400px;
+  overflow: hidden;
+  display: none;
+}
+
+.img-wrapper img {
+  width: 150px;
+}
+
+.m-info {
+  display: block;
 }
 
 /* Small devices (portrait tablets and large phones, 640px and up) */
@@ -830,6 +808,18 @@ body.dark-mode .modal {
   }
   .img-wrapper img {
     width: 150px;
+  }
+  .m-info {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+  }
+  .m-info a {
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: bold;
   }
 }
 
@@ -945,10 +935,10 @@ body.dark-mode .modal {
   }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+/* Extra large devices (large laptops and desktops, 1536px and up) */
+@media only screen and (min-width: 1536px) {
   main {
-    width: 80%;
+    width: 70%;
   }
   section {
     margin-top: 5em;
