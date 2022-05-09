@@ -415,8 +415,11 @@ nav{
 } 
 
 .translate{
-	//transform: translateY(-66%);
-	transform: translateY(-50%);
+	transform: translateY(-66%);
+	transition: all 4s;
+}
+.translate-40{
+	transform: translateY(-40%);
 	transition: all 4s;
 }
 
