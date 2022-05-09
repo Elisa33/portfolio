@@ -17,7 +17,7 @@
                "description": "This system allows you to enter as admin, upload, edit and delete products, read customer orders. As a customer, you can see the products, select them and place the order.",
                "site": "https://tecnobox.vercel.app/",
                "code": "https://github.com/Elisa33/tecnobox-react",
-               "class": "translate"
+               "clase2": "translate"
                
                },
                {
@@ -34,7 +34,7 @@
                "description": "I am building this site in React, I implement react-router and handle css with styled-components. As a designer I create new sections and recommend styles to the client",
                "site": "https://mochila.vercel.app/",
                "code": "https://github.com/Elisa33/mochila",
-               "class": "translate"
+               "clase2": "translate"
               
  
                },
@@ -51,7 +51,7 @@
                "description": "This application is for patients to complete online forms, the data is saved in firebase and then can be viewed by the doctor from the patient view",
                "site": "https://nutricion-seven.vercel.app/",
                "code": "https://github.com/Elisa33/nutricion",
-               "class": "translate"
+               "clase2": "translate"
                }
          ]
       },
@@ -70,7 +70,7 @@
                "description": "This work was for practice fetch API",
                "site": "https://clever-mcnulty-bbe9bb.netlify.app/",
                "code": "https://github.com/Elisa33/pixabay",
-               "class": "translate"
+               "clase2": "translate"
               
                },
                {
@@ -86,7 +86,7 @@
                "description": "This work was for practice CRUD with React",
                "site": "https://appointment-vet.netlify.app/",
                "code": "https://github.com/Elisa33/mascotas-app",
-               "class": "translate"
+               "clase2": "translate"
  
                },
                {
@@ -102,7 +102,7 @@
                "description": "This work was for practice Javascript",
                "site": "https://distracted-lovelace-0ab6e1.netlify.app/",
                "code": "https://github.com/Elisa33/proyecto-green.git",
-               "class": "translate-40"
+               "clase2": "translate-40"
               
                }
          ]
@@ -122,7 +122,7 @@
                "mode": "Freelance",
                "description": "Working as a Designer and custom this site with html/css",
                "site": "https://www.onixpublicidad.com",
-               "class": "translate"
+               "clase2": "translate"
                },
                {
                "id":"web2",
@@ -136,7 +136,7 @@
                "mode": "Co-created with <a href='http://www.grudisegno.com/ class='info'>Gru</a>",
                "description": "Working as developer customizing this site, with my colegue as a team",
                "site": "https://www.brunaeventos.com",
-               "class": "translate"
+               "clase2": "translate"
                },
                {
                "id":"web3",
@@ -150,7 +150,7 @@
                "mode": "Co-created with <a href='http://www.grudisegno.com/ class='info'>Gru</a>",
                "description": "Working as developer customizing this site, with my colegue as a team",
                "site": "https://www.flordeluna.com.ar",
-               "class": "translate"
+               "clase2": "translate"
                }
 
          ]

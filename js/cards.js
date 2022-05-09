@@ -39,6 +39,7 @@ function loadData() {
                         icon02,
                         img,
                         clase,
+                        clase2,
                         rol,
                         techs,
                         mode,
@@ -52,7 +53,7 @@ function loadData() {
                         const contenido = ` 
                                 <div id="${id}">
                                     <div class="contain">
-                                        <img src="${img}" alt="" class="${clase}"/>
+                                        <img src="${img}" alt="" class="${clase2}"/>
                                     </div>
                                     <div class="flex">
                                         <a href="#dm">${client}</a>

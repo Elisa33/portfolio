@@ -414,11 +414,11 @@ nav{
 	}
 } 
 
-.translate{
-	transform: translateY(-66%);
+.translate:hover{
+	transform: translateY(-61%);
 	transition: all 4s;
 }
-.translate-40{
+.translate-40:hover{
 	transform: translateY(-40%);
 	transition: all 4s;
 }
