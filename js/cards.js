@@ -52,7 +52,7 @@ function loadData() {
                         const contenido = ` 
                                 <div id="${id}">
                                     <div class="contain">
-                                        <img src="${img}" alt="" />
+                                        <img src="${img}" alt="" class="${clase}"/>
                                     </div>
                                     <div class="flex">
                                         <a href="#dm">${client}</a>

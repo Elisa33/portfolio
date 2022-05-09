@@ -16,7 +16,8 @@
                "mode": "Freelance",
                "description": "This system allows you to enter as admin, upload, edit and delete products, read customer orders. As a customer, you can see the products, select them and place the order.",
                "site": "https://tecnobox.vercel.app/",
-               "code": "https://github.com/Elisa33/tecnobox-react"
+               "code": "https://github.com/Elisa33/tecnobox-react",
+               "class": "translate"
                
                },
                {
@@ -32,7 +33,8 @@
                "mode": "Work",
                "description": "I am building this site in React, I implement react-router and handle css with styled-components. As a designer I create new sections and recommend styles to the client",
                "site": "https://mochila.vercel.app/",
-               "code": "https://github.com/Elisa33/mochila"
+               "code": "https://github.com/Elisa33/mochila",
+               "class": "translate"
               
  
                },
@@ -48,7 +50,8 @@
                "mode": "Practice",
                "description": "This application is for patients to complete online forms, the data is saved in firebase and then can be viewed by the doctor from the patient view",
                "site": "https://nutricion-seven.vercel.app/",
-               "code": "https://github.com/Elisa33/nutricion"
+               "code": "https://github.com/Elisa33/nutricion",
+               "class": "translate"
                }
          ]
       },
@@ -66,7 +69,8 @@
                "mode": "Practice",
                "description": "This work was for practice fetch API",
                "site": "https://clever-mcnulty-bbe9bb.netlify.app/",
-               "code": "https://github.com/Elisa33/pixabay"
+               "code": "https://github.com/Elisa33/pixabay",
+               "class": "translate"
               
                },
                {
@@ -81,22 +85,24 @@
                "mode": "Practice",
                "description": "This work was for practice CRUD with React",
                "site": "https://appointment-vet.netlify.app/",
-               "code": "https://github.com/Elisa33/mascotas-app"
+               "code": "https://github.com/Elisa33/mascotas-app",
+               "class": "translate"
  
                },
                {
                "id":"js6",
-               "client":"CRM", 
-               "img": "img/javascript/screencapt-crm.png",
+               "client":"Green", 
+               "img": "img/javascript/screencapt-fruits.png",
                "clase":"web",
                "rol":"Front developer",
                "techs": "Modern JS",
                "icon01":"<img src='img/icons/js.svg' alt=''>",
                "icon02":"<img src='img/icons/sass.svg' alt=''>",
                "mode": "Work",
-               "description": "This work was for practice CRUD with Javascript",
-               "site": "https://crm-indexeddb.vercel.app/",
-               "code": "https://github.com/Elisa33/crm-indexeddb"
+               "description": "This work was for practice Javascript",
+               "site": "https://distracted-lovelace-0ab6e1.netlify.app/",
+               "code": "https://github.com/Elisa33/proyecto-green.git",
+               "class": "translate"
               
                }
          ]
@@ -115,7 +121,8 @@
                "icon02":"<img src='img/icons/css3.svg' alt=''>",
                "mode": "Freelance",
                "description": "Working as a Designer and custom this site with html/css",
-               "site": "https://www.onixpublicidad.com"
+               "site": "https://www.onixpublicidad.com",
+               "class": "translate"
                },
                {
                "id":"web2",
@@ -128,7 +135,8 @@
                "icon02":"<img src='img/icons/css3.svg' alt=''>",
                "mode": "Co-created with <a href='http://www.grudisegno.com/ class='info'>Gru</a>",
                "description": "Working as developer customizing this site, with my colegue as a team",
-               "site": "https://www.brunaeventos.com"
+               "site": "https://www.brunaeventos.com",
+               "class": "translate"
                },
                {
                "id":"web3",
@@ -141,7 +149,8 @@
                "icon02":"<img src='img/icons/css3.svg' alt=''>",
                "mode": "Co-created with <a href='http://www.grudisegno.com/ class='info'>Gru</a>",
                "description": "Working as developer customizing this site, with my colegue as a team",
-               "site": "https://www.flordeluna.com.ar"
+               "site": "https://www.flordeluna.com.ar",
+               "class": "translate"
                }
 
          ]
@@ -158,7 +167,8 @@
                "icon01":"<img src='img/icons/ai.svg' alt=''>",
                "icon02":"",
                "mode": "Freelance",
-               "description": "Working as a Designer, developing the brand for a client that sells children's clothing"
+               "description": "Working as a Designer, developing the brand for a client that sells children's clothing",
+               "class": "scale"
                },
 
                {
@@ -171,7 +181,8 @@
                "icon01":"<img src='img/icons/ai.svg' alt=''>",
                "icon02":"",
                "mode": "Freelance",
-               "description": "Working as a Designer, developing the brand for a construction company"
+               "description": "Working as a Designer, developing the brand for a construction company",
+               "class": "scale"
                },
                {
                "id":"ampersand",
@@ -183,7 +194,8 @@
                "icon01":"<img src='img/icons/ai.svg' alt=''>",
                "icon02":"",
                "mode": "Freelance",
-               "description": "Working as a Designer, developing the brand for an advertising agency"
+               "description": "Working as a Designer, developing the brand for an advertising agency",
+               "class": "scale"
                }
 
          ]
@@ -200,7 +212,8 @@
                "icon01":"<img src='img/icons/ai.svg' alt=''>",
                "icon02":"",
                "mode": "freelance",
-               "description": "Working as a Designer"
+               "description": "Working as a Designer",
+               "class": "scale"
                },
                {
                   "id":"graph2",
@@ -212,7 +225,8 @@
                "icon01":"<img src='img/icons/ps.svg' alt=''>",
                "icon02":"<img src='img/icons/id.svg' alt=''>",
                "mode": "freelance",
-               "description": "Working as a Designer"
+               "description": "Working as a Designer",
+               "class": "scale"
  
                },
                {
@@ -225,7 +239,8 @@
                "icon01":"<img src='img/icons/ai.svg' alt=''>",
                "icon02":"",
                "mode": "Freelance",
-               "description": "Illustrations and design"
+               "description": "Illustrations and design",
+               "class": "scale"
                }
 
          ]
