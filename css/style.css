@@ -471,7 +471,7 @@ body.dark-mode .switch span svg {
   transition: all 4s;
 }
 
-.scale {
+.scale:hover {
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
   -webkit-transition: all 2s;

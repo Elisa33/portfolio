@@ -168,7 +168,7 @@
                "icon02":"",
                "mode": "Freelance",
                "description": "Working as a Designer, developing the brand for a client that sells children's clothing",
-               "class": "scale"
+               "clase2": "scale"
                },
 
                {
@@ -182,7 +182,7 @@
                "icon02":"",
                "mode": "Freelance",
                "description": "Working as a Designer, developing the brand for a construction company",
-               "class": "scale"
+               "clase2": "scale"
                },
                {
                "id":"ampersand",
@@ -195,7 +195,7 @@
                "icon02":"",
                "mode": "Freelance",
                "description": "Working as a Designer, developing the brand for an advertising agency",
-               "class": "scale"
+               "clase2": "scale"
                }
 
          ]
@@ -213,7 +213,7 @@
                "icon02":"",
                "mode": "freelance",
                "description": "Working as a Designer",
-               "class": "scale"
+               "clase2": "scale"
                },
                {
                   "id":"graph2",
@@ -226,7 +226,7 @@
                "icon02":"<img src='img/icons/id.svg' alt=''>",
                "mode": "freelance",
                "description": "Working as a Designer",
-               "class": "scale"
+               "clase2": "scale"
  
                },
                {
@@ -240,7 +240,7 @@
                "icon02":"",
                "mode": "Freelance",
                "description": "Illustrations and design",
-               "class": "scale"
+               "clase2": "scale"
                }
 
          ]
