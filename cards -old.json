@@ -56,49 +56,103 @@
          ]
       },
       {
+         "Javascript Study Projects":[
+            {
+               "id":"js4",
+               "client":"Images bank", 
+               "img": "img/javascript/screencapt-images.png",
+               "clase":"web",
+               "rol":"React developer",
+               "techs": "Javascript - Tailwind",
+               "icon01":"<img src='img/icons/js.svg' alt=''>",
+               "icon02":"<img src='img/icons/tailwind.svg' alt=''>",
+               "mode": "Practice",
+               "description": "This work was for practice fetch API",
+               "site": "https://clever-mcnulty-bbe9bb.netlify.app/",
+               "code": "https://github.com/Elisa33/pixabay",
+               "clase2": "translate"
+              
+               },
+               {
+               "id":"js5",
+               "client":"Vet", 
+               "img": "img/javascript/screencapt-vet.png",
+               "clase":"web",
+               "rol":"Frontend developer",
+               "techs": "Javascript - Bootstrap",
+               "icon01":"<img src='img/icons/js.svg' alt=''>",
+               "icon02":"<img src='img/icons/boostrap.svg' alt=''>",
+               "mode": "Practice",
+               "description": "This work was for practice CRUD with React",
+               "site": "https://appointment-vet.netlify.app/",
+               "code": "https://github.com/Elisa33/mascotas-app",
+               "clase2": "translate"
+ 
+               },
+               {
+               "id":"js6",
+               "client":"Green", 
+               "img": "img/javascript/screencapt-fruits.png",
+               "clase":"web",
+               "rol":"Front developer",
+               "techs": "Modern JS",
+               "icon01":"<img src='img/icons/js.svg' alt=''>",
+               "icon02":"<img src='img/icons/sass.svg' alt=''>",
+               "mode": "Work",
+               "description": "This work was for practice Javascript",
+               "site": "https://distracted-lovelace-0ab6e1.netlify.app/",
+               "code": "https://github.com/Elisa33/proyecto-green.git",
+               "clase2": "translate-40"
+              
+               }
+         ]
+      },
+
+      {
          "Layout":[
-           {
-             "id": "web1",
-             "client": "Elise y Roque",
-             "img": "img/web/screencapt-elise.png",
-             "clase": "web",
-             "rol": "Web developer & designer",
-             "techs": "Html 5 - Tailwind",
-             "icon01": "<img src='img/icons/html5.svg' alt=''>",
-             "icon02": "<img src='img/icons/tailwind.svg' alt=''>",
-             "mode": "Freelance",
-             "description": "Working as a Designer and layout this site with html/tailwind",
-             "site": "https://www.eliseyroque.com",
-             "clase2": "translate"
-           },
-           {
-             "id": "web2",
-             "client": "Bruna site",
-             "img": "img/web/screencapt-bruna.png",
-             "clase": "web",
-             "rol": "Web developer",
-             "techs": "Html 5 - Css3",
-             "icon01": "<img src='img/icons/html5.svg' alt=''>",
-             "icon02": "<img src='img/icons/css3.svg' alt=''>",
-             "mode": "Co-created with <a href='http://www.grudisegno.com/ class='info'>Gru</a>",
-             "description": "Working as developer customizing this site, with my colegue as a team",
-             "site": "https://bruna-fawn.vercel.app/",
-             "clase2": "translate"
-           },
-           {
-             "id": "web3",
-             "client": "Flor de Luna site",
-             "img": "img/web/screencapt-florde.png",
-             "clase": "web",
-             "rol": "Web developer",
-             "techs": "Wordpress - Css3",
-             "icon01": "<img src='img/icons/wp.svg' alt=''>",
-             "icon02": "<img src='img/icons/css3.svg' alt=''>",
-             "mode": "Co-created with <a href='http://www.grudisegno.com/ class='info'>Gru</a>",
-             "description": "Working as developer customizing this site, with my colegue as a team",
-             "site": "https://www.flordeluna.com.ar",
-             "clase2": "translate"
-           }
+            {
+               "id":"web1",
+               "client":"Onix site", 
+               "img": "img/web/screencapt-onix.png",
+               "clase":"web",
+               "rol":"Web developer",
+               "techs": "Html 5 - Css3",
+               "icon01":"<img src='img/icons/html5.svg' alt=''>",
+               "icon02":"<img src='img/icons/css3.svg' alt=''>",
+               "mode": "Freelance",
+               "description": "Working as a Designer and custom this site with html/css",
+               "site": "https://www.onixpublicidad.com",
+               "clase2": "translate"
+               },
+               {
+               "id":"web2",
+               "client":"Bruna site", 
+               "img": "img/web/screencapt-bruna.png",
+               "clase":"web",
+               "rol":"Web developer",
+               "techs": "Html 5 - Css3",
+               "icon01":"<img src='img/icons/html5.svg' alt=''>",
+               "icon02":"<img src='img/icons/css3.svg' alt=''>",
+               "mode": "Co-created with <a href='http://www.grudisegno.com/ class='info'>Gru</a>",
+               "description": "Working as developer customizing this site, with my colegue as a team",
+               "site": "https://www.brunaeventos.com",
+               "clase2": "translate"
+               },
+               {
+               "id":"web3",
+               "client":"Flor de Luna site", 
+               "img": "img/web/screencapt-florde.png",
+               "clase":"web",
+               "rol":"Web developer",
+               "techs": "Wordpress - Css3",
+               "icon01":"<img src='img/icons/wp.svg' alt=''>",
+               "icon02":"<img src='img/icons/css3.svg' alt=''>",
+               "mode": "Co-created with <a href='http://www.grudisegno.com/ class='info'>Gru</a>",
+               "description": "Working as developer customizing this site, with my colegue as a team",
+               "site": "https://www.flordeluna.com.ar",
+               "clase2": "translate"
+               }
+
          ]
       },
       {
