@@ -87,16 +87,16 @@
            },
            {
              "id": "web3",
-             "client": "Onix site",
-             "img": "img/web/screencapt-onix.png",
+             "client": "Checo site",
+             "img": "img/web/screencapt-checo.png",
              "clase": "web",
-             "rol": "Web developer",
-             "techs": "Html 5 - Css3",
-             "icon01": "<img src='img/icons/html5.svg' alt=''>",
-             "icon02": "<img src='img/icons/css3.svg' alt=''>",
+             "rol": "Web developer & designer",
+             "techs": "NextJs - Tailwind",
+             "icon01": "<img src='img/icons/nextjs.svg' alt=''>",
+             "icon02": "<img src='img/icons/tailwind.svg' alt=''>",
              "mode": "Freelance",
-             "description": "Working as a Designer and custom this site with html/css",
-             "site": "https://www.onixpublicidad.com",
+             "description": "Working as a Designer and Developer - Coming soon page",
+             "site": "https://www.checo.com.ar",
              "clase2": "translate"
            }
          ]

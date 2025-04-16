@@ -110,49 +110,62 @@
 
       {
          "Layout":[
-            {
-               "id":"web1",
-               "client":"Onix site", 
-               "img": "img/web/screencapt-onix.png",
-               "clase":"web",
-               "rol":"Web developer",
-               "techs": "Html 5 - Css3",
-               "icon01":"<img src='img/icons/html5.svg' alt=''>",
-               "icon02":"<img src='img/icons/css3.svg' alt=''>",
-               "mode": "Freelance",
-               "description": "Working as a Designer and custom this site with html/css",
-               "site": "https://www.onixpublicidad.com",
-               "clase2": "translate"
-               },
-               {
-               "id":"web2",
-               "client":"Bruna site", 
-               "img": "img/web/screencapt-bruna.png",
-               "clase":"web",
-               "rol":"Web developer",
-               "techs": "Html 5 - Css3",
-               "icon01":"<img src='img/icons/html5.svg' alt=''>",
-               "icon02":"<img src='img/icons/css3.svg' alt=''>",
-               "mode": "Co-created with <a href='http://www.grudisegno.com/ class='info'>Gru</a>",
-               "description": "Working as developer customizing this site, with my colegue as a team",
-               "site": "https://www.brunaeventos.com",
-               "clase2": "translate"
-               },
-               {
-               "id":"web3",
-               "client":"Flor de Luna site", 
-               "img": "img/web/screencapt-florde.png",
-               "clase":"web",
-               "rol":"Web developer",
-               "techs": "Wordpress - Css3",
-               "icon01":"<img src='img/icons/wp.svg' alt=''>",
-               "icon02":"<img src='img/icons/css3.svg' alt=''>",
-               "mode": "Co-created with <a href='http://www.grudisegno.com/ class='info'>Gru</a>",
-               "description": "Working as developer customizing this site, with my colegue as a team",
-               "site": "https://www.flordeluna.com.ar",
-               "clase2": "translate"
-               }
-
+           {
+             "id": "web1",
+             "client": "Onix site",
+             "img": "img/web/screencapt-onix.png",
+             "clase": "web",
+             "rol": "Web developer",
+             "techs": "Html 5 - Css3",
+             "icon01": "<img src='img/icons/html5.svg' alt=''>",
+             "icon02": "<img src='img/icons/css3.svg' alt=''>",
+             "mode": "Freelance",
+             "description": "Working as a Designer and custom this site with html/css",
+             "site": "https://www.onixpublicidad.com",
+             "clase2": "translate"
+           },
+           {
+             "id": "web2",
+             "client": "Bruna site",
+             "img": "img/web/screencapt-bruna.png",
+             "clase": "web",
+             "rol": "Web developer",
+             "techs": "Html 5 - Css3",
+             "icon01": "<img src='img/icons/html5.svg' alt=''>",
+             "icon02": "<img src='img/icons/css3.svg' alt=''>",
+             "mode": "Co-created with <a href='http://www.grudisegno.com/ class='info'>Gru</a>",
+             "description": "Working as developer customizing this site, with my colegue as a team",
+             "site": "https://www.brunaeventos.com",
+             "clase2": "translate"
+           },
+           {
+             "id": "web3",
+             "client": "Flor de Luna site",
+             "img": "img/web/screencapt-florde.png",
+             "clase": "web",
+             "rol": "Web developer",
+             "techs": "Wordpress - Css3",
+             "icon01": "<img src='img/icons/wp.svg' alt=''>",
+             "icon02": "<img src='img/icons/css3.svg' alt=''>",
+             "mode": "Co-created with <a href='http://www.grudisegno.com/ class='info'>Gru</a>",
+             "description": "Working as developer customizing this site, with my colegue as a team",
+             "site": "https://www.flordeluna.com.ar",
+             "clase2": "translate"
+           },
+           {
+             "id": "web4",
+             "client": "Onix site",
+             "img": "img/web/screencapt-onix.png",
+             "clase": "web",
+             "rol": "Web developer",
+             "techs": "Html 5 - Css3",
+             "icon01": "<img src='img/icons/html5.svg' alt=''>",
+             "icon02": "<img src='img/icons/css3.svg' alt=''>",
+             "mode": "Freelance",
+             "description": "Working as a Designer and custom this site with html/css",
+             "site": "https://www.onixpublicidad.com",
+             "clase2": "translate"
+           }
          ]
       },
       {
