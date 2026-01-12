@@ -1,8 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-color: #dbefff; /* aliceblue */
+  --main-color: #00caee;
+  --light-color: lighten(#00caee, 40%);
+  --shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+    inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+    5px 5px 5px rgba(0, 0, 0, 0.05), -5px -5px 5px rgba(255, 255, 255, 0.5);
+  --little-shadow: 2px 2px 2px #afc9d0, -3px -3px 3px #fff;
+  --down-shadow: inset 4px 4px 4px #afc9d0, inset -4px -4px 4px #fafdff;
+  --little-down-shadow: inset 3px 3px 3px #afc9d0, inset -3px -3px 3px #fafdff;
+  --text-color: #877e8c;
+  --font: "Quicksand", sans-serif;
+  --thin: 300;
+  --semibold: 400;
+  --bold: 500;
 }
 
 @theme inline {
@@ -14,8 +26,15 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --text-color: rgb(173, 209, 240);
+    --bg-color: #005971;
+    --shadow: 5px 5px 5px #012220, -5px -5px 5px #14687f;
+    --little-shadow: 3px 3px 3px #012220, -3px -3px 3px #14687f;
+    /* --down-shadow: inset 3px 3px 3px #012220, inset -4px -4px 4px #14687F; */
+    --little-down-shadow: inset 2px 2px 3px #012220, inset -3px -3px 3px #14687f;
+    --down-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+      inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+      5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
   }
 }
 
