@@ -1,23 +1,55 @@
-import { defineConfig, globalIgnores } from "eslint/config";
-import nextVitals from "eslint-config-next/core-web-vitals";
-import nextTs from "eslint-config-next/typescript";
+import js from "@eslint/js";
+import globals from "globals";
+import tseslint from "typescript-eslint";
+import pluginReact from "eslint-plugin-react";
+import pluginReactHooks from "eslint-plugin-react-hooks";
+import pluginNext from "@next/eslint-plugin-next";
+import { defineConfig } from "eslint/config";
 
-const eslintConfig = defineConfig([
-  ...nextVitals,
-  ...nextTs,
+export default defineConfig([
+  // Base JS / TS / React files
   {
-    rules: {
-      "react/no-unescaped-entities": "off",
+    files: ["**/*.{js,mjs,cjs,ts,tsx,jsx}"],
+    plugins: {
+      js,
+      react: pluginReact,
+      "react-hooks": pluginReactHooks,
+      next: pluginNext,
+    },
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+    settings: {
+      react: {
+        version: "detect",
+      },
     },
   },
-  // Override default ignores of eslint-config-next.
-  globalIgnores([
-    // Default ignores of eslint-config-next:
-    ".next/**",
-    "out/**",
-    "build/**",
-    "next-env.d.ts",
-  ]),
-]);
 
-export default eslintConfig;
+  // JS recommended
+  js.configs.recommended,
+
+  // TypeScript recommended
+  ...tseslint.configs.recommended,
+
+  // React recommended
+  pluginReact.configs.flat.recommended,
+
+  // React JSX runtime (React 17+)
+  pluginReact.configs.flat["jsx-runtime"],
+
+  // React Hooks recommended
+  pluginReactHooks.configs.recommended,
+
+  // Next.js core web vitals
+  pluginNext.configs.flat.recommended,
+  pluginNext.configs.flat["core-web-vitals"],
+]);
