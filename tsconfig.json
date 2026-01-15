@@ -29,7 +29,7 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts",
-    "src/components/sections/IntroSection.tsx"
+    "src/components/sections/AboutSection.tsx"
   ],
   "exclude": ["node_modules"]
 }

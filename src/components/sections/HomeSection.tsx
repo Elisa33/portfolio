@@ -1,9 +1,12 @@
 import Image from "next/image";
 
-const Intro = () => {
+const Home = () => {
   return (
-    <section id="intro" className="w-screen h-screen bg-sky-100 flex flex-col lg:flex-row items-center justify-center">
-      <div className="w-5/6 flex flex-col lg:flex-row gap-20 items-center justify-center h-full">
+    <section
+      id="home"
+      className="w-screen h-screen bg-sky-200 flex flex-col lg:flex-row items-center justify-center"
+    >
+      <div className="w-9/12 flex flex-col lg:flex-row gap-20 items-center justify-center h-full">
         <div className="relative w-60 h-60 lg:w-90 lg:h-90 rounded-full overflow-hidden mx-auto">
           <Image
             src="/imgs/profile.jpg"
@@ -17,7 +20,7 @@ const Intro = () => {
           <h2 className="text-xl pb-6">
             Frontend Developer & Visual Communicator
           </h2>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-800">
             I work at the intersection of design and development, creating
             thoughtful, user-centered digital experiences. With a background in
             visual communication and graphic design, I approach frontend
@@ -29,4 +32,4 @@ const Intro = () => {
   );
 };
 
-export default Intro;
+export default Home;

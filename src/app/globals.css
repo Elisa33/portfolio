@@ -15,6 +15,18 @@
   --thin: 300;
   --semibold: 400;
   --bold: 500;
+  --color-amber-100:oklch(96.2% 0.059 95.617);
+  --color-lime-100:oklch(93.8% 0.127 124.321);
+  --color-sky-100:oklch(90.1% 0.058 230.902);
+  --color-violet-100:oklch(89.4% 0.057 293.283);
+  --color-fuchsia-100:oklch(90.3% 0.076 319.62);
+  --color-emerald-100:oklch(95% 0.052 163.051);
+  --color-amber-200:oklch(96.2% 0.059 95.617);
+  --color-lime-200:oklch(93.8% 0.127 124.321);
+  --color-sky-200:oklch(90.1% 0.058 230.902);
+  --color-violet-200:oklch(89.4% 0.057 293.283);
+  --color-fuchsia-200:oklch(90.3% 0.076 319.62);
+  --color-emerald-200:oklch(95% 0.052 163.051);
 }
 
 @theme inline {
@@ -47,3 +59,27 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
+@keyframes backgroundColors {
+  0%   { background-color: var(--color-sky-200) } 
+  16.66% { background-color: var(--color-violet-200) }
+  33.33% { background-color: var(--color-fuchsia-200) }
+  50%   { background-color: var(--color-amber-200) }
+  66.66% { background-color: var(--color-lime-200)}
+  83.33% { background-color: var(--color-emerald-200) }
+  100%  { background-color: var(--color-sky-200)}
+}
+
+.bg-animated {
+  animation: backgroundColors 28s linear infinite;
+  transition: background-color 3s linear;
+
+}
+
+
+.btn-primary {
+  @apply px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition;
+}
+

@@ -29,7 +29,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex`}
       >
         <Menu />
-        {children}
+        <main className="animate-bgColor">{children}</main>
       </body>
     </html>
   );
