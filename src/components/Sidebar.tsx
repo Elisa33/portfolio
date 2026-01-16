@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
   HiMiniHome,
-  HiMiniUser,
   HiClipboardDocumentCheck,
   HiMiniDocumentText,
   HiBriefcase,
@@ -14,7 +13,6 @@ import { NavItem } from "@/models/navigation";
 
 const navItems: NavItem[] = [
   { id: "home", label: "home", icon: HiMiniHome },
-  { id: "about", label: "about", icon: HiMiniUser },
   { id: "skills", label: "skills", icon: HiMiniDocumentText },
   { id: "works", label: "works", icon: HiClipboardDocumentCheck },
   { id: "resume", label: "resume", icon: HiBriefcase },
@@ -23,7 +21,7 @@ const navItems: NavItem[] = [
 
 const Sidebar = () => {
   const router = useRouter();
-  const [active, setActive] = useState("about");
+  const [active, setActive] = useState("home");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -54,40 +52,37 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="fixed h-screen w-16 bg-animated flex items-center justify-center">
-      <nav className="text-cyan-500 flex flex-col gap-5">
-        {navItems.map((item) => {
-          const Icon = item.icon;
-          const isActive = active === item.id;
-          return (
-            <button
-              key={item.id}
-              onClick={() => goTo(item.id)}
-              className="flex flex-col items-center group"
-            >
-              <Icon
-                size={20}
-                className={`transition ${
-                  isActive ? "text-cyan-500" : "text-gray-400"
-                } group-hover:text-cyan-400`}
-              />
-              <span
-                className={`text-[12px] transition-all duration-300
+    <nav className="fixed w-screen bg-sky-50 pt-2 pb-1 md:h-screen md:w-16 flex items-center lg:justify-center shadow z-50text-cyan-500 md:flex-col justify-evenly gap-5">
+      {navItems.map((item) => {
+        const Icon = item.icon;
+        const isActive = active === item.id;
+        return (
+          <button
+            key={item.id}
+            onClick={() => goTo(item.id)}
+            className="flex flex-col items-center group"
+          >
+            <Icon
+              className={`transition h-6 w-6 ${
+                isActive ? "text-cyan-500" : "text-gray-400"
+              } group-hover:text-cyan-400`}
+            />
+            <span
+              className={`text-[12px] transition-all duration-300 text-cyan-400
                 ${
                   isActive
-                    ? "visible translate-y-1"
-                    : "invisible -translate-y-0.5"
+                    ? "visible md:translate-y-1"
+                    : "md:invisible md:-translate-y-0.5"
                 }
                 group-hover:visible group-hover:translate-y-1
               `}
-              >
-                {item.label}
-              </span>
-            </button>
-          );
-        })}
-      </nav>
-    </div>
+            >
+              {item.label}
+            </span>
+          </button>
+        );
+      })}
+    </nav>
   );
 };
 
