@@ -21,9 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={quicksand.variable}>
-      <body className="antialiased flex flex-col md:flex-row">
+      <body className="antialiased flex flex-col md:flex-row bg-linear-to-b/increasing from-[var(--bg-color)] to-fuchsia-200">
         <Menu />
-        <main className="flex flex-col">{children}</main>
+        <main className="ml-16 w-full flex flex-col">{children}</main>
       </body>
     </html>
   );
