@@ -35,7 +35,7 @@ const Home = () => {
               <span>elisablange.tdf@gmail.com</span>
             </div>
           </div>
-          <button className="mt-5 h-10 w-40 px-4 rounded-lg text-sky-500 shadow-[var(--little-shadow)] hover:shadow-[var(--little-down-shadow)]">
+          <button className="mt-5 h-10 w-40 px-4 rounded-lg text-sky-500 btn-primary">
             Download CV
           </button>
         </div>
