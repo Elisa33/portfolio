@@ -58,14 +58,14 @@ function SkillChip({ name, color }: { name: string; color: string }) {
         rounded-full
         text-[0.88rem] font-medium
         text-fuchsia-500
-        shadow-[var(--little-shadow)]
+        shadow-(--little-shadow)
         transition-[box-shadow,transform] duration-200 ease-out
-        hover:shadow-[var(--down-shadow)] hover:-translate-y-px
+        hover:shadow-(--down-shadow) hover:-translate-y-px
         cursor-default select-none
       "
     >
       <span
-        className="w-2 h-2 rounded-full flex-shrink-0"
+        className="w-2 h-2 rounded-full shrink-0"
         style={{ backgroundColor: color }}
         aria-hidden
       />
@@ -78,13 +78,13 @@ function SkillChip({ name, color }: { name: string; color: string }) {
 
 function StarRating({ value, color }: { value: number; color: string }) {
   return (
-    <div className="inline-flex gap-[2px]" style={{ color }}>
+    <div className="inline-flex gap-0.5" style={{ color }}>
       {[0, 1, 2, 3, 4].map((i) => {
         const fill = Math.max(0, Math.min(1, value - i));
         return (
           <span
             key={i}
-            className="relative inline-block w-[18px] h-[18px]"
+            className="relative inline-block w-4.5 h-4.5"
             aria-hidden
           >
             {/* empty star (fondo tenue) */}
@@ -101,7 +101,7 @@ function StarRating({ value, color }: { value: number; color: string }) {
               style={{ width: `${fill * 100}%` }}
             >
               <svg
-                className="w-[18px] h-[18px] block"
+                className="w-4.5 h-4.5 block"
                 viewBox="0 0 24 24"
                 fill="currentColor"
               >
@@ -137,7 +137,7 @@ function TimelineColumn({ group }: { group: TimelineGroup }) {
       <div className="relative pl-6">
         {/* vertical gradient line — var() + rgba() mixto, va como inline style */}
         <div
-          className="absolute left-0 top-2 bottom-2 w-[2px] rounded-[2px]"
+          className="absolute left-0 top-2 bottom-2 w-0.5 rounded-xs"
           style={{
             backgroundImage:
               "linear-gradient(to bottom, var(--main-color) 0%, rgba(0, 202, 238, 0.2) 100%)",
@@ -154,15 +154,15 @@ function TimelineColumn({ group }: { group: TimelineGroup }) {
               mb-5 last:mb-0
               transition-transform duration-200 ease-out
               hover:translate-x-1
-              shadow-[var(--little-shadow)]
+              shadow-(--little-shadow)
             "
           >
             <span
               className="
                 absolute top-6 -left-6
-                w-[14px] h-[14px]
+                w-3.5 h-3.5
                 rounded-full
-                border-[3px] border-[var(--bg-color)]
+                border-[3px] border-(--bg-color)
                 -translate-x-1/2
               "
               style={{
@@ -218,7 +218,7 @@ export default function ResumeSection({
       "
     >
       <div
-        className="w-[90%] max-w-[1100px]
+        className="w-[90%] max-w-275
         mx-auto"
       >
         <h2
@@ -265,7 +265,7 @@ export default function ResumeSection({
                 flex flex-wrap gap-[0.6rem]
                 p-6
                 rounded-xl
-                shadow-[var(--down-shadow)]
+                shadow-(--down-shadow)
               "
               >
                 {group.skills.map((s) => (
@@ -298,7 +298,7 @@ export default function ResumeSection({
                 rounded-lg
                 neu-shadow-little
                 transition-[box-shadow,transform] duration-200 ease-out
-                hover:shadow-[var(--down-shadow)] active:translate-y-px
+                hover:shadow-(--down-shadow) active:translate-y-px
               "
               >
                 <p className="text-[0.95rem] font-medium text-fuchsia-500 m-0">

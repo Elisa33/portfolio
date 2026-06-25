@@ -8,7 +8,7 @@ const Skills = () => {
     >
       <h2 className="text-indigo-500 text-2xl">Skills</h2>
       <div className="grid grid-cols-3 gap-4">
-        <div className="shadow-[var(--down-shadow)] p-5 rounded-sm">
+        <div className="shadow-(--down-shadow) p-5 rounded-sm">
           <div className="flex items-center gap-5">
             <LuCodeXml className="text-indigo-500" />
             <h3 className="font-light text-gray-600 text-sm">Developer</h3>
@@ -27,7 +27,7 @@ const Skills = () => {
             </li>
           </ul>
         </div>
-        <div className="shadow-[var(--down-shadow)] p-5 rounded-sm">
+        <div className="shadow-(--down-shadow) p-5 rounded-sm">
           <div className="flex items-center gap-5">
             <LuPencil className="text-indigo-500" />
             <h3 className="font-light text-gray-600 text-sm">Designer</h3>
@@ -46,7 +46,7 @@ const Skills = () => {
             </li>
           </ul>
         </div>
-        <div className="shadow-[var(--down-shadow)] p-5 rounded-sm">
+        <div className="shadow-(--down-shadow) p-5 rounded-sm">
           <div className="flex items-center gap-5">
             <LuStar className="text-indigo-500" />
             <h2 className="font-light text-gray-600 text-sm">Others</h2>

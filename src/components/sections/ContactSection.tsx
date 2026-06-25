@@ -115,9 +115,9 @@ function ContactCard({
         rounded-2xl
         no-underline
         text-lime-200
-        shadow-[var(--little-shadow)]
+        shadow-(--little-shadow)
         transition-[box-shadow,transform] duration-200 ease-out
-        hover:shadow-[var(--down-shadow)]
+        hover:shadow-(--down-shadow)
         active:translate-y-px
       "
     >
@@ -129,7 +129,7 @@ function ContactCard({
           rounded-full
           transition-transform duration-300 ease-out
           group-hover:scale-105
-          shadow-[var(--little-shadow)]
+          shadow-(--little-shadow)
         "
       >
         {icon}
@@ -169,9 +169,9 @@ function ContactCard({
               rounded-full
               text-lime-500
               cursor-pointer border-none
-              shadow-[var(--little-shadow)]
+              shadow-(--little-shadow)
               transition-[box-shadow,transform] duration-200 ease-out
-              hover:shadow-[var(--down-shadow)]
+              hover:shadow-(--down-shadow)
               active:translate-y-px
             "
           >
@@ -203,7 +203,7 @@ export default function Contact({
         bg-linear-to-b from-lime-200 to-lime-200      "
     >
       <div
-        className=" w-[90%] max-w-[1100px]
+        className=" w-[90%] max-w-275
         mx-auto"
       >
         <h2
@@ -221,14 +221,14 @@ export default function Contact({
             className="
             text-center text-base font-light opacity-75
             m-0 mx-auto mb-12
-            max-w-[600px]
+            max-w-150
           "
           >
             {subtitle}
           </p>
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[800px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-200 mx-auto">
           <ContactCard
             icon={<MailIcon />}
             label="Email"

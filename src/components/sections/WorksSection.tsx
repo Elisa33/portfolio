@@ -19,7 +19,7 @@ interface WorksProps {
 
 function Icon({
   name,
-  className = "w-[22px] h-[22px]",
+  className = "w-5.5 h-5.5",
 }: {
   name: IconName;
   className?: string;
@@ -76,8 +76,8 @@ export default function Works({
       id={id}
       className="w-full pt-8 pb-20 text-violet-500 bg-linear-to-b from-violet-200 via-violet-200 via-75% to-fuchsia-100"
     >
-      <div className="w-[90%] max-w-[1100px] mx-auto">
-        <h2 className="text-center text-[var(--works-main)] text-[2.2rem] font-normal mt-6 mb-1">
+      <div className="w-[90%] max-w-275 mx-auto">
+        <h2 className="text-center text-(--works-main) text-[2.2rem] font-normal mt-6 mb-1">
           {title}
         </h2>
         {subtitle && (
@@ -88,7 +88,7 @@ export default function Works({
 
         {WORKS.map((group) => (
           <div key={group.group}>
-            <h3 className="text-center text-[var(--works-main)] text-[1.6rem] font-normal mt-12 mb-6">
+            <h3 className="text-center text-(--works-main) text-[1.6rem] font-normal mt-12 mb-6">
               {group.group}
             </h3>
 
@@ -99,7 +99,7 @@ export default function Works({
                   type="button"
                   onClick={() => setActive(p)}
                   aria-label={`Ver detalles de ${p.client}`}
-                  className="group works-shadow flex flex-col rounded-[10px] bg-[var(--works-bg)] p-3.5 relative overflow-hidden cursor-pointer transition-transform duration-200 hover:-translate-y-[3px] focus-visible:outline-2 focus-visible:outline-[var(--works-main)] focus-visible:outline-offset-2 border-none text-left"
+                  className="group works-shadow flex flex-col rounded-[10px] bg-(--works-bg) p-3.5 relative overflow-hidden cursor-pointer transition-transform duration-200 hover:-translate-y-0.75 focus-visible:outline-2 focus-visible:outline-(--works-main) focus-visible:outline-offset-2 border-none text-left"
                 >
                   <div
                     className={`overflow-hidden rounded-md ${CONTAIN[p.variant]}`}
@@ -113,8 +113,8 @@ export default function Works({
                     />
                   </div>
 
-                  <div className="mt-4 mb-1.5 mx-[3px] flex items-center justify-between gap-2">
-                    <span className="text-[var(--works-main)] text-[1.05rem] font-medium uppercase tracking-[0.02em]">
+                  <div className="mt-4 mb-1.5 mx-0.75 flex items-center justify-between gap-2">
+                    <span className="text-(--works-main) text-[1.05rem] font-medium uppercase tracking-[0.02em]">
                       {p.client}
                     </span>
                     <div className="flex justify-end items-center gap-2">
@@ -135,7 +135,7 @@ export default function Works({
             if (e.target === e.currentTarget) closeModal();
           }}
           aria-hidden={!active}
-          className={`fixed inset-0 flex items-center justify-center p-4 z-[1000] bg-[rgba(1,34,32,0.8)] transition-[opacity,visibility] duration-200 ${
+          className={`fixed inset-0 flex items-center justify-center p-4 z-1000 bg-[rgba(1,34,32,0.8)] transition-[opacity,visibility] duration-200 ${
             active ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
         >
@@ -144,53 +144,53 @@ export default function Works({
               role="dialog"
               aria-modal="true"
               aria-labelledby="works-modal-title"
-              className="bg-[var(--works-bg)] text-[var(--works-text)] shadow-[0_8px_32px_rgba(0,0,0,0.35)] rounded-[10px] p-6 w-full max-w-[560px] max-h-[90vh] overflow-y-auto relative"
+              className="bg-(--works-bg) text-(--works-text) shadow-[0_8px_32px_rgba(0,0,0,0.35)] rounded-[10px] p-6 w-full max-w-140 max-h-[90vh] overflow-y-auto relative"
             >
               <button
                 type="button"
                 onClick={closeModal}
                 aria-label="Cerrar"
-                className="absolute top-3 right-4 text-[1.2rem] leading-none text-[#bbb] font-medium cursor-pointer transition-colors duration-200 hover:text-[var(--works-main)] bg-transparent border-none"
+                className="absolute top-3 right-4 text-[1.2rem] leading-none text-[#bbb] font-medium cursor-pointer transition-colors duration-200 hover:text-(--works-main) bg-transparent border-none"
               >
                 ✕
               </button>
 
               <h3
                 id="works-modal-title"
-                className="text-[var(--works-main)] text-[1.4rem] font-medium mt-0 mb-4"
+                className="text-(--works-main) text-[1.4rem] font-medium mt-0 mb-4"
               >
                 {active.client}
               </h3>
 
               <div className="mb-[0.85rem]">
-                <h4 className="text-[var(--works-main)] text-[0.85rem] font-medium uppercase tracking-[0.04em] mt-0 mb-1">
+                <h4 className="text-(--works-main) text-[0.85rem] font-medium uppercase tracking-[0.04em] mt-0 mb-1">
                   Rol
                 </h4>
-                <p className="mt-0 text-[0.95rem] leading-[1.5]">
+                <p className="mt-0 text-[0.95rem] leading-normal">
                   {active.rol}
                 </p>
               </div>
               <div className="mb-[0.85rem]">
-                <h4 className="text-[var(--works-main)] text-[0.85rem] font-medium uppercase tracking-[0.04em] mt-0 mb-1">
+                <h4 className="text-(--works-main) text-[0.85rem] font-medium uppercase tracking-[0.04em] mt-0 mb-1">
                   Techs
                 </h4>
-                <p className="mt-0 text-[0.95rem] leading-[1.5]">
+                <p className="mt-0 text-[0.95rem] leading-normal">
                   {active.techs}
                 </p>
               </div>
               <div className="mb-[0.85rem]">
-                <h4 className="text-[var(--works-main)] text-[0.85rem] font-medium uppercase tracking-[0.04em] mt-0 mb-1">
+                <h4 className="text-(--works-main) text-[0.85rem] font-medium uppercase tracking-[0.04em] mt-0 mb-1">
                   Mode
                 </h4>
-                <p className="mt-0 text-[0.95rem] leading-[1.5]">
+                <p className="mt-0 text-[0.95rem] leading-normal">
                   {active.mode}
                 </p>
               </div>
               <div className="mb-[0.85rem]">
-                <h4 className="text-[var(--works-main)] text-[0.85rem] font-medium uppercase tracking-[0.04em] mt-0 mb-1">
+                <h4 className="text-(--works-main) text-[0.85rem] font-medium uppercase tracking-[0.04em] mt-0 mb-1">
                   Description
                 </h4>
-                <p className="mt-0 text-[0.95rem] leading-[1.5]">
+                <p className="mt-0 text-[0.95rem] leading-normal">
                   {active.description}
                 </p>
               </div>
@@ -202,7 +202,7 @@ export default function Works({
                       href={active.site}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="works-btn inline-flex items-center gap-2 font-medium text-[var(--works-main)] bg-[var(--works-bg)] py-[0.7rem] px-[1.4rem] rounded-lg no-underline text-[0.95rem]"
+                      className="works-btn inline-flex items-center gap-2 font-medium text-(--works-main) bg-(--works-bg) py-[0.7rem] px-[1.4rem] rounded-lg no-underline text-[0.95rem]"
                     >
                       <Icon name="eye" className="w-4 h-4" /> Site
                     </a>
@@ -212,7 +212,7 @@ export default function Works({
                       href={active.code}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="works-btn inline-flex items-center gap-2 font-medium text-[var(--works-main)] bg-[var(--works-bg)] py-[0.7rem] px-[1.4rem] rounded-lg no-underline text-[0.95rem]"
+                      className="works-btn inline-flex items-center gap-2 font-medium text-(--works-main) bg-(--works-bg) py-[0.7rem] px-[1.4rem] rounded-lg no-underline text-[0.95rem]"
                     >
                       <Icon name="github" className="w-4 h-4" /> Code
                     </a>
