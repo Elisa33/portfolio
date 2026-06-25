@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="w-screen h-screen flex flex-col md:flex-row items-center justify-center"
+      className="w-screen h-screen text-sky-500 flex flex-col md:flex-row items-center justify-center bg-linear-to-b from-sky-200 via-sky-200 via-75% to-indigo-200"
     >
       <div className="w-9/12 flex flex-col md:flex-row gap-20 items-center justify-center h-full mt-14 pt-14 md:mt-0">
         <div className="relative w-60 h-60 md:w-90 md:h-90 rounded-full overflow-hidden mx-auto">
@@ -16,7 +16,7 @@ const Home = () => {
             className="object-cover"
           />
         </div>
-        <div className="text-cyan-600 md:w-1/2 md:order-first flex flex-col gap-4">
+        <div className="text-sky-500 md:w-1/2 md:order-first flex flex-col gap-4">
           <h1 className="text-3xl pb-5">I&apos;m Elisa Lange</h1>
           <h2 className="text-xl">Frontend Developer & Visual Communicator</h2>
           <p className="text-sm text-gray-800 font-light">
@@ -35,7 +35,7 @@ const Home = () => {
               <span>elisablange.tdf@gmail.com</span>
             </div>
           </div>
-          <button className="mt-5 h-10 w-40 px-4 rounded-lg text-sky-500 btn-primary">
+          <button className="mt-5 h-10 w-40 px-4 rounded-lg text-sky-500 btn-primary shadow-[var(--little-shadow)] hover:shadow-[var(--down-shadow)]">
             Download CV
           </button>
         </div>
