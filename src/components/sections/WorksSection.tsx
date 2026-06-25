@@ -1,11 +1,228 @@
-import Image from "next/image";
+"use client";
 
-const Works = () => {
+import { useEffect, useState, useCallback } from "react";
+import {
+  WORKS,
+  ICONS,
+  ASSETS_BASE,
+  type WorkProject,
+  type IconName,
+} from "../../data/works-data";
+
+interface WorksProps {
+  title?: string;
+  subtitle?: string;
+  id?: string;
+}
+
+/* ---------- Helpers ---------- */
+
+function Icon({
+  name,
+  className = "w-[22px] h-[22px]",
+}: {
+  name: IconName;
+  className?: string;
+}) {
   return (
-    <section id="works" className="min-h-screen bg-amber-400">
-      <h2>Works</h2>
-    </section>
+    <span
+      aria-hidden
+      className={`inline-flex shrink-0 [&_svg]:w-full [&_svg]:h-full ${className}`}
+      dangerouslySetInnerHTML={{ __html: ICONS[name] }}
+    />
   );
+}
+
+// Efecto hover de la imagen según el tipo de proyecto
+const IMG_HOVER: Record<WorkProject["hover"], string> = {
+  translate:
+    "group-hover:-translate-y-[61%] transition-transform duration-[4s] ease-out",
+  scale: "group-hover:scale-[1.3] transition-transform duration-[2s] ease-out",
 };
 
-export default Works;
+// Contenedor de la imagen según variante
+const CONTAIN: Record<WorkProject["variant"], string> = {
+  web: "h-[240px] sm:h-[300px] xl:h-[320px]",
+  brand: "aspect-[4/3] flex items-center justify-center",
+  graphic: "aspect-[4/3] flex items-center justify-center",
+};
+
+/* ---------- Component ---------- */
+
+export default function Works({
+  title = "Works",
+  subtitle = "A selection of recent projects — code, layout, branding & graphic design.",
+  id = "works",
+}: WorksProps) {
+  const [active, setActive] = useState<WorkProject | null>(null);
+  const closeModal = useCallback(() => setActive(null), []);
+
+  // Cerrar con Escape + bloquear scroll del body
+  useEffect(() => {
+    if (!active) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeModal();
+    };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [active, closeModal]);
+
+  return (
+    <section
+      id={id}
+      className="w-full pt-8 pb-20 text-violet-500 bg-linear-to-b from-violet-200 via-violet-200 via-75% to-fuchsia-100"
+    >
+      <div className="w-[90%] max-w-[1100px] mx-auto">
+        <h2 className="text-center text-[var(--works-main)] text-[2.2rem] font-normal mt-6 mb-1">
+          {title}
+        </h2>
+        {subtitle && (
+          <p className="text-center text-base font-light opacity-75 mt-0 mb-12">
+            {subtitle}
+          </p>
+        )}
+
+        {WORKS.map((group) => (
+          <div key={group.group}>
+            <h3 className="text-center text-[var(--works-main)] text-[1.6rem] font-normal mt-12 mb-6">
+              {group.group}
+            </h3>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
+              {group.items.map((p) => (
+                <button
+                  key={p.id}
+                  type="button"
+                  onClick={() => setActive(p)}
+                  aria-label={`Ver detalles de ${p.client}`}
+                  className="group works-shadow flex flex-col rounded-[10px] bg-[var(--works-bg)] p-3.5 relative overflow-hidden cursor-pointer transition-transform duration-200 hover:-translate-y-[3px] focus-visible:outline-2 focus-visible:outline-[var(--works-main)] focus-visible:outline-offset-2 border-none text-left"
+                >
+                  <div
+                    className={`overflow-hidden rounded-md ${CONTAIN[p.variant]}`}
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={`${ASSETS_BASE}${p.img}`}
+                      alt={p.client}
+                      loading="lazy"
+                      className={`block w-full ${IMG_HOVER[p.hover]}`}
+                    />
+                  </div>
+
+                  <div className="mt-4 mb-1.5 mx-[3px] flex items-center justify-between gap-2">
+                    <span className="text-[var(--works-main)] text-[1.05rem] font-medium uppercase tracking-[0.02em]">
+                      {p.client}
+                    </span>
+                    <div className="flex justify-end items-center gap-2">
+                      {p.icons.map((ic) => (
+                        <Icon key={ic} name={ic} />
+                      ))}
+                    </div>
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+        ))}
+
+        {/* ---------- Modal ---------- */}
+        <div
+          onClick={(e) => {
+            if (e.target === e.currentTarget) closeModal();
+          }}
+          aria-hidden={!active}
+          className={`fixed inset-0 flex items-center justify-center p-4 z-[1000] bg-[rgba(1,34,32,0.8)] transition-[opacity,visibility] duration-200 ${
+            active ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
+        >
+          {active && (
+            <div
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="works-modal-title"
+              className="bg-[var(--works-bg)] text-[var(--works-text)] shadow-[0_8px_32px_rgba(0,0,0,0.35)] rounded-[10px] p-6 w-full max-w-[560px] max-h-[90vh] overflow-y-auto relative"
+            >
+              <button
+                type="button"
+                onClick={closeModal}
+                aria-label="Cerrar"
+                className="absolute top-3 right-4 text-[1.2rem] leading-none text-[#bbb] font-medium cursor-pointer transition-colors duration-200 hover:text-[var(--works-main)] bg-transparent border-none"
+              >
+                ✕
+              </button>
+
+              <h3
+                id="works-modal-title"
+                className="text-[var(--works-main)] text-[1.4rem] font-medium mt-0 mb-4"
+              >
+                {active.client}
+              </h3>
+
+              <div className="mb-[0.85rem]">
+                <h4 className="text-[var(--works-main)] text-[0.85rem] font-medium uppercase tracking-[0.04em] mt-0 mb-1">
+                  Rol
+                </h4>
+                <p className="mt-0 text-[0.95rem] leading-[1.5]">
+                  {active.rol}
+                </p>
+              </div>
+              <div className="mb-[0.85rem]">
+                <h4 className="text-[var(--works-main)] text-[0.85rem] font-medium uppercase tracking-[0.04em] mt-0 mb-1">
+                  Techs
+                </h4>
+                <p className="mt-0 text-[0.95rem] leading-[1.5]">
+                  {active.techs}
+                </p>
+              </div>
+              <div className="mb-[0.85rem]">
+                <h4 className="text-[var(--works-main)] text-[0.85rem] font-medium uppercase tracking-[0.04em] mt-0 mb-1">
+                  Mode
+                </h4>
+                <p className="mt-0 text-[0.95rem] leading-[1.5]">
+                  {active.mode}
+                </p>
+              </div>
+              <div className="mb-[0.85rem]">
+                <h4 className="text-[var(--works-main)] text-[0.85rem] font-medium uppercase tracking-[0.04em] mt-0 mb-1">
+                  Description
+                </h4>
+                <p className="mt-0 text-[0.95rem] leading-[1.5]">
+                  {active.description}
+                </p>
+              </div>
+
+              {(active.site || active.code) && (
+                <div className="flex flex-wrap gap-3 mt-5">
+                  {active.site && (
+                    <a
+                      href={active.site}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="works-btn inline-flex items-center gap-2 font-medium text-[var(--works-main)] bg-[var(--works-bg)] py-[0.7rem] px-[1.4rem] rounded-lg no-underline text-[0.95rem]"
+                    >
+                      <Icon name="eye" className="w-4 h-4" /> Site
+                    </a>
+                  )}
+                  {active.code && (
+                    <a
+                      href={active.code}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="works-btn inline-flex items-center gap-2 font-medium text-[var(--works-main)] bg-[var(--works-bg)] py-[0.7rem] px-[1.4rem] rounded-lg no-underline text-[0.95rem]"
+                    >
+                      <Icon name="github" className="w-4 h-4" /> Code
+                    </a>
+                  )}
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}

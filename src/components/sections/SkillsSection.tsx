@@ -4,16 +4,16 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="w-full h-screen flex flex-col gap-14 items-center justify-center"
+      className="w-full h-screen flex flex-col gap-14 items-center  bg-linear-to-b from-indigo-200 via-indigo-200 via-75% to-violet-200 justify-center"
     >
-      <h2 className="text-cyan-500 text-2xl">Skills</h2>
+      <h2 className="text-indigo-500 text-2xl">Skills</h2>
       <div className="grid grid-cols-3 gap-4">
-        <div className="shadow-[var(--little-down-shadow)] p-5 rounded-sm">
+        <div className="shadow-[var(--down-shadow)] p-5 rounded-sm">
           <div className="flex items-center gap-5">
-            <LuCodeXml className="text-cyan-500" />
+            <LuCodeXml className="text-indigo-500" />
             <h3 className="font-light text-gray-600 text-sm">Developer</h3>
           </div>
-          <ul className="pt-6 uppercase text-cyan-500 flex flex-col gap-3 items-center  justify-center text-sm">
+          <ul className="pt-6 uppercase text-indigo-500 flex flex-col gap-3 items-center  justify-center text-sm">
             <li>
               <h3>typescript</h3>
             </li>
@@ -27,12 +27,12 @@ const Skills = () => {
             </li>
           </ul>
         </div>
-        <div className="shadow-[var(--little-down-shadow)] p-5 rounded-sm">
+        <div className="shadow-[var(--down-shadow)] p-5 rounded-sm">
           <div className="flex items-center gap-5">
-            <LuPencil className="text-cyan-500" />
+            <LuPencil className="text-indigo-500" />
             <h3 className="font-light text-gray-600 text-sm">Designer</h3>
           </div>
-          <ul className="pt-6 uppercase text-cyan-500 flex flex-col gap-3 items-center  justify-center text-sm">
+          <ul className="pt-6 uppercase text-indigo-500 flex flex-col gap-3 items-center  justify-center text-sm">
             <li>
               <h3>figma</h3>
             </li>
@@ -46,12 +46,12 @@ const Skills = () => {
             </li>
           </ul>
         </div>
-        <div className="shadow-[var(--little-down-shadow)] p-5 rounded-sm">
+        <div className="shadow-[var(--down-shadow)] p-5 rounded-sm">
           <div className="flex items-center gap-5">
-            <LuStar className="text-cyan-500" />
+            <LuStar className="text-indigo-500" />
             <h2 className="font-light text-gray-600 text-sm">Others</h2>
           </div>
-          <ul className="pt-6 uppercase text-cyan-500 flex flex-col gap-3 items-center  justify-center text-sm">
+          <ul className="pt-6 uppercase text-indigo-500 flex flex-col gap-3 items-center  justify-center text-sm">
             <li>
               <h3>english b1</h3>
             </li>
