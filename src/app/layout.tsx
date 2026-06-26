@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en" className={quicksand.variable}>
       <body className="antialiased flex flex-col md:flex-row ">
         <Menu />
-        <main className="ml-16 w-full flex flex-col">{children}</main>
+        <main className="md:ml-16 w-full flex flex-col">{children}</main>
       </body>
     </html>
   );

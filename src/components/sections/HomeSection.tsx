@@ -5,9 +5,9 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="w-full py-20 text-sky-500 flex flex-col md:flex-row items-center justify-center bg-linear-to-b from-sky-100 via-sky-100 via-75% to-blue-100"
+      className="w-full min-h-screen lg:py-20 text-sky-500 flex flex-col md:flex-row items-center justify-center bg-linear-to-b from-sky-100 via-sky-100 via-75% to-emerald-100"
     >
-      <div className="w-9/12 flex flex-col md:flex-row gap-20 items-center justify-center h-full mt-14 pt-14 md:mt-0">
+      <div className="w-9/12 flex flex-col md:flex-row gap-10 lgm:gap-20 items-center justify-center h-full mt-14 py-10 md:mt-0">
         <div className="relative w-60 h-60 md:w-90 md:h-90 rounded-full overflow-hidden mx-auto">
           <Image
             src="/img/profile.jpg"

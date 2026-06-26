@@ -12,12 +12,58 @@ import {
 import { NavItem } from "@/models/navigation";
 
 const navItems: NavItem[] = [
-  { id: "home", label: "home", icon: HiMiniHome },
-  { id: "skills", label: "skills", icon: HiMiniDocumentText },
-  { id: "works", label: "works", icon: HiClipboardDocumentCheck },
-  { id: "resume", label: "resume", icon: HiBriefcase },
-  { id: "contact", label: "contact", icon: HiMiniEnvelopeOpen },
+  { id: "home", label: "home", icon: HiMiniHome, color: "sky" },
+  {
+    id: "skills",
+    label: "skills",
+    icon: HiMiniDocumentText,
+    color: "emerald",
+  },
+  {
+    id: "works",
+    label: "works",
+    icon: HiClipboardDocumentCheck,
+    color: "lime",
+  },
+  { id: "resume", label: "resume", icon: HiBriefcase, color: "amber" },
+  {
+    id: "contact",
+    label: "contact",
+    icon: HiMiniEnvelopeOpen,
+    color: "purple",
+  },
 ];
+
+const COLOR_CLASSES: Record<
+  string,
+  { active: string; hover: string; label: string }
+> = {
+  sky: {
+    active: "text-sky-400",
+    hover: "group-hover:text-sky-500",
+    label: "text-sky-500",
+  },
+  emerald: {
+    active: "text-emerald-400",
+    hover: "group-hover:text-emerald-500",
+    label: "text-emerald-500",
+  },
+  lime: {
+    active: "text-lime-400",
+    hover: "group-hover:text-lime-500",
+    label: "text-lime-500",
+  },
+  amber: {
+    active: "text-amber-400",
+    hover: "group-hover:text-amber-500",
+    label: "text-amber-500",
+  },
+  purple: {
+    active: "text-purple-400",
+    hover: "group-hover:text-purple-500",
+    label: "text-purple-500",
+  },
+};
 
 const Sidebar = () => {
   const router = useRouter();
@@ -32,7 +78,10 @@ const Sidebar = () => {
           }
         });
       },
-      { threshold: 0.5 } // la sección está activa cuando 50% visible
+      {
+        rootMargin: "-45% 0px -45% 0px", // solo la franja central del 10% del viewport
+        threshold: 0,
+      },
     );
 
     navItems.forEach((item) => {
@@ -52,10 +101,11 @@ const Sidebar = () => {
   };
 
   return (
-    <nav className="fixed w-screen bg-sky-50 pt-2 pb-1 md:h-screen md:w-16 flex items-center lg:justify-center shadow z-50 text-cyan-500 md:flex-col justify-evenly gap-5">
+    <nav className="fixed w-screen bg-sky-50 pt-2 pb-1 md:h-screen md:w-16 flex items-center lg:justify-center shadow z-50 md:flex-col justify-evenly gap-5">
       {navItems.map((item) => {
         const Icon = item.icon;
         const isActive = active === item.id;
+        const colors = COLOR_CLASSES[item.color];
         return (
           <button
             key={item.id}
@@ -64,11 +114,11 @@ const Sidebar = () => {
           >
             <Icon
               className={`transition h-6 w-6 ${
-                isActive ? "text-cyan-500" : "text-gray-400"
-              } group-hover:text-cyan-400`}
+                isActive ? colors.active : "text-gray-400"
+              } ${colors.hover}`}
             />
             <span
-              className={`text-[12px] transition-all duration-300 text-cyan-400
+              className={`text-[12px] transition-all duration-300 ${colors.label}
                 ${
                   isActive
                     ? "visible md:translate-y-1"

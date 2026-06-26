@@ -6,4 +6,5 @@ export interface NavItem {
   id: sectionId;
   label: string;
   icon: IconType;
+  color: string;
 }
