@@ -52,7 +52,7 @@ const Sidebar = () => {
   };
 
   return (
-    <nav className="fixed w-screen bg-sky-50 pt-2 pb-1 md:h-screen md:w-16 flex items-center lg:justify-center shadow z-50text-cyan-500 md:flex-col justify-evenly gap-5">
+    <nav className="fixed w-screen bg-sky-50 pt-2 pb-1 md:h-screen md:w-16 flex items-center lg:justify-center shadow z-50 text-cyan-500 md:flex-col justify-evenly gap-5">
       {navItems.map((item) => {
         const Icon = item.icon;
         const isActive = active === item.id;

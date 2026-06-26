@@ -9,11 +9,13 @@ interface ContactProps {
   email?: string;
   telegramHandle?: string;
   telegramUrl?: string;
+  linkedinUrl?: string;
 }
 
 /* ---------- Datos de contacto (edita aquí) ---------- */
 
 const DEFAULT_EMAIL = "elisablange.tdf@gmail.com";
+const DEFAULT_LINKEDIN_URL = "https://www.linkedin.com/in/elisabethblange/";
 const DEFAULT_TELEGRAM_HANDLE = "@elisa_lange";
 const DEFAULT_TELEGRAM_URL = "https://t.me/elisa_lange";
 
@@ -194,6 +196,7 @@ export default function Contact({
   email = DEFAULT_EMAIL,
   telegramHandle = DEFAULT_TELEGRAM_HANDLE,
   telegramUrl = DEFAULT_TELEGRAM_URL,
+  linkedinUrl = DEFAULT_LINKEDIN_URL,
 }: ContactProps) {
   return (
     <section
@@ -220,6 +223,7 @@ export default function Contact({
           <p
             className="
             text-center text-base font-light opacity-75
+            text-purple-900
             m-0 mx-auto mb-12
             max-w-150
           "
@@ -228,7 +232,7 @@ export default function Contact({
           </p>
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-200 mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-200 mx-auto">
           <ContactCard
             icon={<MailIcon />}
             label="Email"
@@ -236,6 +240,13 @@ export default function Contact({
             href={`mailto:${email}`}
             cta="Send a message"
             copyable
+          />
+          <ContactCard
+            icon={<TelegramIcon />}
+            label="Linkedin"
+            value={telegramHandle}
+            href={linkedinUrl}
+            cta="Open chat"
           />
           <ContactCard
             icon={<TelegramIcon />}

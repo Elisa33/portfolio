@@ -143,7 +143,7 @@ export default function Works({
               role="dialog"
               aria-modal="true"
               aria-labelledby="works-modal-title"
-              className="bg-(--works-bg) text-(--works-text) shadow-[0_8px_32px_rgba(0,0,0,0.35)] rounded-[10px] p-6 w-full max-w-140 max-h-[90vh] overflow-y-auto relative"
+              className="bg-sky-200 text-(--works-text) shadow-[0_8px_32px_rgba(0,0,0,0.35)] rounded-[10px] p-6 w-full max-w-140 max-h-[90vh] overflow-y-auto relative"
             >
               <button
                 type="button"

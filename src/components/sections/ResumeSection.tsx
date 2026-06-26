@@ -43,10 +43,13 @@ const ICONS = {
     </svg>
   ),
   briefcase: (
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className="fill-violet-500"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"
-        fill="var(--main-color)"
         stroke="none"
       />
     </svg>
@@ -175,7 +178,7 @@ function TimelineColumn({ group }: { group: TimelineGroup }) {
 
 export default function ResumeSection({
   title = "Resume",
-  subtitle = "Education, experience, skills and languages — a quick overview of my journey so far.",
+  subtitle = "Profile, education and experience, a quick overview of my journey so far.",
   id = "resume",
 }: ResumeSectionProps) {
   return (
@@ -210,9 +213,21 @@ export default function ResumeSection({
 
         {/* ---------- Timeline: Education + Experience ---------- */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-12">
-          {TIMELINE.map((group) => (
-            <TimelineColumn key={group.heading} group={group} />
-          ))}
+          {/* Columna izquierda: Profile + Education */}
+          <div className="flex flex-col gap-10">
+            {TIMELINE.filter(
+              (g) => g.heading === "Profile" || g.heading === "Education",
+            ).map((group) => (
+              <TimelineColumn key={group.heading} group={group} />
+            ))}
+          </div>
+
+          {/* Columna derecha: Experience */}
+          <div>
+            {TIMELINE.filter((g) => g.heading === "Experience").map((group) => (
+              <TimelineColumn key={group.heading} group={group} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

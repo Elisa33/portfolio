@@ -121,7 +121,7 @@ const Skills = () => {
           "
           >
             Language
-            <span className="text-blue-500"> Skills</span>
+            <span className="text-blue-400"> Skills</span>
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
             {LANGUAGES.map((lang: LanguageItem) => (
@@ -136,14 +136,15 @@ const Skills = () => {
                 hover:shadow-(--shadow) active:translate-y-px
               "
               >
-                <p className="text-[0.95rem] font-medium text-blue-500 m-0">
+                <p className="text-sm uppercase font-medium text-blue-500 m-0">
                   {lang.name}
                   <span
                     className="
                     text-blue-500
-                    text-[0.8rem] font-normal
+                    text-xs font-normal
                     ml-1
-                    uppercase tracking-[0.04em]
+                     tracking-[0.04em]
+                     lowercase
                   "
                   >
                     {lang.level}
