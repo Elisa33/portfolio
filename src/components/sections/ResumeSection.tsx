@@ -1,13 +1,7 @@
 "use client";
 
-import {
-  TIMELINE,
-  SKILLS,
-  LANGUAGES,
-  type TimelineGroup,
-  type SkillGroup,
-  type LanguageItem,
-} from "../../data/resume-data";
+
+import { TIMELINE, type TimelineGroup } from "../../data/resume-data";
 
 interface ResumeSectionProps {
   title?: string;
@@ -15,49 +9,7 @@ interface ResumeSectionProps {
   id?: string;
 }
 
-/* ---------- Iconos inline (fill = main-color) ---------- */
 
-const ICONS = {
-  graduation: (
-    <svg
-      className="fill-violet-500"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"
-        stroke="none"
-      />
-    </svg>
-  ),
-  pencil: (
-    <svg
-      className="fill-violet-500"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
-        stroke="none"
-      />
-    </svg>
-  ),
-  briefcase: (
-    <svg
-      className="fill-violet-500"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"
-        stroke="none"
-      />
-    </svg>
-  ),
-} as const;
-
-
-/* ---------- Star rating (decimal soportado, p.ej. 4.5) ---------- */
 
 function StarRating({ value, color }: { value: number; color: string }) {
   return (
@@ -101,25 +53,27 @@ function StarRating({ value, color }: { value: number; color: string }) {
 /* ---------- Timeline column ---------- */
 
 function TimelineColumn({ group }: { group: TimelineGroup }) {
+  const IconComponent = group.icon;
   return (
     <div>
       <h3
         className="
           flex items-center gap-[0.6rem]
-          text-violet-500
+          text-amber-400
           text-[1.4rem] font-medium
           m-0 mb-6
         "
       >
-        <span className="inline-flex w-[1.4rem] h-[1.4rem]">
+        {/* <span className="inline-flex w-[1.4rem] h-[1.4rem]">
           {ICONS[group.icon]}
-        </span>
+        </span> */}
+        <IconComponent className="w-[1.4rem] h-[1.4rem]" />
         {group.heading}
       </h3>
 
       <div className="relative pl-6">
         {/* vertical gradient line — var() + rgba() mixto, va como inline style */}
-        <div className="absolute left-0 top-2 bottom-2 w-0.5 rounded-xs bg-violet-500" />
+        <div className="absolute left-0 top-2 bottom-2 w-0.5 rounded-xs bg-amber-500" />
 
         {group.items.map((item, i) => (
           <div
@@ -141,12 +95,12 @@ function TimelineColumn({ group }: { group: TimelineGroup }) {
                 rounded-full
                 border-[3px] border-(--bg-color)
                 -translate-x-1/2
-                bg-violet-500
+                bg-amber-500
               "
             />
             <h4
               className="
-                text-violet-500
+                text-amber-400
                 text-[1.05rem] font-medium
                 m-0 mb-[0.2rem]
               "
@@ -155,7 +109,7 @@ function TimelineColumn({ group }: { group: TimelineGroup }) {
             </h4>
             <p
               className="
-                text-violet-500
+                text-amber-400
                 opacity-70
                 text-[0.85rem] font-normal
                 m-0 mb-[0.65rem]
@@ -179,16 +133,15 @@ function TimelineColumn({ group }: { group: TimelineGroup }) {
 export default function ResumeSection({
   title = "Resume",
   subtitle = "Profile, education and experience, a quick overview of my journey so far.",
-  id = "resume",
 }: ResumeSectionProps) {
   return (
     <section
-      id={id}
+      id="resume"
       className="
         
         py-20
-        text-violet-500
-        bg-linear-to-b from-violet-100 via-violet-100 via-75% to-purple-100
+        text-amber-400
+        bg-linear-to-b from-amber-100 via-amber-100 via-75% to-purple-100
       "
     >
       <div
@@ -198,7 +151,7 @@ export default function ResumeSection({
         <h2
           className="
           text-center
-          text-violet-500
+          text-amber-500
           text-3xl
           mx-0 mt-6 mb-1
         "
@@ -206,7 +159,7 @@ export default function ResumeSection({
           {title}
         </h2>
         {subtitle && (
-          <p className="text-center text-base font-light text-violet-900 m-0 mb-12">
+          <p className="text-center text-base font-light text-amber-900 m-0 mb-12">
             {subtitle}
           </p>
         )}

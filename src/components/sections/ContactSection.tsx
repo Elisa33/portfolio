@@ -1,46 +1,34 @@
 "use client";
 
 import { useState } from "react";
+import { FaLinkedinIn, FaTelegramPlane, FaEnvelope } from "react-icons/fa";
+import { HiMiniCheck } from "react-icons/hi2";
+
+
 
 interface ContactProps {
   title?: string;
   subtitle?: string;
   id?: string;
   email?: string;
+  linkedinHandle?: string;
+  linkedinUrl?: string;
   telegramHandle?: string;
   telegramUrl?: string;
-  linkedinUrl?: string;
 }
 
 /* ---------- Datos de contacto (edita aquí) ---------- */
 
 const DEFAULT_EMAIL = "elisablange.tdf@gmail.com";
 const DEFAULT_LINKEDIN_URL = "https://www.linkedin.com/in/elisabethblange/";
+const DEFAULT_LINKEDIN_HANDLE = "in/elisabethblange";
 const DEFAULT_TELEGRAM_HANDLE = "@elisa_lange";
 const DEFAULT_TELEGRAM_URL = "https://t.me/elisa_lange";
 
 /* ---------- Iconos SVG inline ---------- */
 
-const MailIcon = () => (
-  <svg
-    className="w-10 h-10 stroke-purple-500 stroke-2"
-    viewBox="0 0 24 24"
-    fill="none"
-    strokeWidth="1.6"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden
-  >
-    <rect x="2" y="4" width="20" height="16" rx="2" />
-    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-  </svg>
-);
 
-const TelegramIcon = () => (
-  <svg className="w-10 h-10 fill-purple-500" viewBox="0 0 24 24" aria-hidden>
-    <path d="M9.78 18.65 10.06 14.42 17.74 7.5C18.08 7.19 17.67 7.04 17.22 7.31L7.74 13.3 3.64 12C2.76 11.75 2.75 11.14 3.84 10.7L19.81 4.54C20.54 4.21 21.24 4.72 20.96 5.84L18.24 18.65C18.05 19.56 17.5 19.78 16.74 19.36L12.6 16.3 10.61 18.23C10.38 18.46 10.19 18.65 9.78 18.65Z" />
-  </svg>
-);
+
 
 const CopyIcon = () => (
   <svg
@@ -58,19 +46,7 @@ const CopyIcon = () => (
   </svg>
 );
 
-const CheckIcon = () => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden
-  >
-    <path d="M20 6 9 17l-5-5" />
-  </svg>
-);
+
 
 /* ---------- Card individual ---------- */
 
@@ -149,8 +125,8 @@ function ContactCard({
         </span>
         <span
           className="
-            text-[1.05rem] font-medium
-            text-purple-100
+            text-sm font-medium
+            text-purple-500
             break-all
           "
         >
@@ -158,10 +134,8 @@ function ContactCard({
         </span>
       </div>
 
-      <div className="flex items-center gap-3 mt-1">
-        <span className="text-purple-500 text-[0.95rem] font-medium">
-          {cta}
-        </span>
+      <div className="flex items-end gap-3 mt-auto">
+        <span className="text-purple-500 text-sm font-medium">{cta}</span>
         {copyable && (
           <button
             type="button"
@@ -170,16 +144,12 @@ function ContactCard({
             className="
               inline-flex items-center justify-center
               w-8 h-8
-              rounded-full
               text-purple-500
-              cursor-pointer border-none
-              shadow-(--little-shadow)
-              transition-[box-shadow,transform] duration-200 ease-out
-              hover:shadow-(--down-shadow)
-              active:translate-y-px
+              cursor-pointer border-none              
+              hover:-translate-y-px
             "
           >
-            {copied ? <CheckIcon /> : <CopyIcon />}
+            {copied ? <HiMiniCheck /> : <CopyIcon />}
           </button>
         )}
       </div>
@@ -194,15 +164,16 @@ export default function Contact({
   subtitle = "Have a project in mind or just want to say hi? My inbox is always open.",
   id = "contact",
   email = DEFAULT_EMAIL,
+  linkedinHandle = DEFAULT_LINKEDIN_HANDLE,
+  linkedinUrl = DEFAULT_LINKEDIN_URL,
   telegramHandle = DEFAULT_TELEGRAM_HANDLE,
   telegramUrl = DEFAULT_TELEGRAM_URL,
-  linkedinUrl = DEFAULT_LINKEDIN_URL,
 }: ContactProps) {
   return (
     <section
       id={id}
-      className="py-20
-        text-purple-100
+      className="py-8 lg:py-20
+        text-purple-500
         bg-linear-to-b from-purple-100 to-purple-100      "
     >
       <div
@@ -234,7 +205,7 @@ export default function Contact({
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-200 mx-auto">
           <ContactCard
-            icon={<MailIcon />}
+            icon={<FaEnvelope className="text-purple-500 h-6 w-6" />}
             label="Email"
             value={email}
             href={`mailto:${email}`}
@@ -242,14 +213,14 @@ export default function Contact({
             copyable
           />
           <ContactCard
-            icon={<TelegramIcon />}
+            icon={<FaLinkedinIn className="text-purple-500 h-6 w-6" />}
             label="Linkedin"
-            value={telegramHandle}
+            value={linkedinHandle}
             href={linkedinUrl}
-            cta="Open chat"
+            cta="Go to /IN"
           />
           <ContactCard
-            icon={<TelegramIcon />}
+            icon={<FaTelegramPlane className="text-purple-500 h-6 w-6" />}
             label="Telegram"
             value={telegramHandle}
             href={telegramUrl}

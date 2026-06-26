@@ -3,10 +3,13 @@
 import { useEffect, useState, useCallback } from "react";
 import {
   WORKS,
-  ICONS,
+  //ICONS,
   type WorkProject,
-  type IconName,
+  // type IconType,
 } from "../../data/works-data";
+import { FaGithub } from "react-icons/fa";
+import { HiEye } from "react-icons/hi2";
+
 
 interface WorksProps {
   title?: string;
@@ -16,21 +19,6 @@ interface WorksProps {
 
 /* ---------- Helpers ---------- */
 
-function Icon({
-  name,
-  className = "w-5.5 h-5.5",
-}: {
-  name: IconName;
-  className?: string;
-}) {
-  return (
-    <span
-      aria-hidden
-      className={`inline-flex shrink-0 [&_svg]:w-full [&_svg]:h-full ${className}`}
-      dangerouslySetInnerHTML={{ __html: ICONS[name] }}
-    />
-  );
-}
 
 // Efecto hover de la imagen según el tipo de proyecto
 const IMG_HOVER: Record<WorkProject["hover"], string> = {
@@ -50,7 +38,7 @@ const CONTAIN: Record<WorkProject["variant"], string> = {
 
 export default function Works({
   title = "Works",
-  subtitle = "A selection of recent projects — code, layout, branding & graphic design.",
+  subtitle = "A selection of recent projects: code, layout, branding & graphic design.",
   id = "works",
 }: WorksProps) {
   const [active, setActive] = useState<WorkProject | null>(null);
@@ -72,15 +60,15 @@ export default function Works({
 
   return (
     <section
-      id={id}
-      className="w-full py-20 text-indigo-500 bg-linear-to-b from-indigo-100 via-indigo-100 via-75% to-violet-100"
+      id="works"
+      className="w-full py-8 lg:py-20 text-lime-400 bg-linear-to-b from-lime-100 via-lime-100 via-75% to-amber-100"
     >
       <div className="w-[90%] max-w-220 mx-auto">
         <h2 className="text-center text-(--works-main) text-3xl font-normal mt-6 mb-1">
           Works
         </h2>
         {subtitle && (
-          <p className="text-center text-indigo-900 font-light opacity-75 mt-0 mb-12">
+          <p className="text-center text-lime-900 font-light opacity-75 mt-0 mb-12">
             {subtitle}
           </p>
         )}
@@ -117,8 +105,11 @@ export default function Works({
                       {p.client}
                     </span>
                     <div className="flex justify-end items-center gap-2">
-                      {p.icons.map((ic) => (
-                        <Icon key={ic} name={ic} />
+                      {p.icons.map((IconComponent, index) => (
+                        <IconComponent
+                          key={index}
+                          className="w-5 h-5 text-(--works-main) opacity-80"
+                        />
                       ))}
                     </div>
                   </div>
@@ -203,7 +194,8 @@ export default function Works({
                       rel="noopener noreferrer"
                       className="works-btn inline-flex items-center gap-2 font-medium text-(--works-main) bg-(--works-bg) py-[0.7rem] px-[1.4rem] rounded-lg no-underline text-[0.95rem]"
                     >
-                      <Icon name="eye" className="w-4 h-4" /> Site
+                      <HiEye />
+                      Site
                     </a>
                   )}
                   {active.code && (
@@ -213,7 +205,8 @@ export default function Works({
                       rel="noopener noreferrer"
                       className="works-btn inline-flex items-center gap-2 font-medium text-(--works-main) bg-(--works-bg) py-[0.7rem] px-[1.4rem] rounded-lg no-underline text-[0.95rem]"
                     >
-                      <Icon name="github" className="w-4 h-4" /> Code
+                      Code
+                      <FaGithub />
                     </a>
                   )}
                 </div>

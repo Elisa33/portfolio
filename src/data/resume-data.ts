@@ -1,14 +1,15 @@
+import { IconType } from "react-icons";
+import { HiBriefcase, HiAcademicCap, HiMiniUserCircle } from "react-icons/hi2";
+
 export interface TimelineItem {
   title: string;
   year: string;
   description: string;
-  /** Color del punto/acento del item (formato CSS, ej. "#ff5380"). */
-  color: string;
 }
 
 export interface TimelineGroup {
   heading: string;
-  icon: "graduation" | "pencil" | "briefcase";
+  icon: IconType;
   items: TimelineItem[];
 }
 
@@ -46,56 +47,97 @@ export interface LanguageItem {
 
 export const TIMELINE: TimelineGroup[] = [
   {
-    heading: "Education",
-    icon: "graduation",
+    heading: "Profile",
+    icon: HiMiniUserCircle,
     items: [
       {
-        title: "QA Tester — Nahual IT",
-        year: "2023 — 2024",
-        description:
-          "Certified in Quality Assurance at Nahual IT. Covered manual testing, test case design, defect reporting and basic automation. Worked on real projects with agile teams.",
-        color: "#ff5380",
+        title: "Developer Front-End",
+        year: "",
+        description: "",
       },
       {
-        title: "Front-End Development Bootcamp",
-        year: "2021 — 2022",
-        description:
-          "Intensive program focused on HTML5, CSS3, JavaScript, React and Styled Components. Built multiple production-ready projects as freelance and practice work.",
-        color: "#fbdd62",
+        title: "Visual Communication",
+        year: "",
+        description: "",
       },
       {
-        title: "Graphic Design Degree",
-        year: "2014 — 2018",
-        description:
-          "Formal education in branding, editorial design, illustration and visual identity. Strong foundation on Illustrator, Photoshop and InDesign.",
-        color: "#0bceaf",
+        title: "Teacher",
+        year: "",
+        description: "",
+      },
+    ],
+  },
+  {
+    heading: "Education",
+    icon: HiAcademicCap,
+    items: [
+      {
+        title: "Teacher training course",
+        year: "2011",
+        description: "E.S.I.P - Cordoba",
+      },
+      {
+        title: "Diploma in Visual Communication",
+        year: "2009",
+        description: "Monserrat college - Cordoba",
+      },
+      {
+        title: "Graphic designer",
+        year: "2006",
+        description: "C.E.N.T. 35 - Tierra del fuego",
+      },
+      {
+        title: "Diploma in Specialized Drawing",
+        year: "2002",
+        description: "Monserrat college - Cordoba",
       },
     ],
   },
   {
     heading: "Experience",
-    icon: "pencil",
+    icon: HiBriefcase,
     items: [
+      {
+        title: "Front-End Developer — Welfi",
+        year: "2023 — 2025",
+        description:
+          "Built Webapp for a wellness app with React. Integrated REST APIs.",
+      },
+      {
+        title: "Front-End Developer — Gorilla",
+        year: "2022 — 2023",
+        description:
+          "Developer building interfaces and design systems. Focused on accessibility and performance.",
+      },
       {
         title: "Front-End Developer — Freelance",
         year: "2022 — Present",
         description:
-          "Building React + Next.js + Tailwind sites for freelance clients (Tecnobox, Elise y Roque, Checo, Bruna). Responsible for design, layout and integration with backends like Firebase.",
-        color: "#ff5380",
+          "Building React + Next.js sites for freelance clients. Design, layout and Firebase integration.",
       },
       {
-        title: "Brand & Graphic Designer — Freelance",
+        title: "Freelance in design and layout.",
         year: "2018 — Present",
         description:
-          "Brand identity development for clients across industries: children's clothing (Barquito de papel), construction (Tikal), advertising (Ampersand), editorial and illustration work.",
-        color: "#fbdd62",
+          "Brand identity for clients across industries: clothing, construction, advertising and editorial.",
       },
       {
-        title: "React Native — In progress",
-        year: "2024 — Present",
+        title: "Teacher in IT education",
+        year: "2017 — 2018",
         description:
-          "Currently studying React Native to expand into mobile development. Combining previous React experience with native patterns and mobile UX principles.",
-        color: "#0bceaf",
+          "IT teacher. Taught programming basics, web design and digital tools to students.",
+      },
+      {
+        title: "Independent graphic designer",
+        year: "2010 — 2019",
+        description:
+          "Brand identity and design work for clients across different industries.",
+      },
+      {
+        title: "Teacher Illustrator & Photoshop I.E.S. y I.S.M.M.",
+        year: "2008 — 2010",
+        description:
+          "Taught Illustrator and Photoshop. Guided students through design fundamentals and projects.",
       },
     ],
   },
@@ -103,7 +145,6 @@ export const TIMELINE: TimelineGroup[] = [
 
 // =============================================================
 // SKILLS — agrupados en 3 categorías con nombres narrativos.
-// Sin porcentajes: cada skill es un chip con un dot de color.
 // =============================================================
 
 export const SKILLS: SkillGroup[] = [
