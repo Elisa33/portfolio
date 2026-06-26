@@ -21,7 +21,7 @@ const DEFAULT_TELEGRAM_URL = "https://t.me/elisa_lange";
 
 const MailIcon = () => (
   <svg
-    className="w-10 h-10 stroke-lime-500 stroke-2"
+    className="w-10 h-10 stroke-purple-500 stroke-2"
     viewBox="0 0 24 24"
     fill="none"
     strokeWidth="1.6"
@@ -35,14 +35,14 @@ const MailIcon = () => (
 );
 
 const TelegramIcon = () => (
-  <svg className="w-10 h-10 fill-lime-500" viewBox="0 0 24 24" aria-hidden>
+  <svg className="w-10 h-10 fill-purple-500" viewBox="0 0 24 24" aria-hidden>
     <path d="M9.78 18.65 10.06 14.42 17.74 7.5C18.08 7.19 17.67 7.04 17.22 7.31L7.74 13.3 3.64 12C2.76 11.75 2.75 11.14 3.84 10.7L19.81 4.54C20.54 4.21 21.24 4.72 20.96 5.84L18.24 18.65C18.05 19.56 17.5 19.78 16.74 19.36L12.6 16.3 10.61 18.23C10.38 18.46 10.19 18.65 9.78 18.65Z" />
   </svg>
 );
 
 const CopyIcon = () => (
   <svg
-    className="w-5 h-5 stroke-lime-500 stroke-1"
+    className="w-5 h-5 stroke-purple-500 stroke-1"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -114,7 +114,7 @@ function ContactCard({
         px-6 py-10
         rounded-2xl
         no-underline
-        text-lime-200
+        text-purple-100
         shadow-(--little-shadow)
         transition-[box-shadow,transform] duration-200 ease-out
         hover:shadow-(--down-shadow)
@@ -138,7 +138,7 @@ function ContactCard({
       <div className="flex flex-col items-center gap-1">
         <span
           className="
-            text-lime-500
+            text-purple-500
             text-[0.78rem] font-medium
             uppercase tracking-[0.12em]
           "
@@ -148,7 +148,7 @@ function ContactCard({
         <span
           className="
             text-[1.05rem] font-medium
-            text-lime-200
+            text-purple-100
             break-all
           "
         >
@@ -157,7 +157,9 @@ function ContactCard({
       </div>
 
       <div className="flex items-center gap-3 mt-1">
-        <span className="text-lime-500 text-[0.95rem] font-medium">{cta}</span>
+        <span className="text-purple-500 text-[0.95rem] font-medium">
+          {cta}
+        </span>
         {copyable && (
           <button
             type="button"
@@ -167,7 +169,7 @@ function ContactCard({
               inline-flex items-center justify-center
               w-8 h-8
               rounded-full
-              text-lime-500
+              text-purple-500
               cursor-pointer border-none
               shadow-(--little-shadow)
               transition-[box-shadow,transform] duration-200 ease-out
@@ -196,11 +198,9 @@ export default function Contact({
   return (
     <section
       id={id}
-      className="
-       
-        pt-8 pb-24
-        text-lime-200
-        bg-linear-to-b from-lime-200 to-lime-200      "
+      className="py-20
+        text-purple-100
+        bg-linear-to-b from-purple-100 to-purple-100      "
     >
       <div
         className=" w-[90%] max-w-275
@@ -209,7 +209,7 @@ export default function Contact({
         <h2
           className="
           text-center
-          text-lime-500
+          text-purple-500
           text-[2.2rem] font-normal
           mx-0 mt-6 mb-1
         "
@@ -250,11 +250,12 @@ export default function Contact({
           className="
           text-center
           mt-10
-          text-[0.85rem] font-light opacity-60
+          text-violet-700
+          text-sm font-light
         "
         >
-          Usually replies within 24 hours · Based in Argentina · Open to remote
-          work
+          Usually replies within 24 hours · Based in Switzerland · Open to
+          remote work
         </p>
       </div>
     </section>

@@ -29,10 +29,10 @@
       3px 3px 5px rgba(50, 40, 32, 0.35),
       -3px -3px 5px rgba(255, 248, 235, 0.40);
     --down-shadow:
-      inset 5px 5px 8px rgba(50, 40, 32, 0.35),
-      inset -5px -5px 12px rgba(255, 248, 235, 0.30),
-      5px 5px 12px rgba(50, 40, 32, 0.25),
-      -5px -5px 12px rgba(255, 248, 235, 0.25);
+      inset 4px 4px 6px rgba(50, 40, 32, 0.35),
+      inset -4px -4px 10px rgba(255, 248, 235, 0.30),
+      4px 4px 10px rgba(50, 40, 32, 0.25),
+      -4px -4px 10px rgba(255, 248, 235, 0.25);
   }
 }
 
@@ -60,7 +60,7 @@ body {
 
 @keyframes backgroundColors {
   0%      { background-color: var(--color-sky-200); }
-  20%  { background-color: var(--color-violet-200); }
+  20%  { background-color: var(--color-violet-100); }
   40%  { background-color: var(--color-fuchsia-200); }
   60%     { background-color: var(--color-fuchsia-200); }
   80%  { background-color: var(--color-lime-200); }

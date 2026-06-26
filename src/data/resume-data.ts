@@ -1,11 +1,3 @@
-// =============================================================
-// resume-data.ts
-// Datos de la sección Resume de Elisa B. Lange.
-// Estructura inspirada en el portfolio Arshia (timeline + skills
-// bars + language stars), pero con la estética neumórfica del
-// portfolio original.
-// =============================================================
-
 export interface TimelineItem {
   title: string;
   year: string;
@@ -33,7 +25,12 @@ export interface SkillGroup {
   skills: SkillItem[];
 }
 
-export type LanguageLevel = "native" | "fluent" | "advanced" | "intermediate" | "basic";
+export type LanguageLevel =
+  | "native"
+  | "fluent"
+  | "advanced"
+  | "intermediate"
+  | "basic";
 
 export interface LanguageItem {
   name: string;
@@ -154,6 +151,7 @@ export const SKILLS: SkillGroup[] = [
 
 export const LANGUAGES: LanguageItem[] = [
   { name: "Spanish", level: "native", stars: 5, color: "#ff5380" },
-  { name: "English", level: "fluent", stars: 4.5, color: "#fbdd62" },
-  { name: "Portuguese", level: "intermediate", stars: 3, color: "#0bceaf" },
+  { name: "English", level: "intermediate", stars: 4, color: "#fbdd62" },
+  { name: "French", level: "intermediate", stars: 3, color: "#0bceaf" },
+  { name: "Portuguese", level: "basic", stars: 1, color: "#0bceaf" },
 ];

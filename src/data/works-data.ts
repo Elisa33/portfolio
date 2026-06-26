@@ -1,10 +1,3 @@
-// =============================================================
-// works-data.ts
-// Datos de los 12 proyectos del portfolio original de Elisa.
-// Reemplaza ASSETS_BASE por la ruta local de tu proyecto Next.js
-// cuando migres las imágenes (carpeta /public/works/...).
-// =============================================================
-
 export type CardVariant = "web" | "brand" | "graphic";
 export type HoverEffect = "translate" | "scale";
 
@@ -42,13 +35,6 @@ export type IconName =
   | "id"
   | "eye"
   | "github";
-
-/**
- * Ruta base de las imágenes.
- * · Ahora apunta al portfolio original para que funcione out-of-the-box.
- * · Cuando migres las imágenes a /public, cambia a "/works/" o similar.
- */
-export const ASSETS_BASE = "https://elisa33.github.io/portfolio-all/";
 
 // =============================================================
 // SVGs inline — colores de la marca de cada tecnología
@@ -132,6 +118,20 @@ export const WORKS: WorkGroup[] = [
     items: [
       {
         id: "web1",
+        client: "Gunavati",
+        img: "img/web/screencapt-gunavati.png",
+        variant: "web",
+        hover: "translate",
+        rol: "Web developer",
+        techs: "NextJs",
+        icons: ["nextjs"],
+        mode: "Freelance",
+        description:
+          "Working as developer customizing this site, with my colleague as a team.",
+        site: "https://gunavati.art/",
+      },
+      {
+        id: "web2",
         client: "Elise y Roque",
         img: "img/web/screencapt-elise.png",
         variant: "web",
@@ -140,22 +140,9 @@ export const WORKS: WorkGroup[] = [
         techs: "Html 5 - Tailwind",
         icons: ["html5", "tailwind"],
         mode: "Freelance",
-        description: "Working as a Designer and layout this site with html/tailwind.",
-        site: "https://eliseyroque.vercel.app",
-      },
-      {
-        id: "web2",
-        client: "Bruna site",
-        img: "img/web/screencapt-bruna.png",
-        variant: "web",
-        hover: "translate",
-        rol: "Web developer",
-        techs: "Html 5 - Css3",
-        icons: ["html5", "css3"],
-        mode: "Co-created with Gru",
         description:
-          "Working as developer customizing this site, with my colleague as a team.",
-        site: "https://bruna-fawn.vercel.app/",
+          "Working as a Designer and layout this site with html/tailwind.",
+        site: "https://eliseyroque.vercel.app",
       },
       {
         id: "web3",

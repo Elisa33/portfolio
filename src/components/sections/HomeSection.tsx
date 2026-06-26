@@ -5,21 +5,21 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="w-screen h-screen text-sky-500 flex flex-col md:flex-row items-center justify-center bg-linear-to-b from-sky-200 via-sky-200 via-75% to-indigo-200"
+      className="w-full py-20 text-sky-500 flex flex-col md:flex-row items-center justify-center bg-linear-to-b from-sky-100 via-sky-100 via-75% to-blue-100"
     >
       <div className="w-9/12 flex flex-col md:flex-row gap-20 items-center justify-center h-full mt-14 pt-14 md:mt-0">
         <div className="relative w-60 h-60 md:w-90 md:h-90 rounded-full overflow-hidden mx-auto">
           <Image
-            src="/imgs/profile.jpg"
+            src="/img/profile.jpg"
             alt="Profile picture"
             fill
             className="object-cover"
           />
         </div>
         <div className="text-sky-500 md:w-1/2 md:order-first flex flex-col gap-4">
-          <h1 className="text-3xl pb-5">I&apos;m Elisa Lange</h1>
-          <h2 className="text-xl">Frontend Developer & Visual Communicator</h2>
-          <p className="text-sm text-gray-800 font-light">
+          <h1 className="text-4xl pb-5">I&apos;m Elisa Lange</h1>
+          <h2 className="text-2xl">Frontend Developer & Visual Communicator</h2>
+          <p className="text-sky-900 font-light">
             I work at the intersection of design and development, creating
             thoughtful, user-centered digital experiences. With a background in
             visual communication and graphic design, I approach frontend

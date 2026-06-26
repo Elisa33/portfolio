@@ -4,7 +4,6 @@ import { useEffect, useState, useCallback } from "react";
 import {
   WORKS,
   ICONS,
-  ASSETS_BASE,
   type WorkProject,
   type IconName,
 } from "../../data/works-data";
@@ -74,25 +73,25 @@ export default function Works({
   return (
     <section
       id={id}
-      className="w-full pt-8 pb-20 text-violet-500 bg-linear-to-b from-violet-200 via-violet-200 via-75% to-fuchsia-100"
+      className="w-full py-20 text-indigo-500 bg-linear-to-b from-indigo-100 via-indigo-100 via-75% to-violet-100"
     >
-      <div className="w-[90%] max-w-275 mx-auto">
-        <h2 className="text-center text-(--works-main) text-[2.2rem] font-normal mt-6 mb-1">
-          {title}
+      <div className="w-[90%] max-w-220 mx-auto">
+        <h2 className="text-center text-(--works-main) text-3xl font-normal mt-6 mb-1">
+          Works
         </h2>
         {subtitle && (
-          <p className="text-center text-base font-light opacity-75 mt-0 mb-12">
+          <p className="text-center text-indigo-900 font-light opacity-75 mt-0 mb-12">
             {subtitle}
           </p>
         )}
 
         {WORKS.map((group) => (
           <div key={group.group}>
-            <h3 className="text-center text-(--works-main) text-[1.6rem] font-normal mt-12 mb-6">
+            <h3 className="text-center text-(--works-main) text-xl mt-12 mb-6">
               {group.group}
             </h3>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-10">
               {group.items.map((p) => (
                 <button
                   key={p.id}
@@ -106,7 +105,7 @@ export default function Works({
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={`${ASSETS_BASE}${p.img}`}
+                      src={`/${p.img}`}
                       alt={p.client}
                       loading="lazy"
                       className={`block w-full ${IMG_HOVER[p.hover]}`}

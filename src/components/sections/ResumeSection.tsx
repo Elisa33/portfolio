@@ -19,19 +19,25 @@ interface ResumeSectionProps {
 
 const ICONS = {
   graduation: (
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className="fill-violet-500"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"
-        fill="var(--main-color)"
         stroke="none"
       />
     </svg>
   ),
   pencil: (
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className="fill-violet-500"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
-        fill="var(--main-color)"
         stroke="none"
       />
     </svg>
@@ -47,32 +53,6 @@ const ICONS = {
   ),
 } as const;
 
-/* ---------- Skill chip (sin porcentaje) ---------- */
-
-function SkillChip({ name, color }: { name: string; color: string }) {
-  return (
-    <span
-      className="
-        inline-flex items-center gap-2
-        px-[0.95rem] py-2
-        rounded-full
-        text-[0.88rem] font-medium
-        text-fuchsia-500
-        shadow-(--little-shadow)
-        transition-[box-shadow,transform] duration-200 ease-out
-        hover:shadow-(--down-shadow) hover:-translate-y-px
-        cursor-default select-none
-      "
-    >
-      <span
-        className="w-2 h-2 rounded-full shrink-0"
-        style={{ backgroundColor: color }}
-        aria-hidden
-      />
-      {name}
-    </span>
-  );
-}
 
 /* ---------- Star rating (decimal soportado, p.ej. 4.5) ---------- */
 
@@ -123,7 +103,7 @@ function TimelineColumn({ group }: { group: TimelineGroup }) {
       <h3
         className="
           flex items-center gap-[0.6rem]
-          text-fuchsia-500
+          text-violet-500
           text-[1.4rem] font-medium
           m-0 mb-6
         "
@@ -136,13 +116,7 @@ function TimelineColumn({ group }: { group: TimelineGroup }) {
 
       <div className="relative pl-6">
         {/* vertical gradient line — var() + rgba() mixto, va como inline style */}
-        <div
-          className="absolute left-0 top-2 bottom-2 w-0.5 rounded-xs"
-          style={{
-            backgroundImage:
-              "linear-gradient(to bottom, var(--main-color) 0%, rgba(0, 202, 238, 0.2) 100%)",
-          }}
-        />
+        <div className="absolute left-0 top-2 bottom-2 w-0.5 rounded-xs bg-violet-500" />
 
         {group.items.map((item, i) => (
           <div
@@ -164,15 +138,12 @@ function TimelineColumn({ group }: { group: TimelineGroup }) {
                 rounded-full
                 border-[3px] border-(--bg-color)
                 -translate-x-1/2
+                bg-violet-500
               "
-              style={{
-                backgroundColor: item.color,
-                boxShadow: `0 0 0 2px ${item.color}, var(--little-shadow)`,
-              }}
             />
             <h4
               className="
-                text-fuchsia-500
+                text-violet-500
                 text-[1.05rem] font-medium
                 m-0 mb-[0.2rem]
               "
@@ -181,7 +152,7 @@ function TimelineColumn({ group }: { group: TimelineGroup }) {
             </h4>
             <p
               className="
-                text-fuchsia-500
+                text-violet-500
                 opacity-70
                 text-[0.85rem] font-normal
                 m-0 mb-[0.65rem]
@@ -212,9 +183,9 @@ export default function ResumeSection({
       id={id}
       className="
         
-        pt-8 pb-20
-        text-fuchsia-500
-        bg-linear-to-b from-fuchsia-100 via-fuchsia-100 via-75% to-lime-200
+        py-20
+        text-violet-500
+        bg-linear-to-b from-violet-100 via-violet-100 via-75% to-purple-100
       "
     >
       <div
@@ -224,15 +195,15 @@ export default function ResumeSection({
         <h2
           className="
           text-center
-          text-fuchsia-500
-          text-[2.2rem] font-normal
+          text-violet-500
+          text-3xl
           mx-0 mt-6 mb-1
         "
         >
           {title}
         </h2>
         {subtitle && (
-          <p className="text-center text-base font-light opacity-75 m-0 mb-12">
+          <p className="text-center text-base font-light text-violet-900 m-0 mb-12">
             {subtitle}
           </p>
         )}
@@ -242,82 +213,6 @@ export default function ResumeSection({
           {TIMELINE.map((group) => (
             <TimelineColumn key={group.heading} group={group} />
           ))}
-        </div>
-
-        {/* ---------- Skills chips (sin porcentajes) ---------- */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-12">
-          {SKILLS.map((group: SkillGroup) => (
-            <div key={group.heading}>
-              <h3
-                className="
-                text-fuchsia-500
-                text-[1.4rem] font-medium
-                m-0 mb-6
-              "
-              >
-                {group.heading}
-                {group.accent && (
-                  <span className="text-fuchsia-500">{group.accent}</span>
-                )}
-              </h3>
-              <div
-                className="
-                flex flex-wrap gap-[0.6rem]
-                p-6
-                rounded-xl
-                shadow-(--down-shadow)
-              "
-              >
-                {group.skills.map((s) => (
-                  <SkillChip key={s.name} name={s.name} color={s.color} />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* ---------- Languages ---------- */}
-        <div>
-          <h3
-            className="
-            text-fuchsia-500
-            text-[1.4rem] font-medium
-            m-0 mb-6
-          "
-          >
-            Language
-            <span className="text-fuchsia-500"> Skills</span>
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
-            {LANGUAGES.map((lang: LanguageItem) => (
-              <div
-                key={lang.name}
-                className="
-                flex items-center justify-between
-                px-4 py-[0.85rem]
-                rounded-lg
-                neu-shadow-little
-                transition-[box-shadow,transform] duration-200 ease-out
-                hover:shadow-(--down-shadow) active:translate-y-px
-              "
-              >
-                <p className="text-[0.95rem] font-medium text-fuchsia-500 m-0">
-                  {lang.name}
-                  <span
-                    className="
-                    text-fuchsia-500
-                    text-[0.8rem] font-normal
-                    ml-1
-                    uppercase tracking-[0.04em]
-                  "
-                  >
-                    {lang.level}
-                  </span>
-                </p>
-                <StarRating value={lang.stars} color={lang.color} />
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
