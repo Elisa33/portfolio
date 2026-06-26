@@ -52,18 +52,21 @@ export const TIMELINE: TimelineGroup[] = [
     items: [
       {
         title: "Developer Front-End",
-        year: "",
-        description: "",
+        year: "React · Next.js · TypeScript",
+        description:
+          "I build accessible, responsive interfaces with a strong focus on component architecture and design systems.",
       },
       {
         title: "Visual Communication",
-        year: "",
-        description: "",
+        year: "Branding · Editorial · Illustration",
+        description:
+          "Graphic designer background. I approach every layout with attention to hierarchy, rhythm and visual identity.",
       },
       {
         title: "Teacher",
-        year: "",
-        description: "",
+        year: "Design & IT",
+        description:
+          "Taught Illustrator, Photoshop and web tools in formal institutions. I enjoy making complex ideas clear.",
       },
     ],
   },
@@ -192,7 +195,7 @@ export const SKILLS: SkillGroup[] = [
 
 export const LANGUAGES: LanguageItem[] = [
   { name: "Spanish", level: "native", stars: 5, color: "#ff5380" },
-  { name: "English", level: "intermediate", stars: 4, color: "#fbdd62" },
+  { name: "English", level: "advanced", stars: 4, color: "#fbdd62" },
   { name: "French", level: "intermediate", stars: 3, color: "#0bceaf" },
-  { name: "Portuguese", level: "basic", stars: 1, color: "#0bceaf" },
+  { name: "Portuguese", level: "basic", stars: 2, color: "#0bceaf" },
 ];

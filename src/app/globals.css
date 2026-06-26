@@ -51,23 +51,15 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
-/* =============================================================
-   BACKGROUND ANIMATION (body)
-   =============================================================
-   Usado en <body className="bg-animated"> para fondo cíclico de
-   pasteles. Las variables --color-*-200 son de Tailwind v4
-   (están disponibles globalmente, no hace falta redefinirlas). */
 
-@keyframes backgroundColors {
-  0%      { background-color: var(--color-sky-200); }
-  20%  { background-color: var(--color-violet-100); }
-  40%  { background-color: var(--color-fuchsia-200); }
-  60%     { background-color: var(--color-fuchsia-200); }
-  80%  { background-color: var(--color-lime-200); }
-  100%    { background-color: var(--color-sky-200); }
+/* globals.css — reemplazá el keyframe actual */
+@keyframes heroHueShift {
+  0%, 100% { background-color: var(--color-sky-100); }
+  25%      { background-color: var(--color-sky-50); }
+  50%      { background-color: var(--color-indigo-50); }
+  75%      { background-color: var(--color-sky-50); }
 }
 
-.bg-animated {
-  animation: backgroundColors 28s linear infinite;
-  transition: background-color 3s linear;
+.hero-animated {
+  animation: heroHueShift 24s ease-in-out infinite;
 }

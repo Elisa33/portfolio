@@ -61,14 +61,14 @@ export default function Works({
   return (
     <section
       id="works"
-      className="w-full py-8 lg:py-20 text-lime-400 bg-linear-to-b from-lime-100 via-lime-100 via-75% to-amber-100"
+      className="w-full py-8 lg:py-20 text-slate-700 bg-linear-to-l from-sky-100 to-sky-200  "
     >
-      <div className="w-[90%] max-w-220 mx-auto">
+      <div className="w-[90%] max-w-5xl mx-auto">
         <h2 className="text-center text-(--works-main) text-3xl font-normal mt-6 mb-1">
           Works
         </h2>
         {subtitle && (
-          <p className="text-center text-lime-900 font-light opacity-75 mt-0 mb-12">
+          <p className="text-center text-sky-800 font-light opacity-75 mt-0 mb-12">
             {subtitle}
           </p>
         )}
@@ -140,7 +140,7 @@ export default function Works({
                 type="button"
                 onClick={closeModal}
                 aria-label="Cerrar"
-                className="absolute top-3 right-4 text-[1.2rem] leading-none text-[#bbb] font-medium cursor-pointer transition-colors duration-200 hover:text-(--works-main) bg-transparent border-none"
+                className="absolute top-3 right-4 text-[1.2rem] leading-none text-[#bbb] font-medium cursor-pointer transition-colors duration-200 hover:text-sky-600 bg-transparent border-none"
               >
                 ✕
               </button>

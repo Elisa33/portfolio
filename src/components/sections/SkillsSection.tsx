@@ -10,7 +10,7 @@ import {
 
 /* ---------- Skill chip (sin porcentaje) ---------- */
 
-function SkillChip({ name, color }: { name: string; color: string }) {
+function SkillChip({ name }: { name: string }) {
   return (
     <span
       className="
@@ -18,17 +18,13 @@ function SkillChip({ name, color }: { name: string; color: string }) {
         px-[0.95rem] py-2
         rounded-full
         text-[0.88rem] font-medium
-        text-emerald-500
-        bg-emerald-200/75
+        text-slate-600
         transition-[box-shadow,transform] duration-200 ease-out
        
         cursor-default select-none
       "
     >
-      <span
-        className="w-2 h-2 rounded-full shrink-0 bg-emerald-500"
-        aria-hidden
-      />
+      <span className="w-2 h-2 rounded-full shrink-0 bg-sky-500" aria-hidden />
       {name}
     </span>
   );
@@ -38,7 +34,7 @@ function SkillChip({ name, color }: { name: string; color: string }) {
 
 function StarRating({ value }: { value: number }) {
   return (
-    <div className="inline-flex gap-0.5 text-emerald-400">
+    <div className="inline-flex gap-0.5 text-sky-400">
       {[0, 1, 2, 3, 4].map((i) => {
         const fill = Math.max(0, Math.min(1, value - i));
         return (
@@ -75,11 +71,11 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="w-full flex flex-col gap-14 items-center py-8 lg:py-20 bg-linear-to-b from-emerald-100 via-emerald-100 via-75% to-lime-100 justify-center"
+      className="w-full flex flex-col gap-14 items-center py-8 lg:py-20 text-slate-700 bg-linear-to-l from-sky-100 to-sky-200   justify-center"
     >
-      <h2 className="text-emerald-500 text-3xl">Skills</h2>
+      <h2 className=" text-3xl">Skills</h2>
       <div
-        className="w-[90%] max-w-275
+        className="w-[90%] max-w-5xl
         mx-auto"
       >
         {/* ---------- Skills chips ------------- */}
@@ -88,14 +84,13 @@ const Skills = () => {
             <div key={group.heading}>
               <h3
                 className="
-                text-emerald-500
                 text-xl
                 m-0 mb-6
               "
               >
                 {group.heading}
                 {group.accent && (
-                  <span className="text-emerald-500">{group.accent}</span>
+                  <span className="text-sky-500">{group.accent}</span>
                 )}
               </h3>
               <div
@@ -107,7 +102,7 @@ const Skills = () => {
               "
               >
                 {group.skills.map((s) => (
-                  <SkillChip key={s.name} name={s.name} color={s.color} />
+                  <SkillChip key={s.name} name={s.name} />
                 ))}
               </div>
             </div>
@@ -118,13 +113,12 @@ const Skills = () => {
         <div>
           <h3
             className="
-            text-emerald-500
             text-xl
             m-0 mb-6
           "
           >
             Language
-            <span className="text-emerald-400"> Skills</span>
+            <span className="text-sky-400"> Skills</span>
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
             {LANGUAGES.map((lang: LanguageItem) => (
@@ -139,12 +133,12 @@ const Skills = () => {
                 hover:shadow-(--shadow) active:translate-y-px
               "
               >
-                <p className="text-sm uppercase font-medium text-emerald-500 m-0">
+                <p className="text-sm uppercase font-medium text-slate-600 m-0">
                   {lang.name}
                   <span
                     className="
-                    text-emerald-500
-                    text-xs font-normal
+                    text-sky-500
+                    text-sm font-normal
                     ml-1
                      tracking-[0.04em]
                      lowercase
@@ -153,7 +147,7 @@ const Skills = () => {
                     {lang.level}
                   </span>
                 </p>
-                <StarRating value={lang.stars} />
+                {/* <StarRating value={lang.stars} /> */}
               </div>
             ))}
           </div>

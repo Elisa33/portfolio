@@ -5,9 +5,9 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="w-full min-h-screen lg:py-20 text-sky-500 flex flex-col md:flex-row items-center justify-center bg-linear-to-b from-sky-100 via-sky-100 via-75% to-emerald-100"
+      className="hero-animated w-full min-h-screen lg:py-20 text-slate-700 bg-animated flex flex-col md:flex-row items-center justify-center bg-linear-to-r from-sky-200 to-sky-100"
     >
-      <div className="w-9/12 flex flex-col md:flex-row gap-10 lgm:gap-20 items-center justify-center h-full mt-14 py-10 md:mt-0">
+      <div className="max-w-5xl flex flex-col md:flex-row gap-10 lgm:gap-20 items-center justify-center h-full mt-14 py-10 md:mt-0">
         <div className="relative w-60 h-60 md:w-90 md:h-90 rounded-full overflow-hidden mx-auto">
           <Image
             src="/img/profile.jpg"
@@ -35,9 +35,13 @@ const Home = () => {
               <span>elisablange.tdf@gmail.com</span>
             </div>
           </div>
-          <button className="mt-5 h-10 w-40 px-4 rounded-lg text-sky-500 btn-primary shadow-(--little-shadow) hover:shadow-(--down-shadow)">
+          <a
+            href="/cv-elisa-lange.pdf"
+            download
+            className="mt-5 h-10 w-40 px-4 rounded-lg text-slate-600 btn-primary shadow-(--little-shadow) hover:shadow-(--down-shadow) hover:translate-y-0.5 transition-all duration-300 ease-out inline-flex items-center justify-center no-underline"
+          >
             Download CV
-          </button>
+          </a>
         </div>
       </div>
     </section>

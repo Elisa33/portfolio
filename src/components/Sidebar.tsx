@@ -25,7 +25,7 @@ const navItems: NavItem[] = [
     icon: HiClipboardDocumentCheck,
     color: "lime",
   },
-  { id: "resume", label: "resume", icon: HiBriefcase, color: "amber" },
+  { id: "resume", label: "resume", icon: HiBriefcase, color: "sky" },
   {
     id: "contact",
     label: "contact",
@@ -38,30 +38,25 @@ const COLOR_CLASSES: Record<
   string,
   { active: string; hover: string; label: string }
 > = {
-  sky: {
-    active: "text-sky-400",
-    hover: "group-hover:text-sky-500",
+  emerald: {
+    active: "text-sky-500",
+    hover: "group-hover:text-sky-600",
     label: "text-sky-500",
   },
-  emerald: {
-    active: "text-emerald-400",
-    hover: "group-hover:text-emerald-500",
-    label: "text-emerald-500",
-  },
   lime: {
-    active: "text-lime-400",
-    hover: "group-hover:text-lime-500",
-    label: "text-lime-500",
+    active: "text-sky-500",
+    hover: "group-hover:text-sky-600",
+    label: "text-sky-500",
   },
-  amber: {
-    active: "text-amber-400",
-    hover: "group-hover:text-amber-500",
-    label: "text-amber-500",
+  sky: {
+    active: "text-sky-500",
+    hover: "group-hover:text-sky-600",
+    label: "text-sky-500",
   },
   purple: {
-    active: "text-purple-400",
-    hover: "group-hover:text-purple-500",
-    label: "text-purple-500",
+    active: "text-sky-500",
+    hover: "group-hover:text-sky-600",
+    label: "text-sky-500",
   },
 };
 

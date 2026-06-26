@@ -92,7 +92,6 @@ function ContactCard({
         px-6 py-10
         rounded-2xl
         no-underline
-        text-purple-100
         shadow-(--little-shadow)
         transition-[box-shadow,transform] duration-200 ease-out
         hover:shadow-(--down-shadow)
@@ -116,7 +115,6 @@ function ContactCard({
       <div className="flex flex-col items-center gap-1">
         <span
           className="
-            text-purple-500
             text-[0.78rem] font-medium
             uppercase tracking-[0.12em]
           "
@@ -126,7 +124,6 @@ function ContactCard({
         <span
           className="
             text-sm font-medium
-            text-purple-500
             break-all
           "
         >
@@ -135,7 +132,7 @@ function ContactCard({
       </div>
 
       <div className="flex items-end gap-3 mt-auto">
-        <span className="text-purple-500 text-sm font-medium">{cta}</span>
+        <span className="text-slate-500 text-sm font-medium">{cta}</span>
         {copyable && (
           <button
             type="button"
@@ -144,7 +141,6 @@ function ContactCard({
             className="
               inline-flex items-center justify-center
               w-8 h-8
-              text-purple-500
               cursor-pointer border-none              
               hover:-translate-y-px
             "
@@ -173,17 +169,13 @@ export default function Contact({
     <section
       id={id}
       className="py-8 lg:py-20
-        text-purple-500
-        bg-linear-to-b from-purple-100 to-purple-100      "
+        text-slate-700
+        bg-linear-to-l from-sky-100 to-sky-200    "
     >
-      <div
-        className=" w-[90%] max-w-275
-        mx-auto"
-      >
+      <div className="w-max-5xl mx-auto">
         <h2
           className="
           text-center
-          text-purple-500
           text-[2.2rem] font-normal
           mx-0 mt-6 mb-1
         "
@@ -194,8 +186,7 @@ export default function Contact({
           <p
             className="
             text-center text-base font-light opacity-75
-            text-purple-900
-            m-0 mx-auto mb-12
+            m-0 mx-auto mb-12 w-[90%]
             max-w-150
           "
           >
@@ -203,9 +194,9 @@ export default function Contact({
           </p>
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-200 mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           <ContactCard
-            icon={<FaEnvelope className="text-purple-500 h-6 w-6" />}
+            icon={<FaEnvelope className="text-slate-500 h-6 w-6" />}
             label="Email"
             value={email}
             href={`mailto:${email}`}
@@ -213,14 +204,14 @@ export default function Contact({
             copyable
           />
           <ContactCard
-            icon={<FaLinkedinIn className="text-purple-500 h-6 w-6" />}
+            icon={<FaLinkedinIn className="text-slate-500 h-6 w-6" />}
             label="Linkedin"
             value={linkedinHandle}
             href={linkedinUrl}
             cta="Go to /IN"
           />
           <ContactCard
-            icon={<FaTelegramPlane className="text-purple-500 h-6 w-6" />}
+            icon={<FaTelegramPlane className="text-slate-500 h-6 w-6" />}
             label="Telegram"
             value={telegramHandle}
             href={telegramUrl}
@@ -232,7 +223,6 @@ export default function Contact({
           className="
           text-center
           mt-10
-          text-violet-700
           text-sm font-light
         "
         >

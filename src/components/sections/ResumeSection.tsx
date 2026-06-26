@@ -59,7 +59,6 @@ function TimelineColumn({ group }: { group: TimelineGroup }) {
       <h3
         className="
           flex items-center gap-[0.6rem]
-          text-amber-400
           text-[1.4rem] font-medium
           m-0 mb-6
         "
@@ -73,7 +72,7 @@ function TimelineColumn({ group }: { group: TimelineGroup }) {
 
       <div className="relative pl-6">
         {/* vertical gradient line — var() + rgba() mixto, va como inline style */}
-        <div className="absolute left-0 top-2 bottom-2 w-0.5 rounded-xs bg-amber-500" />
+        <div className="absolute left-0 top-2 bottom-2 w-0.5 rounded-xs bg-sky-500/30" />
 
         {group.items.map((item, i) => (
           <div
@@ -84,23 +83,21 @@ function TimelineColumn({ group }: { group: TimelineGroup }) {
               px-[1.4rem] py-[1.1rem]
               mb-5 last:mb-0
               transition-transform duration-200 ease-out
-              hover:translate-x-1
-              shadow-(--little-shadow)
+              shadow-(--down-shadow)
+              hover:shadow-(--little-shadow)
             "
           >
             <span
               className="
                 absolute top-6 -left-6
-                w-3.5 h-3.5
+                w-2 h-2
                 rounded-full
-                border-[3px] border-(--bg-color)
                 -translate-x-1/2
-                bg-amber-500
+                bg-sky-500
               "
             />
             <h4
               className="
-                text-amber-400
                 text-[1.05rem] font-medium
                 m-0 mb-[0.2rem]
               "
@@ -109,7 +106,6 @@ function TimelineColumn({ group }: { group: TimelineGroup }) {
             </h4>
             <p
               className="
-                text-amber-400
                 opacity-70
                 text-[0.85rem] font-normal
                 m-0 mb-[0.65rem]
@@ -140,18 +136,17 @@ export default function ResumeSection({
       className="
         
         py-20
-        text-amber-400
-        bg-linear-to-b from-amber-100 via-amber-100 via-75% to-purple-100
+        text-slate-700
+        bg-linear-to-l from-sky-100 to-sky-200  
       "
     >
       <div
-        className="w-[90%] max-w-275
+        className="w-[90%] max-w-5xl
         mx-auto"
       >
         <h2
           className="
           text-center
-          text-amber-500
           text-3xl
           mx-0 mt-6 mb-1
         "
@@ -159,7 +154,7 @@ export default function ResumeSection({
           {title}
         </h2>
         {subtitle && (
-          <p className="text-center text-base font-light text-amber-900 m-0 mb-12">
+          <p className="text-center text-base font-light m-0 mb-12">
             {subtitle}
           </p>
         )}
