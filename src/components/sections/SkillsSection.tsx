@@ -74,7 +74,7 @@ const Skills = () => {
       <h2 className=" text-3xl">Skills</h2>
       <div
         className="w-full max-w-5xl
-        mx-auto px-6"
+        mx-auto px-7"
       >
         {/* ---------- Skills chips ------------- */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-12">

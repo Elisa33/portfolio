@@ -7,7 +7,7 @@ const Home = () => {
       id="home"
       className="hero-animated w-full min-h-screen py-20 text-slate-700 bg-animated flex items-center bg-linear-to-r from-sky-200 to-sky-100"
     >
-      <div className="w-full max-w-5xl mx-auto px-6 flex flex-col md:flex-row gap-10 lg:gap-20 items-center justify-center mt-14 md:mt-0">
+      <div className="w-full max-w-5xl mx-auto px-7 flex flex-col md:flex-row gap-10 lg:gap-20 items-center justify-center mt-14 md:mt-0">
         {/* Imagen de perfil */}
         <div className="relative w-60 h-60 md:w-90 md:h-90 shrink-0 rounded-full overflow-hidden">
           <Image

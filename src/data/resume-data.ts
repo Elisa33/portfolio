@@ -75,6 +75,11 @@ export const TIMELINE: TimelineGroup[] = [
     icon: HiAcademicCap,
     items: [
       {
+        title: "Tester QA",
+        year: "2019",
+        description: "Nahual IT",
+      },
+      {
         title: "Teacher training course",
         year: "2011",
         description: "E.S.I.P - Cordoba",
@@ -101,6 +106,12 @@ export const TIMELINE: TimelineGroup[] = [
     icon: HiBriefcase,
     items: [
       {
+        title: "Front-End Developer — Freelance",
+        year: "2022 — Present",
+        description:
+          "Building React + Next.js sites for freelance clients. Design, layout and Firebase integration.",
+      },
+      {
         title: "Front-End Developer — Welfi",
         year: "2023 — 2025",
         description:
@@ -113,14 +124,8 @@ export const TIMELINE: TimelineGroup[] = [
           "Developer building interfaces and design systems. Focused on accessibility and performance.",
       },
       {
-        title: "Front-End Developer — Freelance",
-        year: "2022 — Present",
-        description:
-          "Building React + Next.js sites for freelance clients. Design, layout and Firebase integration.",
-      },
-      {
         title: "Freelance in design and layout.",
-        year: "2018 — Present",
+        year: "2018 — 2022",
         description:
           "Brand identity for clients across industries: clothing, construction, advertising and editorial.",
       },

@@ -63,7 +63,7 @@ export default function Works({
       id="works"
       className="w-full py-8 lg:py-20 text-slate-700 bg-linear-to-l from-sky-100 to-sky-200  "
     >
-      <div className="w-[90%] xl:max-w-5xl mx-auto">
+      <div className="w-full xl:max-w-5xl mx-auto px-7">
         <h2 className="text-center text-(--works-main) text-3xl font-normal mt-6 mb-1">
           Works
         </h2>
@@ -79,7 +79,7 @@ export default function Works({
               {group.group}
             </h3>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-10">
+            <div className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-10">
               {group.items.map((p) => (
                 <button
                   key={p.id}
@@ -180,9 +180,10 @@ export default function Works({
                 <h4 className="text-(--works-main) text-[0.85rem] font-medium uppercase tracking-[0.04em] mt-0 mb-1">
                   Description
                 </h4>
-                <p className="mt-0 text-[0.95rem] leading-normal">
-                  {active.description}
-                </p>
+                <p
+                  className="mt-0 text-[0.95rem] leading-normal [&_a]:text-sky-600 [&_a]:underline [&_a:hover]:text-sky-800 no-underline"
+                  dangerouslySetInnerHTML={{ __html: active.description }}
+                />
               </div>
 
               {(active.site || active.code) && (

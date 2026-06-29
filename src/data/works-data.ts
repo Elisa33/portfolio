@@ -3,6 +3,7 @@ import { FaReact, FaHtml5 } from "react-icons/fa";
 import { GrJs } from "react-icons/gr";
 import { SiStyledcomponents, SiTailwindcss } from "react-icons/si";
 import { RiNextjsFill, RiFirebaseFill } from "react-icons/ri";
+import { PiFramerLogoFill } from "react-icons/pi";
 import {
   TbBrandAdobeIndesign,
   TbBrandAdobePhotoshop,
@@ -46,8 +47,8 @@ export const WORKS: WorkGroup[] = [
         img: "img/web/screencapt-gunavati.png",
         variant: "web",
         hover: "translate",
-        rol: "Web developer",
-        techs: "NextJs",
+        rol: "Web developer & designer",
+        techs: "NextJs- Tailwind",
         icons: [RiNextjsFill, SiTailwindcss],
         mode: "Freelance",
         description:
@@ -61,7 +62,7 @@ export const WORKS: WorkGroup[] = [
         variant: "web",
         hover: "translate",
         rol: "Web developer & designer",
-        techs: "Html 5 - Tailwind",
+        techs: "NextJs- Tailwind",
         icons: [RiNextjsFill, SiTailwindcss],
         mode: "Freelance",
         description:
@@ -75,11 +76,11 @@ export const WORKS: WorkGroup[] = [
         variant: "web",
         hover: "translate",
         rol: "Web developer & designer",
-        techs: "NextJs - Tailwind",
-        icons: [RiNextjsFill, SiTailwindcss],
+        techs: "NextJs - Framer Motion - Tailwind",
+        icons: [RiNextjsFill, SiTailwindcss, PiFramerLogoFill],
         mode: "Freelance",
         description:
-          "Responsible for the site's design and development, translating the brand identity established by Gru into a fully customized web layout.",
+          "Responsible for the site's design and development, translating the brand identity established by <a href='http://www.grudisegno.com/' className='info no-underline' target='_blank' rel='noopener noreferrer'>Gru</a> into a fully customized web layout.",
         site: "https://www.checo.com.ar",
       },
     ],
