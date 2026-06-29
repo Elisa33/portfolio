@@ -1,9 +1,7 @@
 import { LuPencil, LuStar, LuCodeXml } from "react-icons/lu";
 import {
-  TIMELINE,
   SKILLS,
   LANGUAGES,
-  type TimelineGroup,
   type SkillGroup,
   type LanguageItem,
 } from "../../data/resume-data";
@@ -75,8 +73,8 @@ const Skills = () => {
     >
       <h2 className=" text-3xl">Skills</h2>
       <div
-        className="w-[90%] max-w-5xl
-        mx-auto"
+        className="w-full max-w-5xl
+        mx-auto px-6"
       >
         {/* ---------- Skills chips ------------- */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-12">

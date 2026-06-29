@@ -5,15 +5,17 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="hero-animated w-full min-h-screen lg:py-20 text-slate-700 bg-animated flex flex-col md:flex-row items-center justify-center bg-linear-to-r from-sky-200 to-sky-100"
+      className="hero-animated w-full min-h-screen py-20 text-slate-700 bg-animated flex items-center bg-linear-to-r from-sky-200 to-sky-100"
     >
-      <div className="max-w-5xl flex flex-col md:flex-row gap-10 lgm:gap-20 items-center justify-center h-full mt-14 py-10 md:mt-0">
-        <div className="relative w-60 h-60 md:w-90 md:h-90 rounded-full overflow-hidden mx-auto">
+      <div className="w-full max-w-5xl mx-auto px-6 flex flex-col md:flex-row gap-10 lg:gap-20 items-center justify-center mt-14 md:mt-0">
+        {/* Imagen de perfil */}
+        <div className="relative w-60 h-60 md:w-90 md:h-90 shrink-0 rounded-full overflow-hidden">
           <Image
             src="/img/profile.jpg"
             alt="Profile picture"
             fill
             className="object-cover"
+            priority
           />
         </div>
         <div className="text-sky-500 md:w-1/2 md:order-first flex flex-col gap-4">
@@ -25,12 +27,12 @@ const Home = () => {
             visual communication and graphic design, I approach frontend
             development with a strong eye for detail, structure, and clarity.
           </p>
-          <div className="flex gap-4 pt-5">
-            <div className="flex items-center gap-1">
+          <div className="flex flex-wrap gap-4 pt-5">
+            <div className="flex items-center gap-2">
               <FaTelegramPlane />
               <span>@elisa_lange</span>
             </div>
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-2">
               <FaEnvelope />
               <span>elisablange.tdf@gmail.com</span>
             </div>

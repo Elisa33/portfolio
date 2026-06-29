@@ -172,7 +172,7 @@ export default function Contact({
         text-slate-700
         bg-linear-to-l from-sky-100 to-sky-200    "
     >
-      <div className="w-max-5xl mx-auto">
+      <div className="w-full w-max-5xl mx-auto px-6">
         <h2
           className="
           text-center

@@ -63,7 +63,7 @@ export default function Works({
       id="works"
       className="w-full py-8 lg:py-20 text-slate-700 bg-linear-to-l from-sky-100 to-sky-200  "
     >
-      <div className="w-[90%] max-w-5xl mx-auto">
+      <div className="w-[90%] xl:max-w-5xl mx-auto">
         <h2 className="text-center text-(--works-main) text-3xl font-normal mt-6 mb-1">
           Works
         </h2>
