@@ -1,16 +1,19 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { HiPaperClip, HiArrowUpRight } from "react-icons/hi2";
 import type { Brief } from "@/data/briefs/types";
 
 type State = { picks: Record<string, string[]>; notes: Record<string, string> };
 const EMPTY: State = { picks: {}, notes: {} };
 
-const card = "rounded-3xl bg-sky-50 shadow-(--shadow)";
+const card = "rounded-3xl border border-sky-200 bg-white/60";
 const field =
-  "w-full resize-y rounded-xl bg-sky-50 px-3 py-2 text-sm text-slate-700 shadow-(--down-shadow) outline-none placeholder:text-slate-400 focus-visible:ring-2 focus-visible:ring-sky-400";
+  "w-full resize-y rounded-xl border border-sky-200 bg-white px-3 py-2 text-sm text-slate-700 outline-none placeholder:text-slate-400 focus-visible:border-sky-400 focus-visible:ring-2 focus-visible:ring-sky-300";
 const action =
-  "rounded-full bg-sky-50 px-7 py-3 font-semibold text-sky-600 shadow-(--little-shadow) transition-[box-shadow,transform] duration-200 hover:shadow-(--down-shadow) focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:outline-none";
+  "rounded-full bg-sky-500 px-7 py-3 font-medium text-white transition-colors duration-200 hover:bg-sky-600 focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:outline-none";
 
 export default function BriefForm({ brief }: { brief: Brief }) {
   const storageKey = `brief:${brief.slug}`;
@@ -109,7 +112,7 @@ export default function BriefForm({ brief }: { brief: Brief }) {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-20 bg-sky-50/90 shadow backdrop-blur">
+      <header className="fixed inset-x-0 top-0 z-20 border-b border-sky-200 bg-sky-100/90 backdrop-blur">
         <div className="mx-auto flex max-w-3xl items-center gap-4 px-6 py-3">
           <span className="text-sm font-medium text-slate-500">{brief.title}</span>
           <div
@@ -118,7 +121,7 @@ export default function BriefForm({ brief }: { brief: Brief }) {
             aria-valuenow={pct}
             aria-valuemin={0}
             aria-valuemax={100}
-            className="h-2.5 flex-1 overflow-hidden rounded-full bg-sky-50 shadow-(--down-shadow)"
+            className="h-2 flex-1 overflow-hidden rounded-full bg-sky-200"
           >
             <div
               className="h-full rounded-full bg-sky-400 transition-all"
@@ -147,7 +150,7 @@ export default function BriefForm({ brief }: { brief: Brief }) {
 
       <div className="mx-auto max-w-3xl space-y-12 px-6 pb-24">
         {saveError && (
-          <p role="alert" className="rounded-2xl bg-sky-50 p-4 text-sm text-red-600 shadow-(--shadow)">
+          <p role="alert" className="rounded-2xl border border-red-200 bg-white p-4 text-sm text-red-600">
             No se puede guardar el avance en este navegador. Si cierras la página se pierden las
             respuestas: cópialas antes de salir.
           </p>
@@ -156,7 +159,7 @@ export default function BriefForm({ brief }: { brief: Brief }) {
         {brief.sections.map((sec, i) => (
           <section key={sec.title} className={`${card} p-6 md:p-10`}>
             <div className="flex items-center gap-4">
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-sky-50 text-xl font-semibold text-sky-500 shadow-(--little-shadow)">
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-sky-500 text-xl font-medium text-white">
                 {i + 1}
               </span>
               <h2 className="text-2xl font-normal text-slate-700 md:text-3xl">{sec.title}</h2>
@@ -175,10 +178,10 @@ export default function BriefForm({ brief }: { brief: Brief }) {
                           type="button"
                           aria-pressed={on}
                           onClick={() => toggle(q.id, o)}
-                          className={`rounded-full bg-sky-50 px-4 py-2 text-sm transition-[box-shadow,color] duration-200 focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:outline-none ${
+                          className={`rounded-full border px-4 py-2 text-sm transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:outline-none ${
                             on
-                              ? "font-semibold text-sky-600 shadow-(--down-shadow)"
-                              : "font-medium text-slate-600 shadow-(--little-shadow) hover:text-sky-600"
+                              ? "border-sky-500 bg-sky-500 font-medium text-white"
+                              : "border-sky-200 bg-white/70 font-normal text-slate-600 hover:border-sky-400 hover:text-sky-600"
                           }`}
                         >
                           {o}
@@ -197,8 +200,11 @@ export default function BriefForm({ brief }: { brief: Brief }) {
                 </div>
               ))}
 
-              <div className="rounded-2xl bg-sky-100 p-5">
-                <p className="text-sm font-medium text-slate-600">📌 {sec.note}</p>
+              <div className="rounded-2xl border-l-4 border-sky-400 bg-sky-100/70 p-5">
+                <p className="flex items-start gap-3 text-sm font-medium text-slate-600">
+                  <HiPaperClip aria-hidden className="mt-0.5 h-5 w-5 shrink-0 text-sky-500" />
+                  <span>{sec.note}</span>
+                </p>
                 <textarea
                   value={s.notes[`sec${i + 1}`] ?? ""}
                   onChange={(e) => note(`sec${i + 1}`, e.target.value)}
@@ -252,6 +258,31 @@ export default function BriefForm({ brief }: { brief: Brief }) {
           )}
         </section>
       </div>
+
+      <footer className="border-t border-sky-200 bg-sky-50">
+        <div className="mx-auto flex max-w-3xl flex-col items-center gap-5 px-6 py-10 text-center sm:flex-row sm:text-left">
+          <Image
+            src="/img/profile.jpg"
+            alt=""
+            width={56}
+            height={56}
+            className="h-14 w-14 shrink-0 rounded-full object-cover"
+          />
+          <div className="flex-1">
+            <p className="font-medium text-slate-700">Elisa Lange</p>
+            <p className="text-sm font-light text-slate-500">
+              Frontend Developer &amp; Visual Communicator
+            </p>
+          </div>
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 rounded-full border border-sky-300 px-5 py-2.5 text-sm font-medium text-sky-600 transition-colors hover:bg-sky-500 hover:text-white focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:outline-none"
+          >
+            Ver el portfolio
+            <HiArrowUpRight aria-hidden className="h-4 w-4" />
+          </Link>
+        </div>
+      </footer>
     </>
   );
 }
