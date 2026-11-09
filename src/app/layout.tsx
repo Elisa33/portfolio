@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
-import Menu from "../components/Sidebar";
 import "./globals.css";
 
 const quicksand = Quicksand({
@@ -32,8 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={quicksand.variable}>
       <body className="antialiased flex flex-col md:flex-row ">
-        <Menu />
-        <main className="md:ml-16 w-full flex flex-col">{children}</main>
+        {children}
       </body>
     </html>
   );
