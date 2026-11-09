@@ -114,7 +114,9 @@ export default function BriefForm({ brief }: { brief: Brief }) {
     <>
       <header className="fixed inset-x-0 top-0 z-20 border-b border-sky-200 bg-sky-100/90 backdrop-blur">
         <div className="mx-auto flex max-w-3xl items-center gap-4 px-6 py-3">
-          <span className="text-sm font-medium text-slate-500">{brief.title}</span>
+          <span className="text-sm font-medium text-slate-500">
+            {brief.title}
+          </span>
           <div
             role="progressbar"
             aria-label="Avance del brief"
@@ -128,7 +130,9 @@ export default function BriefForm({ brief }: { brief: Brief }) {
               style={{ width: `${pct}%` }}
             />
           </div>
-          <span className="text-sm font-semibold tabular-nums text-sky-600">{pct}%</span>
+          <span className="text-sm font-semibold tabular-nums text-sky-600">
+            {pct}%
+          </span>
         </div>
       </header>
 
@@ -145,14 +149,19 @@ export default function BriefForm({ brief }: { brief: Brief }) {
             </>
           )}
         </h1>
-        <p className="mx-auto mt-6 max-w-xl text-base font-light text-slate-500">{brief.intro}</p>
+        <p className="mx-auto mt-6 max-w-xl text-base font-light text-slate-500">
+          {brief.intro}
+        </p>
       </section>
 
       <div className="mx-auto max-w-3xl space-y-12 px-6 pb-24">
         {saveError && (
-          <p role="alert" className="rounded-2xl border border-red-200 bg-white p-4 text-sm text-red-600">
-            No se puede guardar el avance en este navegador. Si cierras la página se pierden las
-            respuestas: cópialas antes de salir.
+          <p
+            role="alert"
+            className="rounded-2xl border border-red-200 bg-white p-4 text-sm text-red-600"
+          >
+            No se puede guardar el avance en este navegador. Si cierras la
+            página se pierden las respuestas: cópialas antes de salir.
           </p>
         )}
 
@@ -162,7 +171,9 @@ export default function BriefForm({ brief }: { brief: Brief }) {
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-sky-500 text-xl font-medium text-white">
                 {i + 1}
               </span>
-              <h2 className="text-2xl font-normal text-slate-700 md:text-3xl">{sec.title}</h2>
+              <h2 className="text-2xl font-normal text-slate-700 md:text-3xl">
+                {sec.title}
+              </h2>
             </div>
 
             <div className="mt-8 space-y-10">
@@ -194,7 +205,7 @@ export default function BriefForm({ brief }: { brief: Brief }) {
                     onChange={(e) => note(q.id, e.target.value)}
                     rows={2}
                     aria-label={`Respuesta libre: ${q.q}`}
-                    placeholder="Espacio para respuesta libre…"
+                    placeholder="Espacio opcional para respuesta libre…"
                     className={`mt-4 ${field}`}
                   />
                 </div>
@@ -202,7 +213,10 @@ export default function BriefForm({ brief }: { brief: Brief }) {
 
               <div className="rounded-2xl border-l-4 border-sky-400 bg-sky-100/70 p-5">
                 <p className="flex items-start gap-3 text-sm font-medium text-slate-600">
-                  <HiPaperClip aria-hidden className="mt-0.5 h-5 w-5 shrink-0 text-sky-500" />
+                  <HiPaperClip
+                    aria-hidden
+                    className="mt-0.5 h-5 w-5 shrink-0 text-sky-500"
+                  />
                   <span>{sec.note}</span>
                 </p>
                 <textarea
@@ -219,9 +233,12 @@ export default function BriefForm({ brief }: { brief: Brief }) {
         ))}
 
         <section className={`${card} p-8 text-center md:p-12`}>
-          <h2 className="text-3xl font-normal text-slate-700">¿Ya está completo?</h2>
+          <h2 className="text-3xl font-normal text-slate-700">
+            ¿Ya está completo?
+          </h2>
           <p className="mx-auto mt-3 max-w-md font-light text-slate-500">
-            Las respuestas se pueden copiar y enviar para revisarlas y avanzar con el proyecto.
+            Las respuestas se pueden copiar y enviar para revisarlas y avanzar
+            con el proyecto.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <button type="button" onClick={copy} className={action}>
@@ -235,7 +252,9 @@ export default function BriefForm({ brief }: { brief: Brief }) {
             </a>
             <button
               type="button"
-              onClick={() => confirm("¿Borrar todas las respuestas?") && setS(EMPTY)}
+              onClick={() =>
+                confirm("¿Borrar todas las respuestas?") && setS(EMPTY)
+              }
               className="rounded-full px-6 py-3 text-slate-500 transition-colors hover:text-red-600 focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:outline-none"
             >
               Empezar de nuevo
@@ -244,8 +263,8 @@ export default function BriefForm({ brief }: { brief: Brief }) {
           {copyError && (
             <div role="alert" className="mt-8 text-left">
               <p className="text-sm font-medium text-red-600">
-                No se pudo copiar automáticamente. Mantén presionado el texto de abajo,
-                selecciónalo todo y cópialo a mano.
+                No se pudo copiar automáticamente. Mantén presionado el texto de
+                abajo, selecciónalo todo y cópialo a mano.
               </p>
               <textarea
                 readOnly
