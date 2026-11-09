@@ -63,18 +63,31 @@ export const sophos: Brief = {
         {
           id: "custom",
           q: "¿Qué se puede personalizar y qué no? ¿Hay mínimos o condiciones para pedidos personalizados?",
-          options: ["Tamaño", "Color", "Forma", "Texto o nombre", "Diseño completo a medida"],
+          options: [
+            "Tamaño",
+            "Color",
+            "Forma",
+            "Texto o nombre",
+            "Diseño completo a medida",
+          ],
         },
         {
           id: "materials",
           q: "¿Qué materiales y acabados usan? ¿Algo que el cliente deba saber (resistencia, cuidado, durabilidad)?",
-          options: ["PLA", "PETG", "Resina", "ABS", "TPU (flexible)", "Acabado pintado o lijado"],
+          options: [
+            "PLA",
+            "PETG",
+            "Resina",
+            "ABS",
+            "TPU (flexible)",
+            "Acabado pintado o lijado",
+          ],
         },
       ],
     },
     {
       title: "Los clientes y la venta",
-      note: "Espacio para precios de referencia, zonas de envío, preguntas frecuentes de los clientes o un ejemplo de pedido real.",
+      note: "Espacio para zonas de envío, preguntas frecuentes de los clientes o un ejemplo de pedido real.",
       questions: [
         {
           id: "clients",
@@ -91,12 +104,23 @@ export const sophos: Brief = {
         {
           id: "channels",
           q: "¿Cómo venden ahora y cuál es el proceso de un pedido, del primer mensaje a la entrega? ¿Tiempos y zonas de envío/retiro?",
-          options: ["Instagram", "WhatsApp", "Ferias", "Email", "Envío a domicilio", "Retiro en persona"],
+          options: [
+            "Instagram",
+            "WhatsApp",
+            "Ferias",
+            "Email",
+            "Envío a domicilio",
+            "Retiro en persona",
+          ],
         },
         {
           id: "pricing",
           q: "¿Cómo manejan precios y qué dudas frecuentes tienen los clientes antes de comprar?",
-          options: ["Catálogo con precios fijos", "Presupuesto a medida", "Mixto"],
+          options: [
+            "Catálogo con precios fijos",
+            "Presupuesto a medida",
+            "Mixto",
+          ],
         },
       ],
     },
@@ -137,12 +161,17 @@ export const sophos: Brief = {
     },
     {
       title: "Identidad y estética",
-      note: "Espacio para links o archivos del logo, paletas, tipografías o imágenes que los inspiren (por ejemplo, un link a una carpeta de Drive).",
+      note: "Espacio para links a los archivos del logo, paletas, tipografías o imágenes que los inspiren (por ejemplo, un link a una carpeta de Drive).",
       questions: [
         {
           id: "logo",
           q: "¿Cómo hicieron el logo? ¿Lo armaron ustedes, con qué herramienta, o lo encargaron? ¿Hay algo que les guste o no les guste de cómo quedó?",
-          options: ["Lo hicimos nosotros", "Lo encargamos", "Quizás lo renovaríamos", "Nos gusta como está"],
+          options: [
+            "Lo hicimos nosotros",
+            "Lo encargamos",
+            "Quizás lo renovaríamos",
+            "Nos gusta como está",
+          ],
         },
         {
           id: "personality",
